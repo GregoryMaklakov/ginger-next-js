@@ -1,14 +1,16 @@
 # Ginger Beauty Zone
 
-### Description
+### Project description:
 
-Project description: This is a website for my wife's beauty salon business in Warsaw.
+This is a website for my wife's beauty salon business in Warsaw.
+
+- [Instagram](https://www.instagram.com/ginger_beauty_zone/) <br />
 
 ### External Libraries used in this project:
 
-Next.js - React framework for server-side rendering and static generation.
-Tailwind CSS - a utility-first CSS framework.
-Framer Motion - a React animation library.
+Next.js - React framework for server-side rendering and static generation.<br />
+Tailwind CSS - a utility-first CSS framework.<br />
+Framer Motion - a React animation library.<br />
 
 - [framer-motion](https://www.framer.com/motion/) <br />
 - [Tailwind css](https://tailwindcss.com/) <br />
