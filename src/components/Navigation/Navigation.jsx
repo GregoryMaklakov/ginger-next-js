@@ -3,6 +3,7 @@ import { Logo } from "../Logo";
 import { useRouter } from "next/router";
 import { Icon } from "../Icons";
 import { motion } from "framer-motion";
+import { PropTypes } from 'prop-types';
 
 const socialLink = {
     instagram: "https://www.instagram.com/ginger_beauty_zone/",
@@ -27,7 +28,11 @@ const CustomLink = ({ href, title, className = "" }) => {
     );
 };
 
-const AnimSocLink = motion(Link);
+CustomLink.propTypes = {
+    href: PropTypes.string,
+    title: PropTypes.string,
+    className: PropTypes.string,
+}
 
 export const Navigation = () => {
     return (
