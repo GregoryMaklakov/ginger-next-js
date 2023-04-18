@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { Icon } from "../Icons";
 import { motion } from "framer-motion";
 import { PropTypes } from 'prop-types';
+import { Routes } from "@/pages/constant";
 
 const socialLink = {
     instagram: "https://www.instagram.com/ginger_beauty_zone/",
@@ -14,14 +15,34 @@ const socialLink = {
         "https://www.google.com/maps/uv?pb=!1s0xaf92f0c2cf3a0703%3A0x97c68627d088282!3m1!7e115!4s%2Fmaps%2Fplace%2Fgoogle%2Bginger%2Bbeauty%2Bzone%2F%4052.2463496%2C21.0680135%2C3a%2C75y%2C28.87h%2C90t%2Fdata%3D*213m4*211e1*213m2*211suBLJ3wx-dEKvnH6oH3yM3A*212e0*214m2*213m1*211s0xaf92f0c2cf3a0703%3A0x97c68627d088282%3Fsa%3DX!5zZ29vZ2xlIGdpbmdlciBiZWF1dHkgem9uZSAtINCf0L7QuNGB0Log0LIgR29vZ2xl!15sCgIgAQ&imagekey=!1e2!2suBLJ3wx-dEKvnH6oH3yM3A&hl=ru&sa=X&ved=2ahUKEwi5l_PdsKz-AhVUnosKHbFNAdkQpx96BAhHEA0",
 };
 
+const navLinks = [
+    {
+        href: Routes.HOME,
+        label: 'Home',
+    },
+    {
+        href: Routes.ABOUT,
+        label: 'O nas',
+    },
+    {
+        href: Routes.GALERY,
+        label: 'Galery',
+    },
+    {
+        href: Routes.BLOG,
+        label: 'Blog',
+    },
+];
+
 const CustomLink = ({ href, title, className = "" }) => {
     const router = useRouter();
+
     return (
         <Link href={href} className={`${className} relative group`}>
             {title}
             <span
                 className={`
-            h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full translate-[width] ease duration-300 ${router.asPath === href ? "w-full" : "w-0"
+            h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? "w-full" : "w-0"
                     }`}
             ></span>
         </Link>
@@ -38,11 +59,18 @@ export const Navigation = () => {
     return (
         <header className="w-full px-32 py-8 font-medium flex items-center justify-between z-50 relative">
             <nav>
+                {navLinks.map((link) => {
+                    return (
+                        <CustomLink key={link.href} href={link.href} title={link.label} className="mr-4" />
+                    )
+                })}
+            </nav>
+            {/* <nav>
                 <CustomLink href="/" title="Home" className="mr-4" />
                 <CustomLink href="/about" title="O nas" className="mx-4" />
                 <CustomLink href="/project" title="Nasze prace" className="mx-4" />
                 <CustomLink href="/blog" title="Blog" className="ml-4" />
-            </nav>
+            </nav> */}
             <nav className="flex items-center justify-center flex-wrap">
                 <motion.a
                     className="mr-3"

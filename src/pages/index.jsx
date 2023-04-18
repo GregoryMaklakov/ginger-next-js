@@ -19,7 +19,7 @@ export default function Home() {
       <main className="flex items-center w-full min-h-screen text-dark">
         <Layount className="pt-0">
           <div className="w-full flex items-center justify-between">
-            <div className="w-1/2">
+            <div className="w-1/2 mr-6 relative -top-[30px]" >
               <Image src={HeroArtSec} alt="HeroImage" className="flex items-center justify-center rounded-md -z-10" />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
