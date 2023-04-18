@@ -36,7 +36,7 @@ CustomLink.propTypes = {
 
 export const Navigation = () => {
     return (
-        <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
+        <header className="w-full px-32 py-8 font-medium flex items-center justify-between z-50 relative">
             <nav>
                 <CustomLink href="/" title="Home" className="mr-4" />
                 <CustomLink href="/about" title="O nas" className="mx-4" />

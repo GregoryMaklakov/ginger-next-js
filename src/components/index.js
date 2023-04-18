@@ -4,3 +4,6 @@ export * from "./LanguageSwitcher";
 export * from "./Logo";
 export * from "./Layount";
 export * from "./AnimatedText";
+export * from "./BooksyButton";
+export * from "./GingerButton";
+export * from "./Footer";
