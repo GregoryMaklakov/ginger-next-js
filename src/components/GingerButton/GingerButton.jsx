@@ -11,7 +11,7 @@ export const GingerButton = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed right-6 bottom-7 flex items-center justify-center overflow-hidden"
+            className="flex items-center justify-center overflow-hidden"
         >
             <Link href="/">
                 <GingerIcon size={120} />

@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
-
-import { AnimatedText, Layount } from "@/components"
+import { AnimatedText, GingerButton, Layount } from "@/components"
 import Head from "next/head";
 import Image from "next/image";
-import KateImage from "../../../public/ginger/images/KateDark.png";
+import KateImage from "../../../public/ginger/images/black-lady.jpg";
 import { useInView, useMotionValue, useSpring } from 'framer-motion';
 
 const AnimatedValue = ({ value }) => {
+
     const ref = useRef(null)
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue, { duration: 3000 })
-    const isInView = useInView(ref)
+    const isInView = useInView(ref, { once: true })
 
     useEffect(() => {
         if (isInView) {
@@ -26,9 +26,10 @@ const AnimatedValue = ({ value }) => {
     }, [springValue, value])
 
     return (
-        <span ref={ref}> </span>
+        <span ref={ref}></span>
     )
 }
+
 
 export default function About() {
 
@@ -49,7 +50,7 @@ export default function About() {
                 <meta name="description" content="Teren Twojego Piękna" />
             </Head>
             <main className="flex w-full flex-col items-center justify-center">
-                <Layount className="pt-16">
+                <Layount className="pt-8">
                     <AnimatedText text="Dowiedz się więcej o salonie piękności Ginger" className="mb-16" />
                     <div className="grid w-full grid-cols-8 gap-16">
                         <div className="col-span-3 flex flex-col items-start justify-start">
@@ -78,9 +79,10 @@ export default function About() {
                             </p>
                         </div>
 
-                        <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8" >
+                        <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-5" >
                             <span className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
                             <Image src={KateImage} alt="KateImage" className="w-full h-auto rounded-2xl" />
+                            <GingerButton />
                         </div>
                         <div className='col-span-2 flex flex-col items-end justify-between'>
                             <div className='flex flex-col items-end justify-center'>

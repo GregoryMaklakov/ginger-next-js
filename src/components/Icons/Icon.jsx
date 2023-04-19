@@ -1,6 +1,4 @@
 import PropTypes from 'prop-types';
-import { motion } from "framer-motion";
-
 
 export const ICON_TYPES = {
     lodoFull: "lodoFull",

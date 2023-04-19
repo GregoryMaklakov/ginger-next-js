@@ -6,7 +6,7 @@ import Image from "next/image";
 import HeroArtSec from "../../public/images/profile/yelow-art-transformed(1).png";
 
 
-import { Layount, AnimatedText, Icon, BooksyButton, GingerButton } from "../components";
+import { Layount, AnimatedText, Icon, BooksyButton, NailPolish } from "../components";
 import Link from "next/link";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main className="flex items-center w-full min-h-screen text-dark">
         <Layount className="pt-0">
-          <div className="w-full flex items-center justify-between">
+          <div className="w-full flex items-center justify-between ">
             <div className="w-1/2 mr-6 relative -top-[30px]" >
               <Image src={HeroArtSec} alt="HeroImage" className="flex items-center justify-center rounded-md -z-10" />
             </div>
@@ -37,7 +37,11 @@ export default function Home() {
           </div>
         </Layount>
         <BooksyButton />
-        <GingerButton />
+        <div className="absolute inline-block right-8 bottom-8">
+          <NailPolish className='' />
+        </div>
+
+
       </main>
     </>
   );

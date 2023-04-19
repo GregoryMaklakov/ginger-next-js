@@ -6,4 +6,6 @@ export * from "./Layount";
 export * from "./AnimatedText";
 export * from "./BooksyButton";
 export * from "./GingerButton";
+export * from "./NailPolish";
+
 export * from "./Footer";
