@@ -1,14 +1,9 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
-const brushMask = `
-M71.768 264.526v214.299c0 28.789 104.253 28.789 104.253 0V264.526H71.768z
-`;
 const bottleMask = `
 M433.136 454.137c-1.25 25.454-23.123 46.279-48.608 46.279h-81.086c-25.484 0-47.358-20.825-48.608-46.279l-7.038-143.332c-1.25-25.454 18.578-46.279 44.062-46.279l52.127 23.167 52.127-23.167c25.484 0 45.312 20.825 44.062 46.279l-7.038 143.332z
 `;
-
-
 
 export const NailPolish = ({ className, size, color }) => {
     const props = {
@@ -31,8 +26,8 @@ export const NailPolish = ({ className, size, color }) => {
         >
             <motion.path
                 d="M315.031 189.232h57.919v98.462h-57.919z"
-                style={{ overflow: "hidden" }}
                 animate={{
+                    overflow: "hidden",
                     fill: ["#00000000", "#ff738e"], // Анимация цвета
                     transition: {
                         delay: 2.6,
@@ -42,22 +37,10 @@ export const NailPolish = ({ className, size, color }) => {
                 }}
             />
             <motion.path
-                d={brushMask}
-                style={{ overflow: "hidden" }}
-                fill="#6badb4"
-                // Анимация заполнения маски
-                animate={{
-                    y: [55, 0],
-                    transition: {
-                        duration: 1.5,
-                        ease: "easeInOut",
-                    },
-                }}
-                // Использование маски для заполнения цветом
-                clipPath="url(#brushMask)"
+                d='M71.768 264.526v214.299c0 28.789 104.253 28.789 104.253 0V264.526H71.768z'
+                style={{ overflow: "hidden", fill: "#6badb4" }}
             />
             <motion.path
-                style={{ overflow: "hidden" }}
                 d={bottleMask}
                 fill="#ff738e"
                 // Анимация заполнения маски

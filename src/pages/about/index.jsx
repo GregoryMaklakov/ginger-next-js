@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { AnimatedText, GingerButton, Layount } from "@/components"
+import { AnimatedText, GingerButton, Layount, PriceList } from "@/components"
 import Head from "next/head";
 import Image from "next/image";
 import KateImage from "../../../public/ginger/images/black-lady.jpg";
@@ -99,12 +99,13 @@ export default function About() {
                             </div >
                             <div className='flex flex-col items-end justify-center'>
                                 <span className='inline-block text-7xl font-bold '>
-                                    <AnimatedValue value={54} />+
+                                    <AnimatedValue value={54} /> +
                                 </span>
                                 <h2 className='text-xl text-end font-medium capitalize text-dark/75'>łączny staż pracy zespołu</h2>
                             </div>
                         </div>
                     </div>
+                    <PriceList></PriceList>
                 </Layount>
             </main>
         </>
