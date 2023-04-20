@@ -37,7 +37,7 @@ export const NailPolishIcon = ({ className, size, color }) => {
                 }}
             />
             <motion.path
-                d='M71.768 264.526v214.299c0 28.789 104.253 28.789 104.253 0V264.526H71.768z'
+                d="M71.768 264.526v214.299c0 28.789 104.253 28.789 104.253 0V264.526H71.768z"
                 style={{ overflow: "hidden", fill: "#6badb4" }}
             />
             <motion.path

@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
       <main className="flex items-center w-full min-h-screen text-dark">
-        <Layount className="pt-0">
+        <Layount className="pt-0 pb-16">
           <div className="w-full flex items-center justify-between ">
             <div className="w-1/2 relative -top-[30px] p-14" >
               <Image src={HeroArt} alt="HeroImage" className="flex items-center justify-center rounded-md -z-10" />

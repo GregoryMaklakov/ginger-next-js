@@ -9,4 +9,6 @@ export * from "./GingerButton";
 export * from "./NailPolish";
 export * from "./PriceList";
 export * from "./FrameWhiteBlack";
+export * from "./AnimatedValue";
+
 export * from "./Footer";

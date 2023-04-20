@@ -3,25 +3,30 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-export const GingerButton = () => {
-
-
+export const GingerButton = ({ size, className, href, color }) => {
     return (
         <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="flex items-center justify-center overflow-hidden"
+            className={`flex items-center justify-center overflow-hidden ${className}`}
+
         >
-            <Link href="/">
-                <GingerIcon size={120} />
+            <Link className="flex " href={href} >
+                <GingerIcon size={size} className='z-10' color={color} />
             </Link>
         </motion.div>
     );
 };
 
-const GingerIcon = ({ className, size, color }) => {
+GingerButton.propTypes = {
+    size: PropTypes.number,
+    className: PropTypes.string,
+    href: PropTypes.string,
+    color: PropTypes.string,
+};
 
+const GingerIcon = ({ className, size, color }) => {
     const props = {
         className,
         style: {
