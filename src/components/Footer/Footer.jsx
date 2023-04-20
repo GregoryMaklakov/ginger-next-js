@@ -1,7 +1,7 @@
 import React from 'react'
-import { Layount } from '../Layount'
+import { Layount } from '../../components'
 import Link from 'next/link'
-import { socialLink } from '../Navigation/Navigation';
+import { socialLink } from "@/pages/constant";
 
 export const Footer = () => {
     return (
@@ -12,7 +12,7 @@ export const Footer = () => {
                     <Link href={socialLink.booksy} target={"_blank"} className='flex items-center'
                     >Dodaj do ulubionych <span className='text-primary text-2xl px=1'> &#9825; </span> w <span className='underline underline-offset-2 px-1'>Booksy</span></Link>
                 </div>
-                <Link href={socialLink.google} className='underline underline-offset-2' target={"_blank"}>Grochowska 278</Link>
+                <Link href={socialLink.google} target={"_blank"}><span className='underline underline-offset-2' >Grochowska 278</span> | Warszawa</Link>
             </Layount>
         </footer>
     )

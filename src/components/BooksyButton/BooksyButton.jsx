@@ -2,7 +2,7 @@ import React from "react";
 import CircularText from "../../../public/images/profile/rounded-ginger-1.png";
 import Image from "next/image";
 import Link from "next/link";
-import { socialLink } from "../Navigation/Navigation";
+import { socialLink } from "@/pages/constant";
 
 export const BooksyButton = () => {
     return (

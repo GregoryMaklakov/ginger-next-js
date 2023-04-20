@@ -7,6 +7,7 @@ import {
 } from "@/components";
 import Head from "next/head";
 import Image from "next/image";
+
 import BlackLady from "../../../public/ginger/images/black-lady.jpg";
 import KateImage from "../../../public/ginger/images/KateDark.png";
 
@@ -74,7 +75,7 @@ export default function About() {
                             </p>
                         </div>
 
-                        <FrameWhiteBlack className="col-span-3 h-5/6">
+                        <FrameWhiteBlack className="col-span-3 h-4/5">
                             <Image
                                 src={BlackLady}
                                 alt="BlackLady"

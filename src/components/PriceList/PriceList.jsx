@@ -11,6 +11,7 @@ export const PriceList = () => {
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start 40%", "center start"],
+        // layoutEffect: false,
     });
 
     return (

@@ -5,6 +5,14 @@ export const Routes = {
   PRICE: "/price",
 };
 
+export const socialLink = {
+  instagram: "https://www.instagram.com/ginger_beauty_zone/",
+  facebook: "https://www.facebook.com/profile.php?id=100087405266889",
+  booksy: "https://gingerbeautyzone.booksy.com",
+  google:
+    "https://www.google.com/maps/uv?pb=!1s0xaf92f0c2cf3a0703%3A0x97c68627d088282!3m1!7e115!4s%2Fmaps%2Fplace%2Fgoogle%2Bginger%2Bbeauty%2Bzone%2F%4052.2463496%2C21.0680135%2C3a%2C75y%2C28.87h%2C90t%2Fdata%3D*213m4*211e1*213m2*211suBLJ3wx-dEKvnH6oH3yM3A*212e0*214m2*213m1*211s0xaf92f0c2cf3a0703%3A0x97c68627d088282%3Fsa%3DX!5zZ29vZ2xlIGdpbmdlciBiZWF1dHkgem9uZSAtINCf0L7QuNGB0Log0LIgR29vZ2xl!15sCgIgAQ&imagekey=!1e2!2suBLJ3wx-dEKvnH6oH3yM3A&hl=ru&sa=X&ved=2ahUKEwi5l_PdsKz-AhVUnosKHbFNAdkQpx96BAhHEA0",
+};
+
 export const priceListData = [
   {
     id: 1,
