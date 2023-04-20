@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
-import { AnimatedText, GingerButton, Layount, PriceList } from "@/components"
+import { AnimatedText, GingerButton, Layount, } from "@/components"
 import Head from "next/head";
 import Image from "next/image";
 import KateImage from "../../../public/ginger/images/black-lady.jpg";
 import { useInView, useMotionValue, useSpring } from 'framer-motion';
+import { FrameWhiteBlack } from '../../components/FrameWhiteBlack/FrameWhiteBlack';
 
-const AnimatedValue = ({ value }) => {
+export const AnimatedValue = ({ value }) => {
 
     const ref = useRef(null)
     const motionValue = useMotionValue(0);
@@ -79,11 +80,10 @@ export default function About() {
                             </p>
                         </div>
 
-                        <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-5" >
-                            <span className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
+                        <FrameWhiteBlack>
                             <Image src={KateImage} alt="KateImage" className="w-full h-auto rounded-2xl" />
                             <GingerButton />
-                        </div>
+                        </FrameWhiteBlack>
                         <div className='col-span-2 flex flex-col items-end justify-between'>
                             <div className='flex flex-col items-end justify-center'>
                                 <span className='inline-block text-7xl font-bold '>
@@ -105,7 +105,6 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-                    <PriceList></PriceList>
                 </Layount>
             </main>
         </>

@@ -1,12 +1,8 @@
 
 import Head from "next/head";
 import Image from "next/image";
-// import HeroPictures from "../../public/images/profile/developer-pic-1.png";
-// import HeroArt from "../../public/images/profile/yelow-art.png";
-import HeroArtSec from "../../public/images/profile/yelow-art-transformed(1).png";
-
-
-import { Layount, AnimatedText, Icon, BooksyButton, NailPolish } from "../components";
+import HeroArt from "../../public/images/profile/hero-art.png";
+import { Layount, AnimatedText, Icon, BooksyButton, NailPolishIcon } from "../components";
 import Link from "next/link";
 
 export default function Home() {
@@ -19,8 +15,8 @@ export default function Home() {
       <main className="flex items-center w-full min-h-screen text-dark">
         <Layount className="pt-0">
           <div className="w-full flex items-center justify-between ">
-            <div className="w-1/2 relative -top-[30px] p-8 pt-0" >
-              <Image src={HeroArtSec} alt="HeroImage" className="flex items-center justify-center rounded-md -z-10" />
+            <div className="w-1/2 relative -top-[30px] p-14" >
+              <Image src={HeroArt} alt="HeroImage" className="flex items-center justify-center rounded-md -z-10" />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
               <AnimatedText text='Twój wygląd nigdy nie był piękniejszy' className='!text-6xl text-left' />
@@ -38,7 +34,7 @@ export default function Home() {
         </Layount>
         <BooksyButton />
         <div className="absolute inline-block right-8 bottom-8">
-          <NailPolish className='' />
+          <NailPolishIcon />
         </div>
       </main>
     </>

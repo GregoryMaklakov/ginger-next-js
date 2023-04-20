@@ -5,7 +5,7 @@ const bottleMask = `
 M433.136 454.137c-1.25 25.454-23.123 46.279-48.608 46.279h-81.086c-25.484 0-47.358-20.825-48.608-46.279l-7.038-143.332c-1.25-25.454 18.578-46.279 44.062-46.279l52.127 23.167 52.127-23.167c25.484 0 45.312 20.825 44.062 46.279l-7.038 143.332z
 `;
 
-export const NailPolish = ({ className, size, color }) => {
+export const NailPolishIcon = ({ className, size, color }) => {
     const props = {
         className,
     };
@@ -74,10 +74,10 @@ export const NailPolish = ({ className, size, color }) => {
     );
 };
 
-NailPolish.propTypes = {
+NailPolishIcon.propTypes = {
     size: PropTypes.number,
     color: PropTypes.string,
 };
-NailPolish.defaultProps = {
+NailPolishIcon.defaultProps = {
     size: 120,
 };

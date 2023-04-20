@@ -1,11 +1,23 @@
 import { priceListData } from "@/pages/constant";
 import PropTypes from 'prop-types';
+import { motion, spring, useScroll } from "framer-motion"
+import { useRef } from 'react';
+import { LiIcon } from "./LiIcon";
+import { AnimatedText } from '../AnimatedText';
 
 export const PriceList = () => {
+    const ref = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "center start"]
+    })
+
     return (
-        <div className="my-32">
-            <h2 className="font-bold text-8xl mb-32 w-full text-center">Cennik</h2>
-            <div className="w-[75%] mx-auto relative flex flex-col">
+        <div className="my-32 mt-0">
+            <AnimatedText className='pt-8' text='Nasze ceny' />
+            <div ref={ref} className="w-[75%] mx-auto relative pt-16">
+                <motion.div style={{ scaleY: scrollYProgress }} className="absolute t-0 left-9 w-[4px] h-full bg-dark origin-top" />
                 {priceListData.map((category) => (
                     <Category
                         key={category.id}
@@ -18,15 +30,24 @@ export const PriceList = () => {
     );
 };
 
-const Category = ({ name, items }) => {
+const Category = ({ name, items, }) => {
+
+    const ref = useRef(null);
     return (
-        <div className="flex flex-col items-center justify-center mb-16">
-            <h3 className="font-bold capitalise text-2xl mb-6">{name}</h3>
-            <ul className="w-[60%]">
-                {items.map((item) => (
-                    <PriceItem key={item.id} name={item.name} price={item.price} />
-                ))}
-            </ul>
+        <div ref={ref}>
+            <LiIcon referece={ref} />
+            <motion.div
+                initial={{ y: 50 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 1, type: "spring", delay: 0.1 }}
+                className="flex flex-col items-center justify-center mb-16">
+                <h3 className="font-bold capitalise text-2xl mb-6">{name}</h3>
+                <ul className="w-[60%]">
+                    {items.map((item) => (
+                        <PriceItem key={item.id} name={item.name} price={item.price} />
+                    ))}
+                </ul>
+            </motion.div>
         </div>
     );
 };

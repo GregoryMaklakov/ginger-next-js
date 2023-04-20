@@ -29,8 +29,8 @@ const navLinks = [
         label: 'Galery',
     },
     {
-        href: Routes.BLOG,
-        label: 'Blog',
+        href: Routes.PRICE,
+        label: 'Cennik',
     },
 ];
 

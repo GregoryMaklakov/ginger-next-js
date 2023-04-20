@@ -1,1 +1,1 @@
-export * from "./NailPolish";
+export * from "./NailPolishIcon";
