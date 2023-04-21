@@ -15,7 +15,10 @@ export default function Price() {
                 <Layount className='py-10'>
                     <FrameWhiteBlack
                         className="flex min-h-full p-16 items-center justify-between mb-16 bg-cover relative overflow-hidden">
-                        <Image src={BlackLadyPrice} alt="BlackLadyPrice" style={{ objectFit: 'cover' }} layout="fill" className="absolurte -z-1 p-2 rounded-2xl" />
+                        <Image src={BlackLadyPrice} alt="BlackLadyPrice" style={{ objectFit: 'cover' }} layout="fill" className="absolurte -z-1 p-2 rounded-2xl" priority
+                            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"/>
                         <div className="w-1/3">
                             <GingerButton href="/" size={240} className="z-10" color="white" />
                         </div>

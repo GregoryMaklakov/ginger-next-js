@@ -44,7 +44,7 @@ export default function About() {
                 <meta name="description" content="Teren Twojego Piękna" />
             </Head>
             <main className="flex w-full flex-col items-center justify-center dark:text-light">
-                <Layount className="pt-4">
+                <Layount className="pt-8">
                     <AnimatedText
                         text="Dowiedz się więcej o salonie piękności Ginger"
                         className="mb-16"

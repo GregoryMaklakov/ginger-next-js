@@ -233,7 +233,7 @@ export const priceListData = [
         price: 20,
       },
       {
-        id: 6,
+        id: 7,
         name: "Regulacja brwi + Farbka + Wąsik",
         price: 80,
       },
@@ -259,7 +259,7 @@ export const priceListData = [
         price: 150,
       },
       {
-        id: 3,
+        id: 4,
         name: "Makijaż okazjonalny",
         price: 150,
       },
