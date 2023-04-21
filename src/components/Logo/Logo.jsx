@@ -11,7 +11,7 @@ const animLink = {
 export const Logo = () => {
     return (
         <div className="flex items-center justify-center mt-2">
-            <MotionLink href='/' className="w-16 h-16 bg-dark text-light flex justify-center items-center rounded-full"
+            <MotionLink href='/' className="w-16 h-16 bg-dark text-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full"
                 whileHover={animLink}
             >
                 <LogoImage size={44} color="white" />

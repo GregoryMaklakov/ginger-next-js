@@ -1,7 +1,8 @@
 import { useInView, useMotionValue, useSpring } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 
-export const AnimatedValue = ({ value }) => {
+export const AnimatedValue = ({ value, className }) => {
 
     const ref = useRef(null)
     const motionValue = useMotionValue(0);
@@ -22,6 +23,11 @@ export const AnimatedValue = ({ value }) => {
     }, [springValue, value])
 
     return (
-        <span ref={ref}></span>
+        <span className={className} ref={ref}></span>
     )
+}
+
+AnimatedValue.propTypes = {
+    value: PropTypes.number.isRequired,
+    className: PropTypes.string,
 }

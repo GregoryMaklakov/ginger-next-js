@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import PropTypes from 'prop-types';
 
 const appearanceText = {
     initial: {
@@ -35,7 +36,7 @@ export const AnimatedText = ({ text, className }) => {
                 variants={appearanceText}
                 initial="initial"
                 animate="animate"
-                className={`inline-blick w-full text-dark font-bold capitalize text-8xl ${className}`}
+                className={`inline-blick w-full text-dark font-bold capitalize text-8xl dark:text-light ${className}`}
             >
                 {text.split(" ").map((word, index) => (
                     <motion.span
@@ -50,3 +51,8 @@ export const AnimatedText = ({ text, className }) => {
         </div>
     );
 };
+
+AnimatedText.propTypes = {
+    text: PropTypes.string,
+    className: PropTypes.string,
+}

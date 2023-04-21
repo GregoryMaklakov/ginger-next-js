@@ -12,7 +12,7 @@ export default function Home() {
         <title>Ginger Beauty Zone</title>
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
-      <main className="flex items-center w-full min-h-screen text-dark">
+      <main className="flex items-center w-full min-h-screen text-dark dark:text-light">
         <Layount className="pt-0 pb-16">
           <div className="w-full flex items-center justify-between ">
             <div className="w-1/2 relative -top-[30px] p-14" >
@@ -24,10 +24,10 @@ export default function Home() {
                 Wiemy, jak ważne jest dla Was posiadanie niezawodnego miejsca, w którym możecie uporządkować nie tylko swoje paznokcie, ale także swoje myśli. Ginger to prawdziwie klimatyczne i uduchowione miejsce, które pomoże Wam się zrelaksować, naładować pięknem i dobrymi wibracjami.
               </p>
               <div className="flex items-center self-start mt-2">
-                <Link className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark" href='/dummy.pdf' target="_blank" download={true}>Odbierz zniżkę 30%
+                <Link className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light" href='/dummy.pdf' target="_blank" download={true}>Odbierz zniżkę 30%
                   <Icon name='linkArrow' size={24} className='ml-2' />
                 </Link>
-                <Link className="flex items-center text-dark ml-4 font-medium capitalize underline text-lg" href='tel:48510001772'>Zadzwoń</Link>
+                <Link className="flex items-center text-dark ml-4 font-medium capitalize underline text-lg dark:text-light" href='tel:48510001772'>Zadzwoń</Link>
               </div>
             </div>
           </div>

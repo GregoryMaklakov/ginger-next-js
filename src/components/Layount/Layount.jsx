@@ -4,7 +4,7 @@ import { PropTypes } from "prop-types";
 export const Layount = ({ children, className }) => {
     return (
         <div
-            className={`w-full h-full bg-light inline-block z-0 p-32 ${className}`}
+            className={`w-full h-full bg-light dark:bg-dark inline-block z-0 p-32 ${className}`}
         >
             {children}
         </div>

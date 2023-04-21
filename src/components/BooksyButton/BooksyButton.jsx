@@ -11,11 +11,11 @@ export const BooksyButton = () => {
                 <Image
                     src={CircularText}
                     alt="GingerBeautyZone"
-                    className="animate-spin-slow"
+                    className="animate-spin-slow bg-transparent rounded-full dark:bg-light"
                 />
                 <Link
                     href={socialLink.booksy}
-                    className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-light hover:text-dark "
+                    className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-light hover:text-dark hover:dark:border-4"
                     target={"_black"}
                 >
                     <span className="flex items-center justify-center text-center leading-5">
