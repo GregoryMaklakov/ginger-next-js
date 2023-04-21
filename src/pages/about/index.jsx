@@ -48,7 +48,7 @@ export default function About() {
                         text="Dowiedz się więcej o salonie piękności Ginger"
                         className="mb-16"
                     />
-                    <div className="grid w-full grid-cols-8 gap-16">
+                    <div className="grid w-full grid-cols-8 gap-16 items-center">
                         <div className="col-span-3 flex flex-col items-start justify-start">
                             <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
                                 O nas
@@ -75,7 +75,7 @@ export default function About() {
                             </p>
                         </div>
 
-                        <FrameWhiteBlack className="col-span-3 h-4/5">
+                        <FrameWhiteBlack className="col-span-3 h-3/4 ">
                             <Image
                                 src={BlackLady}
                                 alt="BlackLady"
@@ -83,7 +83,7 @@ export default function About() {
                                 style={{ objectFit: 'cover' }} layout="fill"
                             />
                         </FrameWhiteBlack>
-                        <div className="col-span-2 flex flex-col items-end justify-between">
+                        <div className="col-span-2 flex flex-col items-end justify-between h-full">
                             <div className="flex flex-col items-end justify-center">
                                 <span className="inline-block text-7xl font-bold ">
                                     <AnimatedValue value={400} />+
@@ -122,7 +122,7 @@ export default function About() {
 
                             <motion.div {...motionFrameWhiteBlack}>
                                 <FrameWhiteBlack
-                                    className="flex min-h-full p-32 items-center justify-between mb-16">
+                                    className="flex min-h-full p-16 items-center justify-between mb-16">
                                     <div className="w-1/3">
                                         <Image
                                             src={KateImage}
@@ -130,8 +130,9 @@ export default function About() {
                                             className="h-auto w-full max-w-md rounded-2xl object-cover"
                                         />
                                     </div>
-                                    <div className="flex flex-col w-2/3 p-8">
+                                    <div className="flex flex-col w-2/3 pl-8">
                                         <h4 className="text-lg font-bold uppercase text-dark/75">Kate</h4>
+                                        <h5 className="text-lg font-bold text-primary/75">Manicurist</h5>
                                         <p className="my-4 font-medium">
                                             Mam na imię Katarzyna, od 10 lat pracuję w branży
                                             kosmetycznej i mogę z całą pewnością powiedzieć, że manicure
@@ -148,9 +149,10 @@ export default function About() {
                                 </FrameWhiteBlack>
                             </motion.div>
                             <motion.div {...motionFrameWhiteBlack}>
-                                <FrameWhiteBlack className="flex min-h-full p-32 items-center justify-between mb-16">
-                                    <div className="flex flex-col w-2/3 p-8">
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
+                                    <div className="flex flex-col w-2/3 pr-8">
                                         <h4 className="text-lg font-bold uppercase text-dark/75">Jana</h4>
+                                        <h5 className="text-lg font-bold text-primary/75">Manicurist</h5>
                                         <p className="my-4 font-medium">
                                             Oto nasza mistrzynia manicure i pedicure - Jana! Jana pracuje w branży od ponad 3 lat i jest ekspertką w zakresie pielęgnacji paznokci i stóp. Jej kreatywność i zmysł artystyczny są wspaniałym dodatkiem do jej już imponujących umiejętności w zakresie hybrydowych stylizacji paznokci.
                                         </p>
@@ -168,7 +170,7 @@ export default function About() {
                                 </FrameWhiteBlack>
                             </motion.div>
                             <motion.div {...motionFrameWhiteBlack}>
-                                <FrameWhiteBlack className="flex min-h-full p-32 items-center justify-between mb-16">
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
                                     <div className="w-1/3">
                                         <Image
                                             src={KateImage}
@@ -176,8 +178,9 @@ export default function About() {
                                             className="h-auto w-full max-w-md rounded-2xl object-cover"
                                         />
                                     </div>
-                                    <div className="flex flex-col w-2/3 p-8">
+                                    <div className="flex flex-col w-2/3 pl-8">
                                         <h4 className="text-lg font-bold uppercase text-dark/75">Maria</h4>
+                                        <h5 className="text-lg font-bold text-primary/75">Manicurist</h5>
                                         <p className="my-4 font-medium">
                                             Oto Maria - nasza specjalistka od manicure i pedicure. Z pasją i zaangażowaniem zajmuje się pielęgnacją dłoni i stóp oraz wykonuje najmodniejsze trendy w dziedzinie stylizacji paznokci. Maria posiada nie tylko bogate doświadczenie, ale również wiedzę z zakresu kosmetyki, dzięki czemu jest w stanie dopasować odpowiednie produkty i zabiegi do indywidualnych potrzeb każdej klientki.
                                         </p>
@@ -188,9 +191,10 @@ export default function About() {
                                 </FrameWhiteBlack>
                             </motion.div>
                             <motion.div {...motionFrameWhiteBlack}>
-                                <FrameWhiteBlack className="flex min-h-full p-32 items-center justify-between mb-16">
-                                    <div className="flex flex-col w-2/3 p-8">
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
+                                    <div className="flex flex-col w-2/3 pr-8">
                                         <h4 className="text-lg font-bold uppercase text-dark/75">Liza</h4>
+                                        <h5 className="text-lg font-bold text-primary/75">Makeup artist | Brow artist | Lash stylist</h5>
                                         <p className="my-4 font-medium">
                                             Oto Liza - nasza specjalistka w dziedzinie makijażu, laminacji, stylizacji brwi i rzęs. Młoda i pełna energii, zawsze na bieżąco ze światowymi trendami, doskonale wie, jak podkreślić naturalne piękno każdej kobiety. Liza nie tylko wykonuje makijaż, ale również pomaga w doborze odpowiednich kosmetyków i pielęgnacji skóry. Dzięki swojej wiedzy i umiejętnościom potrafi dobrać odpowiedni kolor podkładu czy cienia do powiek, aby uzyskać idealny efekt.
                                         </p>
@@ -204,6 +208,27 @@ export default function About() {
                                             alt="KateImage"
                                             className="h-auto w-full max-w-md rounded-2xl object-cover"
                                         />
+                                    </div>
+                                </FrameWhiteBlack>
+                            </motion.div>
+                            <motion.div {...motionFrameWhiteBlack}>
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
+                                    <div className="w-1/3">
+                                        <Image
+                                            src={KateImage}
+                                            alt="KateImage"
+                                            className="h-auto w-full max-w-md rounded-2xl object-cover"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col w-2/3 pl-8">
+                                        <h4 className="text-lg font-bold uppercase text-dark/75">Luda</h4>
+                                        <h5 className="text-lg font-bold text-primary/75">Masażystka</h5>
+                                        <p className="my-4 font-medium">
+                                            Nasza masażystka to osoba z wykształceniem medycznym oraz ponad 30-letnim doświadczeniem w pracy. Jest to profesjonalistka, która doskonale zna się na swoim fachu i potrafi zaspokoić potrzeby każdego klienta. Jej umiejętności i wiedza medyczna pozwalają jej na wykonywanie różnorodnych masaży, w tym leczniczych, relaksacyjnych i sportowych, zapewniając najlepsze efekty terapeutyczne. Nasza masażystka jest również bardzo cierpliwa i zawsze stara się zrozumieć potrzeby klientów, co sprawia, że jest bardzo ceniona przez naszych klientów.
+                                        </p>
+                                        <p className="font-medium">
+
+                                        </p>
                                     </div>
                                 </FrameWhiteBlack>
                             </motion.div>
