@@ -34,7 +34,7 @@ export const Navigation = () => {
     };
 
     return (
-        <header className="w-full px-32 py-8 font-medium flex items-center justify-between z-50 relative dark:text-light">
+        <header className="w-full px-32 lg:px-16 md:px-8 py-8 font-medium flex items-center justify-between z-50 relative dark:text-light">
             <button
                 className="relative w-8 h-8 focus:outline-none rounded-full hidden items-center justify-center p-2 lg:flex"
                 onClick={handleClick}

@@ -1,10 +1,11 @@
 import React from "react";
 import { PropTypes } from "prop-types";
 
+// Container
 export const Layount = ({ children, className }) => {
     return (
         <div
-            className={`w-full h-full bg-light dark:bg-dark inline-block z-0 p-32 ${className}`}
+            className={`w-full mx-auto h-full bg-light dark:bg-dark inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 ${className}`}
         >
             {children}
         </div>
