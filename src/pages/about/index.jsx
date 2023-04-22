@@ -34,7 +34,7 @@ export default function About() {
         initial: { opacity: 0, y: 50 },
         whileInView: { opacity: 1, y: 0 },
         transition: { duration: 1, type: "spring", delay: 0.1 },
-        viewport: { once: true }
+        viewport: { once: true },
     };
 
     return (
@@ -81,7 +81,9 @@ export default function About() {
                                 src={BlackLady}
                                 alt="BlackLady"
                                 className="absolurte -z-1 p-2 rounded-2xl"
-                                style={{ objectFit: 'cover' }} layout="fill"
+                                style={{ objectFit: "cover" }}
+                                fill
+                                sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
                             />
                         </FrameWhiteBlack>
                         <div className="col-span-2 flex flex-col items-end justify-between h-full">
@@ -95,7 +97,10 @@ export default function About() {
                             </div>
                             <div className="flex flex-col items-end justify-center">
                                 <span className="inline-block text-7xl font-bold ">
-                                    <AnimatedValue value={daysSince} className="dark:text-light/75" />
+                                    <AnimatedValue
+                                        value={daysSince}
+                                        className="dark:text-light/75"
+                                    />
                                 </span>
                                 <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75">
                                     dni pracy salonu
@@ -120,10 +125,8 @@ export default function About() {
                             Nasi specjaliści od piękna
                         </motion.div>
                         <div className="flex flex-col items-center justify-center w-full my-16">
-
                             <motion.div {...motionFrameWhiteBlack}>
-                                <FrameWhiteBlack
-                                    className="flex min-h-full p-16 items-center justify-between mb-16">
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
                                     <div className="w-1/3">
                                         <Image
                                             src={KateImage}
@@ -132,19 +135,30 @@ export default function About() {
                                         />
                                     </div>
                                     <div className="flex flex-col w-2/3 pl-8">
-                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">Kate</h4>
-                                        <h5 className="text-lg font-bold text-primary/75">Manicurist</h5>
+                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+                                            Kate
+                                        </h4>
+                                        <h5 className="text-lg font-bold text-primary/75">
+                                            Manicurist
+                                        </h5>
                                         <p className="my-4 font-medium">
                                             Mam na imię Katarzyna, od 10 lat pracuję w branży
-                                            kosmetycznej i mogę z całą pewnością powiedzieć, że manicure
-                                            to trochę więcej niż malowanie paznokci. To prawdziwa magia
-                                            dla duszy, fajny anty-stres, a czasem zbawienna sesja
-                                            psychoterapeutyczna. Zależało mi, aby stworzyć dla Was
-                                            ciepłe i przytulne miejsce, gdzie będziecie mogli poczuć się
-                                            komfortowo i pięknie.
+                                            kosmetycznej i mogę z całą pewnością powiedzieć, że
+                                            manicure to trochę więcej niż malowanie paznokci. To
+                                            prawdziwa magia dla duszy, fajny anty-stres, a czasem
+                                            zbawienna sesja psychoterapeutyczna. Zależało mi, aby
+                                            stworzyć dla Was ciepłe i przytulne miejsce, gdzie
+                                            będziecie mogli poczuć się komfortowo i pięknie.
                                         </p>
                                         <p className="font-medium">
-                                            Trzy lata temu, kiedy przyjechałam do Polski z Ukrainy, widziałam jak tutejsze dziewczyny (mężczyźni zresztą też) lubią bardzo spersonalizowaną obsługę, kiedy kosmetyczka zna Twoje osobiste preferencje - jaką kawę pijesz, podkręcić głośniej muzykę, ściszyć ją bądź może całkowicie wyłączyć. Dokładnie taki rodzaj spersonalizowanej obsługi wraz z najwyższą jakością usług kosmetycznych oferuję w Ginger
+                                            Trzy lata temu, kiedy przyjechałam do Polski z Ukrainy,
+                                            widziałam jak tutejsze dziewczyny (mężczyźni zresztą też)
+                                            lubią bardzo spersonalizowaną obsługę, kiedy kosmetyczka
+                                            zna Twoje osobiste preferencje - jaką kawę pijesz,
+                                            podkręcić głośniej muzykę, ściszyć ją bądź może całkowicie
+                                            wyłączyć. Dokładnie taki rodzaj spersonalizowanej obsługi
+                                            wraz z najwyższą jakością usług kosmetycznych oferuję w
+                                            Ginger
                                         </p>
                                     </div>
                                 </FrameWhiteBlack>
@@ -152,13 +166,29 @@ export default function About() {
                             <motion.div {...motionFrameWhiteBlack}>
                                 <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
                                     <div className="flex flex-col w-2/3 pr-8">
-                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">Jana</h4>
-                                        <h5 className="text-lg font-bold text-primary/75">Manicurist</h5>
+                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+                                            Jana
+                                        </h4>
+                                        <h5 className="text-lg font-bold text-primary/75">
+                                            Manicurist
+                                        </h5>
                                         <p className="my-4 font-medium">
-                                            Oto nasza mistrzynia manicure i pedicure - Jana! Jana pracuje w branży od ponad 3 lat i jest ekspertką w zakresie pielęgnacji paznokci i stóp. Jej kreatywność i zmysł artystyczny są wspaniałym dodatkiem do jej już imponujących umiejętności w zakresie hybrydowych stylizacji paznokci.
+                                            Oto nasza mistrzynia manicure i pedicure - Jana! Jana
+                                            pracuje w branży od ponad 3 lat i jest ekspertką w
+                                            zakresie pielęgnacji paznokci i stóp. Jej kreatywność i
+                                            zmysł artystyczny są wspaniałym dodatkiem do jej już
+                                            imponujących umiejętności w zakresie hybrydowych
+                                            stylizacji paznokci.
                                         </p>
                                         <p className="font-medium">
-                                            Jana jest ciepłą i uśmiechniętą osobą, która zawsze stara się stworzyć relaksującą i przyjemną atmosferę podczas zabiegu. Zawsze słucha potrzeb swoich klientek i dokładnie dopasowuje każdy zabieg do ich indywidualnych potrzeb. Jej precyzja i dbałość o szczegóły sprawiają, że jej prace są prawdziwymi dziełami sztuki. Jeśli szukasz profesjonalnej i doświadczonej mistrzyni manicure i pedicure, to Jana jest właśnie dla Ciebie!
+                                            Jana jest ciepłą i uśmiechniętą osobą, która zawsze stara
+                                            się stworzyć relaksującą i przyjemną atmosferę podczas
+                                            zabiegu. Zawsze słucha potrzeb swoich klientek i dokładnie
+                                            dopasowuje każdy zabieg do ich indywidualnych potrzeb. Jej
+                                            precyzja i dbałość o szczegóły sprawiają, że jej prace są
+                                            prawdziwymi dziełami sztuki. Jeśli szukasz profesjonalnej
+                                            i doświadczonej mistrzyni manicure i pedicure, to Jana
+                                            jest właśnie dla Ciebie!
                                         </p>
                                     </div>
                                     <div className="w-1/3">
@@ -180,13 +210,28 @@ export default function About() {
                                         />
                                     </div>
                                     <div className="flex flex-col w-2/3 pl-8">
-                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">Maria</h4>
-                                        <h5 className="text-lg font-bold text-primary/75">Manicurist</h5>
+                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+                                            Maria
+                                        </h4>
+                                        <h5 className="text-lg font-bold text-primary/75">
+                                            Manicurist
+                                        </h5>
                                         <p className="my-4 font-medium">
-                                            Oto Maria - nasza specjalistka od manicure i pedicure. Z pasją i zaangażowaniem zajmuje się pielęgnacją dłoni i stóp oraz wykonuje najmodniejsze trendy w dziedzinie stylizacji paznokci. Maria posiada nie tylko bogate doświadczenie, ale również wiedzę z zakresu kosmetyki, dzięki czemu jest w stanie dopasować odpowiednie produkty i zabiegi do indywidualnych potrzeb każdej klientki.
+                                            Oto Maria - nasza specjalistka od manicure i pedicure. Z
+                                            pasją i zaangażowaniem zajmuje się pielęgnacją dłoni i
+                                            stóp oraz wykonuje najmodniejsze trendy w dziedzinie
+                                            stylizacji paznokci. Maria posiada nie tylko bogate
+                                            doświadczenie, ale również wiedzę z zakresu kosmetyki,
+                                            dzięki czemu jest w stanie dopasować odpowiednie produkty
+                                            i zabiegi do indywidualnych potrzeb każdej klientki.
                                         </p>
                                         <p className="font-medium">
-                                            Jej praca to nie tylko profesjonalne wykonywanie zabiegów, ale również dbałość o komfort i zadowolenie klientki. Zawsze stara się wysłuchać i doradzić najlepsze rozwiązania dla danego problemu. Dzięki temu każda wizyta u Marii to nie tylko poprawa kondycji paznokci czy stóp, ale również relaks i chwila dla siebie.
+                                            Jej praca to nie tylko profesjonalne wykonywanie zabiegów,
+                                            ale również dbałość o komfort i zadowolenie klientki.
+                                            Zawsze stara się wysłuchać i doradzić najlepsze
+                                            rozwiązania dla danego problemu. Dzięki temu każda wizyta
+                                            u Marii to nie tylko poprawa kondycji paznokci czy stóp,
+                                            ale również relaks i chwila dla siebie.
                                         </p>
                                     </div>
                                 </FrameWhiteBlack>
@@ -194,13 +239,32 @@ export default function About() {
                             <motion.div {...motionFrameWhiteBlack}>
                                 <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
                                     <div className="flex flex-col w-2/3 pr-8">
-                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">Liza</h4>
-                                        <h5 className="text-lg font-bold text-primary/75">Makeup artist | Brow artist | Lash stylist</h5>
+                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+                                            Liza
+                                        </h4>
+                                        <h5 className="text-lg font-bold text-primary/75">
+                                            Makeup artist | Brow artist | Lash stylist
+                                        </h5>
                                         <p className="my-4 font-medium">
-                                            Oto Liza - nasza specjalistka w dziedzinie makijażu, laminacji, stylizacji brwi i rzęs. Młoda i pełna energii, zawsze na bieżąco ze światowymi trendami, doskonale wie, jak podkreślić naturalne piękno każdej kobiety. Liza nie tylko wykonuje makijaż, ale również pomaga w doborze odpowiednich kosmetyków i pielęgnacji skóry. Dzięki swojej wiedzy i umiejętnościom potrafi dobrać odpowiedni kolor podkładu czy cienia do powiek, aby uzyskać idealny efekt.
+                                            Oto Liza - nasza specjalistka w dziedzinie makijażu,
+                                            laminacji, stylizacji brwi i rzęs. Młoda i pełna energii,
+                                            zawsze na bieżąco ze światowymi trendami, doskonale wie,
+                                            jak podkreślić naturalne piękno każdej kobiety. Liza nie
+                                            tylko wykonuje makijaż, ale również pomaga w doborze
+                                            odpowiednich kosmetyków i pielęgnacji skóry. Dzięki swojej
+                                            wiedzy i umiejętnościom potrafi dobrać odpowiedni kolor
+                                            podkładu czy cienia do powiek, aby uzyskać idealny efekt.
                                         </p>
                                         <p className="font-medium">
-                                            Jej praca to nie tylko perfekcyjne wykonanie makijażu, ale również dbałość o detale, takie jak kształtowanie brwi czy stylizacja rzęs. Każda klientka zostaje obsłużona indywidualnie, z uwzględnieniem jej potrzeb i oczekiwań. Liza to nie tylko specjalistka w swoim fachu, ale również osoba bardzo sympatyczna i pomocna. Jej pozytywne podejście do życia i entuzjazm sprawiają, że wizyta u niej to nie tylko zabieg kosmetyczny, ale również miła chwila spędzona w towarzystwie profesjonalistki.
+                                            Jej praca to nie tylko perfekcyjne wykonanie makijażu, ale
+                                            również dbałość o detale, takie jak kształtowanie brwi czy
+                                            stylizacja rzęs. Każda klientka zostaje obsłużona
+                                            indywidualnie, z uwzględnieniem jej potrzeb i oczekiwań.
+                                            Liza to nie tylko specjalistka w swoim fachu, ale również
+                                            osoba bardzo sympatyczna i pomocna. Jej pozytywne
+                                            podejście do życia i entuzjazm sprawiają, że wizyta u niej
+                                            to nie tylko zabieg kosmetyczny, ale również miła chwila
+                                            spędzona w towarzystwie profesjonalistki.
                                         </p>
                                     </div>
                                     <div className="w-1/3">
@@ -222,10 +286,23 @@ export default function About() {
                                         />
                                     </div>
                                     <div className="flex flex-col w-2/3 pl-8">
-                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">Luda</h4>
-                                        <h5 className="text-lg font-bold text-primary/75">Masażystka</h5>
+                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+                                            Luda
+                                        </h4>
+                                        <h5 className="text-lg font-bold text-primary/75">
+                                            Masażystka
+                                        </h5>
                                         <p className="my-4 font-medium">
-                                            Nasza masażystka to osoba z wykształceniem medycznym oraz ponad 30-letnim doświadczeniem w pracy. Jest to profesjonalistka, która doskonale zna się na swoim fachu i potrafi zaspokoić potrzeby każdego klienta. Jej umiejętności i wiedza medyczna pozwalają jej na wykonywanie różnorodnych masaży, w tym leczniczych, relaksacyjnych i sportowych, zapewniając najlepsze efekty terapeutyczne. Nasza masażystka jest również bardzo cierpliwa i zawsze stara się zrozumieć potrzeby klientów, co sprawia, że jest bardzo ceniona przez naszych klientów.
+                                            Nasza masażystka to osoba z wykształceniem medycznym oraz
+                                            ponad 30-letnim doświadczeniem w pracy. Jest to
+                                            profesjonalistka, która doskonale zna się na swoim fachu i
+                                            potrafi zaspokoić potrzeby każdego klienta. Jej
+                                            umiejętności i wiedza medyczna pozwalają jej na
+                                            wykonywanie różnorodnych masaży, w tym leczniczych,
+                                            relaksacyjnych i sportowych, zapewniając najlepsze efekty
+                                            terapeutyczne. Nasza masażystka jest również bardzo
+                                            cierpliwa i zawsze stara się zrozumieć potrzeby klientów,
+                                            co sprawia, że jest bardzo ceniona przez naszych klientów.
                                         </p>
                                     </div>
                                 </FrameWhiteBlack>
@@ -233,7 +310,7 @@ export default function About() {
                         </div>
                     </div>
                 </Layount>
-            </main >
+            </main>
         </>
     );
 }
