@@ -7,10 +7,8 @@ import {
 } from "@/components";
 import Head from "next/head";
 import Image from "next/image";
-
 import BlackLady from "../../../public/ginger/images/black-lady.jpg";
 import KateImage from "../../../public/ginger/images/KateDark.png";
-
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -47,10 +45,10 @@ export default function About() {
                 <Layount className="pt-8">
                     <AnimatedText
                         text="Dowiedz się więcej o salonie piękności Ginger"
-                        className="mb-16"
+                        className="mb-16 xl:text-6xl lg:text-5xl xs:text-3xl"
                     />
-                    <div className="grid w-full grid-cols-8 gap-16 items-center">
-                        <div className="col-span-3 flex flex-col items-start justify-start">
+                    <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 items-center">
+                        <div className="col-span-3 xl:col-span-4 flex flex-col items-start justify-start md:order-2 md:col-span-8">
                             <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                                 O nas
                             </h2>
@@ -76,41 +74,41 @@ export default function About() {
                             </p>
                         </div>
 
-                        <FrameWhiteBlack className="col-span-3 min-h-full">
+                        <FrameWhiteBlack className="col-span-3 xl:col-span-4 min-h-full md:order-1 md:col-span-8 md:min-h-[450px]">
                             <Image
                                 src={BlackLady}
                                 alt="BlackLady"
-                                className="absolurte -z-1 p-2 rounded-2xl"
+                                className="absolurte -z-1 p-2 rounded-2xl w-full h-auto"
                                 style={{ objectFit: "cover" }}
                                 fill
                                 sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
                             />
                         </FrameWhiteBlack>
-                        <div className="col-span-2 flex flex-col items-end justify-between h-full">
-                            <div className="flex flex-col items-end justify-center">
-                                <span className="inline-block text-7xl font-bold dark:text-light/75">
-                                    <AnimatedValue value={400} className="dark:text-light/75" />+
+                        <div className="col-span-2 xl:col-span-8 xl:flex-row xl:items-center flex flex-col items-end justify-between h-full md:order-3">
+                            <div className="flex flex-col items-end justify-center xl:items-center ">
+                                <span className="inline-block text-7xl font-bold dark:text-light/75 md:text-4xl xs:text-2xl">
+                                    <AnimatedValue value={400} className="dark:text-light/75 " />+
                                 </span>
-                                <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75">
+                                <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75 md:text-center xs:text-sm">
                                     zadowolonych klientów
                                 </h2>
                             </div>
-                            <div className="flex flex-col items-end justify-center">
-                                <span className="inline-block text-7xl font-bold ">
+                            <div className="flex flex-col items-end justify-center  xl:items-center">
+                                <span className="inline-block text-7xl font-bold dark:text-light/75 md:text-4xl xs:text-2xl">
                                     <AnimatedValue
                                         value={daysSince}
                                         className="dark:text-light/75"
                                     />
                                 </span>
-                                <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75">
+                                <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75 md:text-center xs:text-sm">
                                     dni pracy salonu
                                 </h2>
                             </div>
-                            <div className="flex flex-col items-end justify-center">
-                                <span className="inline-block text-7xl font-bold dark:text-light/75">
+                            <div className="flex flex-col items-end justify-center  xl:items-center">
+                                <span className="inline-block text-7xl font-bold dark:text-light/75 md:text-4xl xs:text-2xl">
                                     <AnimatedValue value={54} className="dark:text-light/75" /> +
                                 </span>
-                                <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75">
+                                <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75 md:text-center xs:text-sm">
                                     łączny staż pracy zespołu
                                 </h2>
                             </div>
@@ -120,21 +118,21 @@ export default function About() {
                     <div className="w-full my-16 mx-auto">
                         <motion.div
                             {...motionSettings}
-                            className="text-8xl font-bold text-center"
+                            className="text-8xl font-bold text-center lg:text-5xl xs:text-3xl "
                         >
                             Nasi specjaliści od piękna
                         </motion.div>
                         <div className="flex flex-col items-center justify-center w-full my-16">
                             <motion.div {...motionFrameWhiteBlack}>
-                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
-                                    <div className="w-1/3">
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
+                                    <div className="w-1/3 sm:w-fit">
                                         <Image
                                             src={KateImage}
                                             alt="KateImage"
-                                            className="h-auto w-full max-w-md rounded-2xl object-cover"
+                                            className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
                                         />
                                     </div>
-                                    <div className="flex flex-col w-2/3 pl-8">
+                                    <div className="flex flex-col w-2/3 pl-8 lg:max-h-60 overflow-y-auto sm:w-full sm:pl-0">
                                         <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                                             Kate
                                         </h4>
@@ -164,8 +162,8 @@ export default function About() {
                                 </FrameWhiteBlack>
                             </motion.div>
                             <motion.div {...motionFrameWhiteBlack}>
-                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
-                                    <div className="flex flex-col w-2/3 pr-8">
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
+                                    <div className="flex flex-col w-2/3 pr-8 lg:max-h-60 overflow-y-auto sm:w-full sm:pl-0 sm:order-2">
                                         <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                                             Jana
                                         </h4>
@@ -191,25 +189,25 @@ export default function About() {
                                             jest właśnie dla Ciebie!
                                         </p>
                                     </div>
-                                    <div className="w-1/3">
+                                    <div className="w-1/3 sm:w-fit">
                                         <Image
                                             src={KateImage}
                                             alt="KateImage"
-                                            className="h-auto w-full max-w-md rounded-2xl object-cover"
+                                            className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
                                         />
                                     </div>
                                 </FrameWhiteBlack>
                             </motion.div>
                             <motion.div {...motionFrameWhiteBlack}>
-                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
-                                    <div className="w-1/3">
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
+                                    <div className="w-1/3 sm:w-fit">
                                         <Image
                                             src={KateImage}
                                             alt="KateImage"
-                                            className="h-auto w-full max-w-md rounded-2xl object-cover"
+                                            className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
                                         />
                                     </div>
-                                    <div className="flex flex-col w-2/3 pl-8">
+                                    <div className="flex flex-col w-2/3 pl-8 lg:max-h-60 overflow-y-auto sm:w-full sm:pl-0">
                                         <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                                             Maria
                                         </h4>
@@ -237,9 +235,9 @@ export default function About() {
                                 </FrameWhiteBlack>
                             </motion.div>
                             <motion.div {...motionFrameWhiteBlack}>
-                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
-                                    <div className="flex flex-col w-2/3 pr-8">
-                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
+                                    <div className="flex flex-col w-2/3 pr-8 lg:max-h-60 overflow-y-auto sm:w-full sm:pl-0 sm:order-2">
+                                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75 ">
                                             Liza
                                         </h4>
                                         <h5 className="text-lg font-bold text-primary/75">
@@ -267,25 +265,25 @@ export default function About() {
                                             spędzona w towarzystwie profesjonalistki.
                                         </p>
                                     </div>
-                                    <div className="w-1/3">
+                                    <div className="w-1/3 sm:w-fit">
                                         <Image
                                             src={KateImage}
                                             alt="KateImage"
-                                            className="h-auto w-full max-w-md rounded-2xl object-cover"
+                                            className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
                                         />
                                     </div>
                                 </FrameWhiteBlack>
                             </motion.div>
                             <motion.div {...motionFrameWhiteBlack}>
-                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16">
-                                    <div className="w-1/3">
+                                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
+                                    <div className="w-1/3 sm:w-fit">
                                         <Image
                                             src={KateImage}
                                             alt="KateImage"
-                                            className="h-auto w-full max-w-md rounded-2xl object-cover"
+                                            className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
                                         />
                                     </div>
-                                    <div className="flex flex-col w-2/3 pl-8">
+                                    <div className="flex flex-col w-2/3 pl-8 lg:max-h-60 overflow-y-auto sm:w-full sm:pl-0">
                                         <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                                             Luda
                                         </h4>

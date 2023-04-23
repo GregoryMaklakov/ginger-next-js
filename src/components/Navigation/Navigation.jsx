@@ -34,7 +34,7 @@ export const Navigation = () => {
     };
 
     return (
-        <header className="w-full px-32 lg:px-16 md:px-8 py-8 font-medium flex items-center justify-between z-50 relative dark:text-light">
+        <header className="w-full px-32 lg:px-16 md:px-6 py-8 font-medium flex items-center justify-between z-50 relative dark:text-light">
             <button
                 className="relative w-8 h-8 focus:outline-none rounded-full hidden items-center justify-center p-2 lg:flex"
                 onClick={handleClick}
@@ -57,7 +57,7 @@ export const Navigation = () => {
                     className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition-all duration-300 transform ${isOpen ? "opacity-0" : "opacity-100"
                         }`}
                     style={{
-                        top: "calc(50% - 5px)",
+                        top: "calc(50% - 6px)",
                     }}
                 ></div>
             </button>
@@ -122,7 +122,7 @@ export const Navigation = () => {
                 <motion.div
                     initial={{ scale: 0, opacity: 0, y: "-50%", x: "-50%" }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="min-w-[70vw] sm:min-w-[100vw] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50
+                    className="min-w-[70vw] sm:min-w-[90vw] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50
                     bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
                 >
                     <nav className="flex flex-col items-center justify-center mb-8">

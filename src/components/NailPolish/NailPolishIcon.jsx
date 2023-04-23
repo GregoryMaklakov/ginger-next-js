@@ -78,6 +78,7 @@ NailPolishIcon.propTypes = {
     size: PropTypes.number,
     color: PropTypes.string,
 };
+
 NailPolishIcon.defaultProps = {
     size: 120,
 };

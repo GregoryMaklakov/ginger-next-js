@@ -18,9 +18,9 @@ export default function Home() {
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
       <main className="flex items-center w-full min-h-screen text-dark dark:text-light">
-        <Layount className="pt-0 pb-16 md:pt-16 sm:pt-0">
+        <Layount className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
           <div className="w-full flex items-center justify-between lg:flex-col">
-            <div className="w-1/2 relative -top-[30px] p-14 lg:hidden">
+            <div className="w-1/2 relative -top-[30px] p-14 lg:p-0  md:w-full">
               <Image
                 src={HeroArt}
                 alt="HeroImage"
@@ -28,7 +28,7 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               50vw"
-                className="flex items-center justify-center rounded-md -z-10 md:inline-block md:w-full"
+                className="flex items-center justify-center rounded-md lg:hidden -z-10 md:inline-block md:w-full"
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full">
@@ -43,9 +43,9 @@ export default function Home() {
                 miejsce, które pomoże Wam się zrelaksować, naładować pięknem i
                 dobrymi wibracjami.
               </p>
-              <div className="flex items-center self-start mt-2 lg:self-center">
+              <div className="flex items-center self-start mt-2 lg:self-center sm:flex-col">
                 <Link
-                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light"
+                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4"
                   href="/dummy.pdf"
                   target="_blank"
                   download={true}
@@ -63,9 +63,9 @@ export default function Home() {
             </div>
           </div>
         </Layount>
-        <BooksyButton />
+        <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0 md:absolute" />
         <div className="absolute inline-block right-8 bottom-8">
-          <NailPolishIcon />
+          <NailPolishIcon className="md:hidden" />
         </div>
       </main>
     </>
