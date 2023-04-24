@@ -1,7 +1,5 @@
-import { Layount } from "@/components";
 import Head from "next/head";
-
-
+import { Layount } from "../../components";
 
 export default function Galery() {
     return (

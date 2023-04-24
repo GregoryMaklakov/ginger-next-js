@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unknown-property */
 import React from "react";
 import { motion, useScroll } from "framer-motion";
+import PropTypes  from 'prop-types';
 
-export const LiIcon = ({ referece }) => {
+export function LiIcon ({ referece }) {
     const { scrollYProgress } = useScroll({
         target: referece,
         offset: ["center end", "center center"],
@@ -29,3 +31,10 @@ export const LiIcon = ({ referece }) => {
         </figure>
     );
 };
+
+LiIcon.propTypes = {
+    referece: PropTypes.shape({
+        prop1: PropTypes.string,
+        prop2: PropTypes.number,
+      }).isRequired,
+}

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import HeroArt from "../../public/images/profile/hero-art.png";
 import {
   Layount,
@@ -8,7 +9,6 @@ import {
   BooksyButton,
   NailPolishIcon,
 } from "../components";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -48,7 +48,7 @@ export default function Home() {
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4"
                   href="/dummy.pdf"
                   target="_blank"
-                  download={true}
+                  download
                 >
                   Odbierz zniżkę 30%
                   <Icon name="linkArrow" size={24} className="ml-2" />

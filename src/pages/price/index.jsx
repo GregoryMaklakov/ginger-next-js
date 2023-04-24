@@ -1,15 +1,16 @@
+import Image from "next/image";
+import Head from "next/head";
+
 import {
     AnimatedText,
-    AnimatedValue,
     FrameWhiteBlack,
     GingerButton,
     Layount,
     PriceList,
-} from "@/components";
+} from "../../components";
 import BlackLadyPrice from "../../../public/ginger/images/2.jpg";
 
-import Image from "next/image";
-import Head from "next/head";
+
 
 export default function Price() {
     return (

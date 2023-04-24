@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import {
     AnimatedText,
     AnimatedValue,
     Layount,
     FrameWhiteBlack,
-} from "@/components";
-import Head from "next/head";
-import Image from "next/image";
+} from "../../components";
 import BlackLady from "../../../public/ginger/images/black-lady.jpg";
 import KateImage from "../../../public/ginger/images/KateDark.png";
-import { motion } from "framer-motion";
 
 export default function About() {
     const [daysSince, setDaysSince] = useState(0);

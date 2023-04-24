@@ -1,4 +1,5 @@
-import "@/styles/globals.css";
+import "../styles/globals.css";
+import PropTypes from 'prop-types';
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import { Footer, Navigation } from "../components";
@@ -25,3 +26,14 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+App.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.shape({
+    prop1: PropTypes.string,
+    prop2: PropTypes.number,
+    prop3: PropTypes.func,
+    prop4: PropTypes.node,
+    prop5: PropTypes.elementType,
+  }).isRequired,
+};
