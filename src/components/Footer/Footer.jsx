@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Layount } from '../Layount'
-import { socialLink } from "../../pages/constant";
+import { socialLink } from "../../lib/constant";
 
 export function Footer() {
     return (

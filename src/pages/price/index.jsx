@@ -4,7 +4,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
-import { priceListData } from '../constant';
+import { priceListData } from '../../lib/constant';
 
 import {
   AnimatedText,

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
-import { socialLink } from "../../pages/constant";
+import { socialLink } from "../../lib/constant";
 import { Icon } from "../Icons";
 
 export function BooksyButton({ className }) {

@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { PropTypes } from 'prop-types';
 import { Icon } from '../Icons/Icon';
-import { Routes, socialLink } from '../../pages/constant';
+import { Routes, socialLink } from '../../lib/constant';
 import { useThemeSwitcher } from '../../hooks/useThemeSwicher';
 import { Logo } from '../Logo';
 import { MoonIcon } from '../Icons/MoonIcon';
@@ -37,7 +37,7 @@ export function Navigation() {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-  
+
   useEffect(() => {
     const html = document.querySelector('html');
     if (isOpen) {
@@ -48,20 +48,20 @@ export function Navigation() {
   }, [isOpen]);
 
 
-    // click Outside
+  // click Outside
 
-    // const dropDawnRef = useRef(null);
-    // useEffect(() => {
-    //   const handler = (e) => {
-    //     if (!dropDawnRef.current.contains(e.target)) {
-    //       setIsOpen(false);
-    //     }
-    //   };
-    //   document.addEventListener("mousedown", handler);
-    //   return () => {
-    //     document.removeEventListener("mousedown", handler);
-    //   };
-    // });
+  // const dropDawnRef = useRef(null);
+  // useEffect(() => {
+  //   const handler = (e) => {
+  //     if (!dropDawnRef.current.contains(e.target)) {
+  //       setIsOpen(false);
+  //     }
+  //   };
+  //   document.addEventListener("mousedown", handler);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handler);
+  //   };
+  // });
 
   return (
     <header className="w-full px-32 lg:px-16 md:px-6 py-8 font-medium flex items-center justify-between z-50 relative dark:text-light">
@@ -71,25 +71,22 @@ export function Navigation() {
         onClick={handleClick}
       >
         <div
-          className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition duration-300 transform ${
-            isOpen ? 'rotate-45' : 'rotate-0'
-          }`}
+          className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition duration-300 transform ${isOpen ? 'rotate-45' : 'rotate-0'
+            }`}
           style={{
             top: 'calc(50% - 1px)',
           }}
         />
         <div
-          className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition duration-300 transform ${
-            isOpen ? '-rotate-45 -translate-y-[5px] ' : 'rotate-0'
-          }`}
+          className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition duration-300 transform ${isOpen ? '-rotate-45 -translate-y-[5px] ' : 'rotate-0'
+            }`}
           style={{
             top: 'calc(50% - -4px)',
           }}
         />
         <div
-          className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition-all duration-300 transform ${
-            isOpen ? 'opacity-0' : 'opacity-100'
-          }`}
+          className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition-all duration-300 transform ${isOpen ? 'opacity-0' : 'opacity-100'
+            }`}
           style={{
             top: 'calc(50% - 6px)',
           }}
@@ -154,7 +151,7 @@ export function Navigation() {
       {isOpen ? (
         <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-40 flex items-center justify-center"
         >
-          <motion.div 
+          <motion.div
             initial={{ scale: 0, opacity: 0, y: '-50%', x: '-50%' }}
             animate={{ scale: 1, opacity: 1 }}
             className="min-w-[70vw] sm:min-w-[90vw] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50
@@ -232,9 +229,8 @@ function CustomLink({ href, title, className }) {
       {title}
       <span
         className={`
-            h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-              router.asPath === href ? 'w-full' : 'w-0'
-            }`}
+            h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
+          }`}
       />
     </Link>
   );
@@ -263,9 +259,8 @@ function CustomMobileLink({ href, title, className, toggle }) {
       {title}
       <span
         className={`
-            h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-              router.asPath === href ? 'w-full' : 'w-0'
-            }`}
+            h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
+          }`}
       />
     </button>
   );
