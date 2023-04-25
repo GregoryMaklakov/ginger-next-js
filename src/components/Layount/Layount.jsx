@@ -5,7 +5,7 @@ import { PropTypes } from "prop-types";
 export function Layount ({ children, className }) {
     return (
         <div
-            className={`w-full mx-auto h-full bg-light dark:bg-dark inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 ${className}`}
+            className={`w-full max-w-[1920px] mx-auto h-full bg-light dark:bg-dark inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 ${className}`}
         >
             {children}
         </div>

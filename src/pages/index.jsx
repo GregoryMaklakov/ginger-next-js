@@ -7,7 +7,7 @@ import {
   AnimatedText,
   Icon,
   BooksyButton,
-  NailPolishIcon,
+  TransitionPageEffect,
 } from "../components";
 
 export default function Home() {
@@ -17,7 +17,8 @@ export default function Home() {
         <title>Ginger Beauty Zone</title>
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
-      <main className="flex items-center w-full min-h-screen text-dark dark:text-light">
+      <TransitionPageEffect />
+      <main className="flex items-center w-full min-h-screen text-dark dark:text-light relative">
         <Layount className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
           <div className="w-full flex items-center justify-between lg:flex-col">
             <div className="w-1/2 relative -top-[30px] p-14 lg:p-0  md:w-full">
@@ -63,10 +64,7 @@ export default function Home() {
             </div>
           </div>
         </Layount>
-        <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0 md:absolute" />
-        <div className="absolute inline-block right-8 bottom-8">
-          <NailPolishIcon className="md:hidden" />
-        </div>
+        <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
       </main>
     </>
   );

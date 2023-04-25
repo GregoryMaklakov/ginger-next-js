@@ -3,7 +3,13 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'next/core-web-vitals',
+    'airbnb',
+    'prettier',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -11,13 +17,13 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'prettier'],
   rules: {
     'react/no-unescaped-entities': 'off',
     'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
-    'import/no-cycle': 'off'
+    'import/no-cycle': 'off',
   },
 };

@@ -1,57 +1,195 @@
-import Image from "next/image";
-import Head from "next/head";
+/* eslint-disable react/no-unknown-property */
+import Image from 'next/image';
+import Head from 'next/head';
+import PropTypes from 'prop-types';
+import { motion, useScroll } from 'framer-motion';
+import { useRef } from 'react';
+import { priceListData } from '../constant';
 
 import {
-    AnimatedText,
-    FrameWhiteBlack,
-    GingerButton,
-    Layount,
-    PriceList,
-} from "../../components";
-import BlackLadyPrice from "../../../public/ginger/images/2.jpg";
-
-
+  AnimatedText,
+  FrameWhiteBlack,
+  GingerButton,
+  Layount,
+  TransitionPageEffect,
+} from '../../components';
+import BlackLadyPrice from '../../../public/ginger/images/2.jpg';
 
 export default function Price() {
-    return (
-        <>
-            <Head>
-                <title>Cennik | Ginger</title>
-                <meta name="description" content="Teren Twojego Piękna" />
-            </Head>
-            <main className="flex w-full flex-col items-center justify-center">
-                <Layount className="py-10">
-                    <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 bg-cover relative overflow-hidden">
-                        <Image
-                            src={BlackLadyPrice}
-                            alt="BlackLadyPrice"
-                            style={{ objectFit: "cover" }}
-                            fill
-                            className="absolurte -z-1 p-2 rounded-2xl"
-                            priority
-                            sizes="(max-width: 768px) 100vw,
+  return (
+    <>
+      <Head>
+        <title>Cennik | Ginger</title>
+        <meta name="description" content="Teren Twojego Piękna" />
+      </Head>
+      <TransitionPageEffect />
+      <main className="flex w-full flex-col items-center justify-center">
+        <Layount className="py-10">
+          <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 bg-cover relative overflow-hidden lg:flex-col lg:p-0">
+            <Image
+              src={BlackLadyPrice}
+              alt="beauty nails makeup"
+              style={{ objectFit: 'cover' }}
+              as="image"
+              fill
+              className="absolurte -z-1 p-2 rounded-2xl"
+              priority
+              sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-                        />
-                        <div className="w-1/3">
-                            <GingerButton
-                                href="/"
-                                size={240}
-                                className="z-10"
-                                color="white"
-                            />
-                        </div>
-                        <div className="flex flex-col w-2/3 p-8">
-                            <AnimatedText
-                                className="!text-4xl pt-8 text-left z-10 text-light"
-                                text={`W naszym salonie zawsze obowiązuje system zbierania punktów rabatowych. Za każdą ósmą usługę otrzymujesz ${30} % zniżki`}
-                            />
-                        </div>
-                    </FrameWhiteBlack>
-                    <AnimatedText className="py-4" text="Nasze ceny" />
-                    <PriceList />
-                </Layount>
-            </main>
-        </>
-    );
+            />
+            <div className="w-1/3 lg:w-full">
+              <GingerButton
+                href="/"
+                size={240}
+                className="z-10"
+                color="white"
+              />
+            </div>
+            <div className="flex flex-col w-2/3 p-8 lg:w-full lg:text-center lg:pt-0">
+              <AnimatedText
+                className="!text-4xl pt-8 text-left z-10 text-light lg:text-center lg:pt-0 md:!text-2xl sm:!text-lg xs:!text-sm"
+                text={`W naszym salonie zawsze obowiązuje system zbierania punktów rabatowych. Za każdą ósmą usługę otrzymujesz ${30} % zniżki`}
+              />
+            </div>
+          </FrameWhiteBlack>
+          <AnimatedText
+            className="py-4 xl:text-6xl lg:text-5xl xs:text-3xl xs:py-0"
+            text="Nasze ceny"
+          />
+          <PriceList />
+        </Layount>
+      </main>
+    </>
+  );
 }
+
+export function PriceList() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start 40%', 'end center'],
+    layoutEffect: false,
+  });
+
+  return (
+    <div className="my-32 mt-0">
+      <div ref={ref} className="w-[75%] mx-auto relative pt-16 xl:w-full">
+        <motion.div
+          style={{ scaleY: scrollYProgress }}
+          className="absolute t-0 left-9 sm:left-4 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark dark:shadow-3xl"
+        />
+        {priceListData.map(category => (
+          <Category
+            key={category.id}
+            name={category.name}
+            items={category.items}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Category({ name, items }) {
+  const ref = useRef(null);
+  return (
+    <div ref={ref}>
+      <LiIcon referece={ref} />
+      <motion.div
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1, type: 'spring', delay: 0.1 }}
+        className="flex flex-col items-center justify-center mb-16 xl:pl-28 xl:items-start sm:pl-12"
+      >
+        <h3 className="font-bold capitalise text-2xl mb-6 dark:text-light/75 xl:text-xl">
+          {name}
+        </h3>
+        <ul className="w-[60%] xl:w-full ">
+          {items.map(item => (
+            <PriceItem key={item.id} name={item.name} price={item.price} />
+          ))}
+        </ul>
+      </motion.div>
+    </div>
+  );
+}
+
+Category.propTypes = {
+  name: PropTypes.string.isRequired,
+  items: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+};
+
+function PriceItem({ name, price }) {
+  return (
+    <li>
+      <div className="flex items-center justify-between w-full mb-2">
+        <p className="font-medium f-wull dark:text-light md:text-sm xs:text-xs xs:max-w-[220px] line-clamp-1">
+          {name}
+        </p>
+        {typeof price === 'object' ? (
+          <span className="capitalize text-primary font-bold xs:text-xs xs:text-right">
+            {price.min}-{price.max} zl
+          </span>
+        ) : (
+          <span className="capitalize text-primary font-bold xs:text-xs xs:text-right">
+            {price} zl
+          </span>
+        )}
+      </div>
+    </li>
+  );
+}
+
+PriceItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  price: PropTypes.oneOfType([
+    PropTypes.number.isRequired,
+    PropTypes.shape({
+      min: PropTypes.number.isRequired,
+      max: PropTypes.number.isRequired,
+    }).isRequired,
+  ]),
+};
+
+export function LiIcon({ referece }) {
+  const { scrollYProgress } = useScroll({
+    target: referece,
+    offset: ['center end', 'center center'],
+    layoutEffect: false,
+  });
+  return (
+    <figure className="absolute left-0 stroke-dark dark:stroke-light sm:-left-5">
+      <svg className="-rotate-45" width="75" height="75" viewBox="0 0 100 50">
+        <circle
+          cx="75"
+          cv="50"
+          r="20"
+          className="stroke-primary stroke-1 fill-none dark:stroke-primaryDark"
+        />
+        <motion.circle
+          cx="75"
+          cv="50"
+          r="20"
+          className=" stroke-[5px] fill-light dark:fill-dark"
+          style={{
+            pathLength: scrollYProgress,
+          }}
+        />
+        <circle
+          cx="75"
+          cv="50"
+          r="10"
+          className="animate-pulse stroke-1 fill-primary dark:fill-primaryDark"
+        />
+      </svg>
+    </figure>
+  );
+}
+
+LiIcon.propTypes = {
+  referece: PropTypes.shape({
+    prop1: PropTypes.string,
+    prop2: PropTypes.number,
+  }).isRequired,
+};

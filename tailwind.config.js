@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
@@ -18,6 +19,9 @@ module.exports = {
       animation: {
         "spin-slow": "spin 8s linear infinite",
       },
+      boxShadow: {
+        "3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)",
+      },
     },
     screens: {
       "2xl": { max: "1535px" },
@@ -34,5 +38,6 @@ module.exports = {
       // => @media (max-width: 479px) { ... }
     },
   },
-  plugins: [],
+  // eslint-disable-next-line import/no-extraneous-dependencies
+  plugins: [require("@tailwindcss/line-clamp")],
 };

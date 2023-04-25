@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { Layount } from '../Layount'
 import { socialLink } from "../../pages/constant";
 
-export function Footer () {
+export function Footer() {
     return (
-        <footer className='w-full border-t-2 border-solid border-dark font-medium text-lg dark:border-light'>
-            <Layount className='flex items-center justify-between py-8 dark:text-light md:flex-col md:gap-2 xs:text-sm'>
+        <footer className='w-full border-t-2 border-solid  border-dark font-medium text-lg dark:border-light'>
+            <Layount className='flex items-center justify-between py-6 xl:!p-6 dark:text-light lg:flex-col lg:gap-2 xs:text-sm'>
                 <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
                 <div>
                     <Link href={socialLink.booksy} target="_blank" className='flex items-center xs:text-sm'

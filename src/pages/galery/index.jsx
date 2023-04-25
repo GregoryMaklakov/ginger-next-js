@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Layount } from "../../components";
+import { Layount, TransitionPageEffect } from "../../components";
 
 export default function Galery() {
     return (
@@ -8,9 +8,10 @@ export default function Galery() {
                 <title>Galery | Ginger</title>
                 <meta name="description" content="Teren Twojego Piękna" />
             </Head>
+            <TransitionPageEffect />
             <main>
                 <Layount>
-                    Galery
+                    <h1 className="text-2xl font-bold text-dark dark:text-light">Soon......</h1>
                 </Layount>
             </main>
         </>
