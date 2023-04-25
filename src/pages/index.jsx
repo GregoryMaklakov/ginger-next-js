@@ -8,6 +8,7 @@ import {
   Icon,
   BooksyButton,
   TransitionPageEffect,
+  LottieAnimation,
 } from "../components";
 
 export default function Home() {
@@ -65,6 +66,7 @@ export default function Home() {
           </div>
         </Layount>
         <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
+        <LottieAnimation className="hidden" />
       </main>
     </>
   );

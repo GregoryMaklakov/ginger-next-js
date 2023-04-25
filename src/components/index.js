@@ -10,3 +10,4 @@ export * from "./FrameWhiteBlack";
 export * from "./AnimatedValue";
 export * from "./TransitionPageEffect";
 export * from "./Footer";
+export * from "./LottieAnimation";

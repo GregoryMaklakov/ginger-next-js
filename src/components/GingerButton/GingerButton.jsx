@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-export function GingerButton ({ size, className, href, color }) {
+export function GingerButton({ size, className, href, color }) {
     return (
         <motion.div
             whileHover={{ scale: 1.05 }}
@@ -26,7 +26,7 @@ GingerButton.propTypes = {
     color: PropTypes.string,
 };
 
-function GingerIcon ({ className, size, color }){
+function GingerIcon({ className, size, color }) {
     const props = {
         className,
         style: {
