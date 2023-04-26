@@ -135,7 +135,7 @@ export function Navigation() {
           </motion.a>
           <button
             type="button"
-            className="flex items-center justify-center max-h-8 max-w-8 rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
+            className="flex items-center justify-center h-8 w-8 rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
             onClick={() =>
               setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'))
             }
@@ -199,7 +199,7 @@ export function Navigation() {
               </motion.a>
               <button
                 type="button"
-                className="flex items-center justify-center rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
+                className="flex items-center h-12 w-12 justify-center rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
                 onClick={() =>
                   setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'))
                 }
