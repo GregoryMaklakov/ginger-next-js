@@ -83,6 +83,7 @@ export default function About() {
                 className="absolurte -z-1 p-2 rounded-2xl w-full h-auto"
                 style={{ objectFit: 'cover' }}
                 fill
+                priority
                 sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
               />
             </FrameWhiteBlack>

@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { PropTypes } from 'prop-types';
 import { Icon } from '../Icons/Icon';
-import { Routes, socialLink } from '../../lib/constant';
+import { Routes, socialLink } from '../lib/constant';
 import { useThemeSwitcher } from '../../hooks/useThemeSwicher';
 import { Logo } from '../Logo';
 import { MoonIcon } from '../Icons/MoonIcon';

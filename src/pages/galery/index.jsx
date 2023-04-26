@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { AnimatedText, HorizontalGalery, Layount, TransitionPageEffect } from "../../components";
+import { AnimatedText, Layount, TransitionPageEffect } from "../../components";
 
 
 export default function Galery() {
@@ -13,9 +13,9 @@ export default function Galery() {
             <TransitionPageEffect />
             <main>
                 <Layount className="pt-8">
-                    <AnimatedText text="Nasza galeria: zobacz nasze prace i czerp inspirację!" />
+                    <AnimatedText text="Nasza galeria: zobacz nasze prace i czerp inspirację!"
+                        className="mb-16 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12" />
                 </Layount>
-                <HorizontalGalery />
             </main>
         </>
     )
