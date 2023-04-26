@@ -13,6 +13,7 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "eslint-config-next": "13.2.4",
     "framer-motion": "^10.6.0",
+    "gsap": "^3.11.5",
     "lottie-web": "^5.11.0",
     "next": "13.2.4",
     "next-i18next": "^13.2.2",

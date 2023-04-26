@@ -9,4 +9,5 @@ export * from "./NailPolish";
 export * from "./FrameWhiteBlack";
 export * from "./AnimatedValue";
 export * from "./TransitionPageEffect";
+export * from "./HorizontalGalery";
 export * from "./Footer";
