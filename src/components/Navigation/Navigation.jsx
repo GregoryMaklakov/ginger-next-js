@@ -66,6 +66,7 @@ export function Navigation() {
   return (
     <header className="w-full px-32 lg:px-16 md:px-6 py-8 font-medium flex items-center justify-between z-50 relative dark:text-light">
       <button
+        aria-label="burger-menu"
         type="button"
         className="relative z-50 w-8 h-8 focus:outline-none rounded-full hidden items-center justify-center p-2 lg:flex"
         onClick={handleClick}
@@ -134,7 +135,7 @@ export function Navigation() {
           </motion.a>
           <button
             type="button"
-            className="flex items-center justify-center rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
+            className="flex items-center justify-center max-h-8 max-w-8 rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
             onClick={() =>
               setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'))
             }

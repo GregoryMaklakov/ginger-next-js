@@ -8,10 +8,10 @@ const animLink = {
     transition: { duration: 1, repeat: Infinity }
 }
 
-export function Logo () {
+export function Logo() {
     return (
         <div className="flex items-center justify-center mt-2">
-            <MotionLink href='/' className="w-16 h-16 bg-dark text-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full"
+            <MotionLink aria-label="Ginger Beauty Zone Warszawa" href='/' className="w-16 h-16 bg-dark text-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full"
                 whileHover={animLink}
             >
                 <LogoImage size={44} color="white" />
@@ -21,7 +21,7 @@ export function Logo () {
 }
 
 
-function LogoImage ({ className, size, color }) {
+function LogoImage({ className, size, color }) {
     const props = {
         className,
     };

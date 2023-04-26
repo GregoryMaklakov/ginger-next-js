@@ -24,7 +24,7 @@ export default function Home() {
             <div className="w-1/2 relative -top-[30px] p-14 lg:p-0  md:w-full">
               <Image
                 src={HeroArt}
-                alt="HeroImage"
+                alt="Beauty"
                 priority
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
