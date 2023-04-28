@@ -11,7 +11,7 @@ export function CustomCursor() {
 		y: 0,
 	})
 	const cursorRef = useRef(null);
-	const { isHoveringLink, isHoveringText, } = useContext(CursorContext);
+	const { isHoveringLink, isHoveringText, isHoveringLogo } = useContext(CursorContext);
 
 	useEffect(() => {
 		const updateCursor = (e) => {
@@ -49,6 +49,23 @@ export function CustomCursor() {
 				},
 			}
 		},
+		logoHover: {
+			width: 44,
+			height: 44,
+			x: mousePosition.x - 22,
+			y: mousePosition.y - 22,
+			backgroundColor: isHoveringLogo ? "#f5f5f5" : "default",
+			border: isHoveringLogo ? "4px solid #f5f5f5" : "2px solid transparent",
+			mixBlendMode: "difference",
+			transition: {
+				backgroundColor: {
+					duration: isHoveringLogo ? 0 : 0.3
+				},
+				border: {
+					duration: isHoveringLogo ? 0 : 0.3
+				},
+			}
+		},
 		textHover: {
 			width: 150,
 			height: 150,
@@ -73,6 +90,8 @@ export function CustomCursor() {
 		cursorVariant = "textHover";
 	} else if (isHoveringLink) {
 		cursorVariant = "linkHover";
+	} else if (isHoveringLogo) {
+		cursorVariant = "logoHover";
 	} else {
 		cursorVariant = "default";
 	}

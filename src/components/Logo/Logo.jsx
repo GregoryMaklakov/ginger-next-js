@@ -12,23 +12,23 @@ const animLink = {
 
 export function Logo() {
 
-    const { setHoveringLink } = useContext(CursorContext);
+    const { setHoveringLogo } = useContext(CursorContext);
     const handleMouseEnter = () => {
-        setHoveringLink(true);
+        setHoveringLogo(true);
     };
     const handleMouseLeave = () => {
-        setHoveringLink(false);
+        setHoveringLogo(false);
     };
 
     return (
         <div className="flex items-center justify-center mt-2">
             <CursorContext.Consumer>
-                {({ isHoveringLink }) => (
+                {({ isHoveringLogo }) => (
                     <MotionLink
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         aria-label="Ginger Beauty Zone Warszawa" href='/'
-                        className={`${isHoveringLink ? "text-dark bg-light dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
+                        className={`${isHoveringLogo ? "bg-dark dark:bg-light" : "dark:bg-dark"
                             } w-16 h-16 bg-dark text-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full`}
                         whileHover={animLink}
                     >

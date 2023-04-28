@@ -13,18 +13,22 @@ import { CursorContext } from '../../lib/context';
 
 const navLinks = [
   {
+    id: 1,
     href: Routes.HOME,
     label: 'Home',
   },
   {
+    id: 2,
     href: Routes.ABOUT,
     label: 'O nas',
   },
   {
+    id: 3,
     href: Routes.GALLERY,
     label: 'Gallery',
   },
   {
+    id: 4,
     href: Routes.PRICE,
     label: 'Cennik',
   },
@@ -90,12 +94,12 @@ export function Navigation() {
       </button>
 
       <div className="w-full flex items-center justify-between lg:hidden">
-        <nav>
-          {navLinks.map((link, thing) => (
-            <CursorContext.Consumer key={thing.id}>
+        <nav key="navigation">
+          {navLinks.map((link) => (
+            <CursorContext.Consumer key={`link-${link.id}`}>
               {({ isHoveringLink }) => (
                 <CustomLink
-                  key={link.href}
+                  key={`link-${link.id}-${link.label}`}
                   href={link.href}
                   title={link.label}
                   className={`${isHoveringLink ? "text-dark bg-light dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
@@ -224,7 +228,8 @@ export function Navigation() {
       ) : null}
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo />
+        <Logo onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave} />
       </div>
     </header>
   );

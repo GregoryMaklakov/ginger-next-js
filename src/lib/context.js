@@ -5,4 +5,6 @@ export const CursorContext = React.createContext({
   setHoveringLink: () => {},
   isHoveringText: false,
   setHoveringText: () => {},
+  isHoveringLogo: false,
+  setHoveringLogo: () => {},
 });

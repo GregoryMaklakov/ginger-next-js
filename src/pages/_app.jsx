@@ -17,14 +17,18 @@ export default function App({ Component, pageProps, }) {
   const router = useRouter();
   const [isHoveringLink, setIsHoveringLink] = useState(false);
   const [isHoveringText, setIsHoveringText] = useState(false);
+  const [isHoveringLogo, setIsHoveringLogo] = useState(false);
+
   const contextValue = useMemo(
     () => ({
       isHoveringLink,
       setHoveringLink: setIsHoveringLink,
       isHoveringText,
       setHoveringText: setIsHoveringText,
+      isHoveringLogo,
+      setHoveringLogo: setIsHoveringLogo,
     }),
-    [isHoveringLink, isHoveringText]
+    [isHoveringLink, isHoveringText, isHoveringLogo]
   );
   return (
     <>
