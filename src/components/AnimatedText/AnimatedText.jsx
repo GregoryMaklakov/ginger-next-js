@@ -1,6 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { CursorContext } from '../../lib/context';
 
 const appearanceText = {
   initial: {
@@ -30,26 +31,42 @@ const singleWord = {
 };
 
 export function AnimatedText({ text, className }) {
+  const { setHoveringText } = useContext(CursorContext);
+  const handleMouseEnter = () => {
+    setHoveringText(true);
+  };
+  const handleMouseLeave = () => {
+    setHoveringText(false);
+  };
+
   return (
-    <div className="w-full mx-auto py-2 flex items-center justify-center text-center sm:py-0">
-      <motion.h1
-        variants={appearanceText}
-        initial="initial"
-        animate="animate"
-        className={`inline-blick w-full text-dark font-bold capitalize text-8xl dark:text-light ${className}`}
-      >
-        {text.split(' ').map((word, index) => (
-          <motion.span
-            // eslint-disable-next-line react/no-array-index-key
-            key={`${word}-${index}`}
-            className="inline-block"
-            variants={singleWord}
+    <CursorContext.Consumer>
+      {({ isHoveringText }) => (
+        <div
+          className="w-full mx-auto py-2 flex items-center justify-center text-center sm:py-0">
+          <motion.h1
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            variants={appearanceText}
+            initial="initial"
+            animate="animate"
+            className={`inline-blick w-full font-bold capitalize text-8xl ${isHoveringText ? "text-dark bg-light dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
+              } ${className}`}
           >
-            {word}&nbsp;
-          </motion.span>
-        ))}
-      </motion.h1>
-    </div>
+            {text.split(' ').map((word, index) => (
+              <motion.span
+                // eslint-disable-next-line react/no-array-index-key
+                key={`${word}-${index}`}
+                className="inline-block"
+                variants={singleWord}
+              >
+                {word}&nbsp;
+              </motion.span>
+            ))}
+          </motion.h1>
+        </div>
+      )}
+    </CursorContext.Consumer>
   );
 }
 
@@ -57,3 +74,4 @@ AnimatedText.propTypes = {
   text: PropTypes.string,
   className: PropTypes.string,
 };
+

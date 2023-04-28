@@ -4,7 +4,9 @@ import Head from "next/head";
 import { Montserrat } from 'next/font/google';
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from 'next/router';
-import { Footer, Navigation } from "../components";
+import { useMemo, useState } from "react";
+import { CustomCursor, Footer, Navigation } from "../components";
+import { CursorContext } from '../lib/context';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -13,21 +15,36 @@ const montserrat = Montserrat({
 
 export default function App({ Component, pageProps, }) {
   const router = useRouter();
+  const [isHoveringLink, setIsHoveringLink] = useState(false);
+  const [isHoveringText, setIsHoveringText] = useState(false);
+  const contextValue = useMemo(
+    () => ({
+      isHoveringLink,
+      setHoveringLink: setIsHoveringLink,
+      isHoveringText,
+      setHoveringText: setIsHoveringText,
+    }),
+    [isHoveringLink, isHoveringText]
+  );
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main
-        className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
-      >
-        <Navigation />
-        <AnimatePresence mode="wait">
-          <Component key={router.asPath} {...pageProps} />
-        </AnimatePresence>
-        <Footer />
-      </main>
+      <CursorContext.Provider value={contextValue}>
+        <CustomCursor />
+        <main
+          className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
+        >
+          <Navigation />
+          <AnimatePresence mode="wait">
+            <Component key={router.asPath} {...pageProps} />
+          </AnimatePresence>
+          <Footer />
+        </main>
+
+      </CursorContext.Provider>
     </>
   );
 }

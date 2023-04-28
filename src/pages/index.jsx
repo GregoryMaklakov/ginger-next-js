@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from 'react';
+import { CursorContext } from '../lib/context';
+
 import HeroArt from "../../public/images/profile/hero-art.png";
 import {
   Layount,
@@ -11,8 +14,15 @@ import {
 } from "../components";
 
 export default function Home() {
+  const { setHoveringLink } = useContext(CursorContext);
+  const handleMouseEnter = () => {
+    setHoveringLink(true);
+  };
+  const handleMouseLeave = () => {
+    setHoveringLink(false);
+  };
   return (
-    <>
+    <div>
       <Head>
         <title>Ginger Beauty Zone</title>
         <meta name="description" content="Teren Twojego Piękna" />
@@ -50,6 +60,8 @@ export default function Home() {
                   href="/dummy.pdf"
                   target="_blank"
                   download
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   Odbierz zniżkę 30%
                   <Icon name="linkArrow" size={24} className="ml-2" />
@@ -57,6 +69,8 @@ export default function Home() {
                 <Link
                   className="flex items-center text-dark ml-4 font-medium capitalize underline text-lg dark:text-light"
                   href="tel:48510001772"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   Zadzwoń
                 </Link>
@@ -66,6 +80,6 @@ export default function Home() {
         </Layount>
         <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
       </main>
-    </>
+    </div>
   );
 }
