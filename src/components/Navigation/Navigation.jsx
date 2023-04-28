@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { PropTypes } from 'prop-types';
@@ -9,6 +9,7 @@ import { useThemeSwitcher } from '../../hooks/useThemeSwicher';
 import { Logo } from '../Logo';
 import { MoonIcon } from '../Icons/MoonIcon';
 import { SunIcon } from '../Icons/SunIcon';
+import { CursorContext } from '../../lib/context';
 
 const navLinks = [
   {
@@ -20,8 +21,8 @@ const navLinks = [
     label: 'O nas',
   },
   {
-    href: Routes.GALERY,
-    label: 'Galery',
+    href: Routes.GALLERY,
+    label: 'Gallery',
   },
   {
     href: Routes.PRICE,
@@ -47,21 +48,15 @@ export function Navigation() {
     }
   }, [isOpen]);
 
+  const { setHoveringLink } = useContext(CursorContext);
 
-  // click Outside
+  const handleMouseEnter = () => {
+    setHoveringLink(true);
+  };
 
-  // const dropDawnRef = useRef(null);
-  // useEffect(() => {
-  //   const handler = (e) => {
-  //     if (!dropDawnRef.current.contains(e.target)) {
-  //       setIsOpen(false);
-  //     }
-  //   };
-  //   document.addEventListener("mousedown", handler);
-  //   return () => {
-  //     document.removeEventListener("mousedown", handler);
-  //   };
-  // });
+  const handleMouseLeave = () => {
+    setHoveringLink(false);
+  };
 
   return (
     <header className="w-full px-32 lg:px-16 md:px-6 py-8 font-medium flex items-center justify-between z-50 relative dark:text-light">
@@ -96,13 +91,18 @@ export function Navigation() {
 
       <div className="w-full flex items-center justify-between lg:hidden">
         <nav>
-          {navLinks.map(link => (
-            <CustomLink
-              key={link.href}
-              href={link.href}
-              title={link.label}
-              className="mr-4"
-            />
+          {navLinks.map((link, index) => (
+            <CursorContext.Consumer key={index}>
+              {({ isHoveringLink }) => (
+                <CustomLink
+                  key={link.href}
+                  href={link.href}
+                  title={link.label}
+                  className={`${isHoveringLink ? "text-dark bg-light dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
+                    } mr-4 `}
+                />
+              )}
+            </CursorContext.Consumer>
           ))}
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
@@ -112,6 +112,8 @@ export function Navigation() {
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <Icon name="insta" />
           </motion.a>
@@ -121,6 +123,8 @@ export function Navigation() {
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <Icon name="facebook" />
           </motion.a>
@@ -130,10 +134,14 @@ export function Navigation() {
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <Icon name="booksy" size={100} />
           </motion.a>
           <button
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             type="button"
             className="flex items-center justify-center h-8 w-8 rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
             onClick={() =>
@@ -224,18 +232,34 @@ export function Navigation() {
 
 function CustomLink({ href, title, className }) {
   const router = useRouter();
+  const { setHoveringLink } = useContext(CursorContext);
+
+  const handleMouseEnter = () => {
+    setHoveringLink(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveringLink(false);
+  };
 
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link
+      href={href}
+      className={`relative group ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       {title}
       <span
         className={`
-            h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
+            h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
           }`}
       />
     </Link>
-  );
+  )
 }
+
+
 
 CustomLink.propTypes = {
   href: PropTypes.string,

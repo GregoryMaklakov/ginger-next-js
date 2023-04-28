@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { motion, useScroll } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useContext } from 'react';
 import { priceListData } from '../../lib/constant';
+import { CursorContext } from '../../lib/context';
 
 import {
   AnimatedText,
@@ -16,6 +17,14 @@ import {
 import BlackLadyPrice from '../../../public/ginger/images/2.jpg';
 
 export default function Price() {
+  const { setHoveringText } = useContext(CursorContext);
+  const handleMouseEnter = () => {
+    setHoveringText(true);
+  };
+  const handleMouseLeave = () => {
+    setHoveringText(false);
+  };
+
   return (
     <>
       <Head>
@@ -23,7 +32,7 @@ export default function Price() {
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
       <TransitionPageEffect />
-      <main className="flex w-full flex-col items-center justify-center">
+      <main data-scroll-section className="flex w-full flex-col items-center justify-center">
         <Layount className="py-10">
           <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 bg-cover relative overflow-hidden lg:flex-col lg:p-0">
             <Image
@@ -47,10 +56,15 @@ export default function Price() {
               />
             </div>
             <div className="flex flex-col w-2/3 p-8 lg:w-full lg:text-center lg:pt-0">
-              <AnimatedText
-                className="!text-4xl pt-8 text-left z-10 text-light lg:text-center lg:pt-0 md:!text-2xl sm:!text-lg xs:!text-sm"
-                text={`W naszym salonie zawsze obowiązuje system zbierania punktów rabatowych. Za każdą ósmą usługę otrzymujesz ${30} % zniżki`}
-              />
+              <CursorContext.Consumer>
+                {({ isHoveringText }) => (
+                  <AnimatedText
+                    className={`${isHoveringText ? "text-dark bg-transparent dark:bg-transparent dark:text-light" : "text-dark dark:bg-transparent dark:text-light"
+                      } !text-4xl pt-8 text-left z-10 text-light lg:text-center lg:pt-0 md:!text-2xl sm:!text-lg xs:!text-sm`}
+                    text={`W naszym salonie zawsze obowiązuje system zbierania punktów rabatowych. Za każdą ósmą usługę otrzymujesz ${30} % zniżki`}
+                  />
+                )}
+              </CursorContext.Consumer>
             </div>
           </FrameWhiteBlack>
           <AnimatedText

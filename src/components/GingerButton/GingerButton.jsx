@@ -12,7 +12,7 @@ export function GingerButton({ size, className, href, color }) {
             className={`flex items-center justify-center overflow-hidden ${className}`}
 
         >
-            <Link className="flex " href={href} >
+            <Link className="flex " href={href} target="_blank">
                 <GingerIcon size={size} className='z-10' color={color} />
             </Link>
         </motion.div>

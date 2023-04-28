@@ -1,9 +1,8 @@
 import Head from "next/head";
-import { AnimatedText, HorizontalGalery, Layount, TransitionPageEffect } from "../../components";
+import { AnimatedText, Layount, TransitionPageEffect } from "../../components";
 
 
-export default function Galery() {
-
+export default function Gallery() {
     return (
         <>
             <Head>
@@ -11,11 +10,10 @@ export default function Galery() {
                 <meta name="description" content="Teren Twojego Piękna" />
             </Head>
             <TransitionPageEffect />
-            <main>
-                <Layount className="pt-8">
+            <main data-scroll-container>
+                <Layount className="pt-8 max-w-full">
                     <AnimatedText text="Nasza galeria: zobacz nasze prace i czerp inspirację!" />
                 </Layount>
-                <HorizontalGalery />
             </main>
         </>
     )
