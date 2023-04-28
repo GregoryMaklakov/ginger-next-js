@@ -59,6 +59,8 @@ export default function Price() {
               <CursorContext.Consumer>
                 {({ isHoveringText }) => (
                   <AnimatedText
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                     className={`${isHoveringText ? "text-dark bg-transparent dark:bg-transparent dark:text-light" : "text-dark dark:bg-transparent dark:text-light"
                       } !text-4xl pt-8 text-left z-10 text-light lg:text-center lg:pt-0 md:!text-2xl sm:!text-lg xs:!text-sm`}
                     text={`W naszym salonie zawsze obowiązuje system zbierania punktów rabatowych. Za każdą ósmą usługę otrzymujesz ${30} % zniżki`}
