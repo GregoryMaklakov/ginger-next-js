@@ -91,8 +91,8 @@ export function Navigation() {
 
       <div className="w-full flex items-center justify-between lg:hidden">
         <nav>
-          {navLinks.map((link, index) => (
-            <CursorContext.Consumer key={index}>
+          {navLinks.map((link, thing) => (
+            <CursorContext.Consumer key={thing.id}>
               {({ isHoveringLink }) => (
                 <CustomLink
                   key={link.href}
