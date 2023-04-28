@@ -32,22 +32,6 @@ export function CustomCursor() {
 			x: mousePosition.x - 16,
 			y: mousePosition.y - 16,
 		},
-		// linkHover: {
-		// 	width: 44,
-		// 	height: 44,
-		// 	x: mousePosition.x - 22,
-		// 	y: mousePosition.y - 22,
-		// 	backgroundColor: isHoveringLink ? "transparent" : "default",
-		// 	border: isHoveringLink ? "4px solid #B63E96" : "2px solid transparent",
-		// 	transition: {
-		// 		backgroundColor: {
-		// 			duration: isHoveringLink ? 0 : 0.3
-		// 		},
-		// 		border: {
-		// 			duration: isHoveringLink ? 0 : 0.3
-		// 		}
-		// 	}
-		// },
 		linkHover: {
 			width: 44,
 			height: 44,

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { CursorContext } from '../../lib/context';
 
 const MotionLink = motion(Link);
 const animLink = {
@@ -9,13 +11,32 @@ const animLink = {
 }
 
 export function Logo() {
+
+    const { setHoveringLink } = useContext(CursorContext);
+    const handleMouseEnter = () => {
+        setHoveringLink(true);
+    };
+    const handleMouseLeave = () => {
+        setHoveringLink(false);
+    };
+
     return (
         <div className="flex items-center justify-center mt-2">
-            <MotionLink aria-label="Ginger Beauty Zone Warszawa" href='/' className="w-16 h-16 bg-dark text-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full"
-                whileHover={animLink}
-            >
-                <LogoImage size={44} color="white" />
-            </MotionLink>
+            <CursorContext.Consumer>
+                {({ isHoveringLink }) => (
+                    <MotionLink
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        aria-label="Ginger Beauty Zone Warszawa" href='/'
+                        className={`${isHoveringLink ? "text-dark bg-light dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
+                            } w-16 h-16 bg-dark text-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full`}
+                        whileHover={animLink}
+                    >
+                        <LogoImage size={44} color="white" />
+                    </MotionLink>
+                )}
+            </CursorContext.Consumer>
+
         </div>
     )
 }
