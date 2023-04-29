@@ -42,7 +42,7 @@ export function Logo() {
 }
 
 
-function LogoImage({ className, size, color }) {
+export function LogoImage({ className, size, color }) {
     const props = {
         className,
     };
@@ -60,6 +60,7 @@ function LogoImage({ className, size, color }) {
             fill="none"
             viewBox="0 0 46 24"
             {...props}
+            profile
         >
             <motion.path
                 initial={{ opacity: 0 }}

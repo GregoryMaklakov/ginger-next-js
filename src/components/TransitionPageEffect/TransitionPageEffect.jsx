@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { GingerButton } from "../GingerButton"
+import { LogoImage } from "../Logo"
 
 export function TransitionPageEffect() {
     return (
@@ -9,7 +9,7 @@ export function TransitionPageEffect() {
                 animate={{ x: "0%", width: "0%" }}
                 exit={{ x: ["0%", "100%"], width: ["0%", "100%"] }}
                 transition={{ duration: 0.8, ease: "easeInOut" }} >
-                <GingerButton href="/" size={200} className="!z-[110] " />
+                <LogoImage size={140} color="white" className="!z-[110] " />
             </motion.div>
             <motion.div className="fixed bottom-0 top-0 right-full w-screen h-screen z-[90] bg-dark dark:bg-light"
                 initial={{ x: "100%", width: "100%" }}

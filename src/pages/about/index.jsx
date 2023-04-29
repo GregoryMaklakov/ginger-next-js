@@ -9,7 +9,7 @@ import {
   FrameWhiteBlack,
   TransitionPageEffect,
 } from '../../components';
-import BlackLady from '../../../public/ginger/images/black-lady.jpg';
+import BlackLady from '../../../public/ginger/images/black-lady.webp';
 import KateImage from '../../../public/ginger/images/KateDark.png';
 
 export default function About() {

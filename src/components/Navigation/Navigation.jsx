@@ -265,7 +265,6 @@ function CustomLink({ href, title, className }) {
 }
 
 
-
 CustomLink.propTypes = {
   href: PropTypes.string,
   title: PropTypes.string,

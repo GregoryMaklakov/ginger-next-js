@@ -18,6 +18,7 @@ export default function App({ Component, pageProps, }) {
   const [isHoveringLink, setIsHoveringLink] = useState(false);
   const [isHoveringText, setIsHoveringText] = useState(false);
   const [isHoveringLogo, setIsHoveringLogo] = useState(false);
+  const [isHoveringImage, setIsHoveringImage] = useState(false);
 
   const contextValue = useMemo(
     () => ({
@@ -27,8 +28,10 @@ export default function App({ Component, pageProps, }) {
       setHoveringText: setIsHoveringText,
       isHoveringLogo,
       setHoveringLogo: setIsHoveringLogo,
+      isHoveringImage,
+      setHoveringImage: setIsHoveringImage,
     }),
-    [isHoveringLink, isHoveringText, isHoveringLogo]
+    [isHoveringLink, isHoveringText, isHoveringLogo, isHoveringImage]
   );
   return (
     <>

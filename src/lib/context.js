@@ -7,4 +7,11 @@ export const CursorContext = React.createContext({
   setHoveringText: () => {},
   isHoveringLogo: false,
   setHoveringLogo: () => {},
+  isHoveringImage: false,
+  setHoveringImage: () => {},
+});
+
+export const ThemeContext = React.createContext({
+  mode: "dark",
+  toggleTheme: () => {},
 });

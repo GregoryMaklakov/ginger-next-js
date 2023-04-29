@@ -2,16 +2,17 @@
 import { useEffect, useState, useRef, useContext } from 'react'
 import { motion } from 'framer-motion';
 import { CursorContext } from '../../lib/context';
-
+import HeroArtDark from "../../../public/images/profile/heroDark.png";
 
 export function CustomCursor() {
 
 	const [mousePosition] = useState({
 		x: 0,
 		y: 0,
+
 	})
 	const cursorRef = useRef(null);
-	const { isHoveringLink, isHoveringText, isHoveringLogo } = useContext(CursorContext);
+	const { isHoveringLink, isHoveringText, isHoveringLogo, isHoveringImage } = useContext(CursorContext);
 
 	useEffect(() => {
 		const updateCursor = (e) => {
@@ -82,18 +83,48 @@ export function CustomCursor() {
 					duration: isHoveringText ? 0 : 0.3
 				},
 			}
+		},
+		imageHover: {
+			width: 200,
+			height: 200,
+			x: mousePosition.x - 100,
+			y: mousePosition.y - 100,
+			backgroundImage: `url(${HeroArtDark})`,
+			backgroundRepeat: "no-repeat",
+			backgroundPosition: "center",
+			backgroundColor: isHoveringImage ? "#f5f5f5" : "default",
+			border: isHoveringImage ? "4px solid #f5f5f5" : "2px solid transparent",
+			mixBlendMode: "difference",
+			// backgroundColor: isHoveringImage ? "#f5f5f5" : "default",
+			// border: isHoveringImage ? "4px solid #f5f5f5" : "2px solid transparent",
+			// mixBlendMode: "difference",
+			transition: {
+				backgroundColor: {
+					duration: isHoveringImage ? 0 : 0.3
+				},
+				border: {
+					duration: isHoveringImage ? 0 : 0.3
+				},
+			}
 		}
 	};
 
 	let cursorVariant;
-	if (isHoveringText) {
-		cursorVariant = "textHover";
-	} else if (isHoveringLink) {
-		cursorVariant = "linkHover";
-	} else if (isHoveringLogo) {
-		cursorVariant = "logoHover";
-	} else {
-		cursorVariant = "default";
+	switch (true) {
+		case isHoveringText:
+			cursorVariant = "textHover";
+			break;
+		case isHoveringLink:
+			cursorVariant = "linkHover";
+			break;
+		case isHoveringLogo:
+			cursorVariant = "logoHover";
+			break;
+		case isHoveringImage:
+			cursorVariant = "imageHover";
+			break;
+		default:
+			cursorVariant = "default";
 	}
 
 	return (

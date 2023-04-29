@@ -14,7 +14,7 @@ import {
   Layount,
   TransitionPageEffect,
 } from '../../components';
-import BlackLadyPrice from '../../../public/ginger/images/2.jpg';
+import BlackLadyPrice from '../../../public/ginger/images/2.webp';
 
 export default function Price() {
   const { setHoveringText } = useContext(CursorContext);

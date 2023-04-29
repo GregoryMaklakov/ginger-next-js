@@ -2,9 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext } from 'react';
-import { CursorContext } from '../lib/context';
-
-import HeroArt from "../../public/images/profile/hero-art.png";
+import { CursorContext, } from '../lib/context';
+import HeroArtDark from "../../public/images/profile/heroDark.png";
+import HeroArtLight from "../../public/images/profile/heroLight.png";
 import {
   Layount,
   AnimatedText,
@@ -14,13 +14,24 @@ import {
 } from "../components";
 
 export default function Home() {
-  const { setHoveringLink } = useContext(CursorContext);
+  const { setHoveringLink, isHoveringImage, setHoveringImage } = useContext(CursorContext);
+
   const handleMouseEnter = () => {
     setHoveringLink(true);
   };
   const handleMouseLeave = () => {
     setHoveringLink(false);
   };
+
+  const handleImageEnter = () => {
+    setHoveringImage(true);
+  };
+  const handleImageLeave = () => {
+    setHoveringImage(false);
+  };
+
+  const heroArtSource = isHoveringImage ? HeroArtDark : HeroArtLight;
+
   return (
     <div>
       <Head>
@@ -33,9 +44,11 @@ export default function Home() {
           <div className="w-full flex items-center justify-between lg:flex-col">
             <div className="w-1/2 relative -top-[30px] p-14 lg:p-0  md:w-full">
               <Image
-                src={HeroArt}
+                onMouseEnter={handleImageEnter}
+                onMouseLeave={handleImageLeave}
+                src={heroArtSource}
                 alt="Beauty"
-                priority
+                loading="lazy"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               50vw"
