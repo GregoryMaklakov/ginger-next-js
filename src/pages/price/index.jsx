@@ -32,7 +32,7 @@ export default function Price() {
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
       <TransitionPageEffect />
-      <main className="flex w-full flex-col items-center justify-center">
+      <section className="flex w-full flex-col items-center justify-center">
         <Layount className="py-10">
           <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 bg-cover relative overflow-hidden lg:flex-col lg:p-0">
             <Image
@@ -73,7 +73,7 @@ export default function Price() {
           >Nasze ceny</h2>
           <PriceList />
         </Layount>
-      </main>
+      </section>
     </>
   );
 }

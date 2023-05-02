@@ -43,7 +43,7 @@ export default function About() {
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
       <TransitionPageEffect />
-      <main className="flex w-full flex-col items-center justify-center dark:text-light">
+      <section className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layount className="pt-8">
           <AnimatedText
             text="Dowiedz się więcej o salonie piękności Ginger"
@@ -313,7 +313,7 @@ export default function About() {
             </div>
           </div>
         </Layount>
-      </main>
+      </section>
     </>
   );
 }
