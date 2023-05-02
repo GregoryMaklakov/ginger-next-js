@@ -5,11 +5,10 @@ import { motion } from 'framer-motion';
 import { PropTypes } from 'prop-types';
 import { Icon } from '../Icons/Icon';
 import { Routes, socialLink } from '../../lib/constant';
-import { useThemeSwitcher } from '../../hooks/useThemeSwicher';
 import { Logo } from '../Logo';
 import { MoonIcon } from '../Icons/MoonIcon';
 import { SunIcon } from '../Icons/SunIcon';
-import { CursorContext } from '../../lib/context';
+import { CursorContext, ThemeContext } from '../../lib/context';
 
 const navLinks = [
   {
@@ -36,7 +35,9 @@ const navLinks = [
 
 export function Navigation() {
 
-  const [mode, setMode] = useThemeSwitcher();
+  // const [mode, setMode] = useThemeSwitcher();
+  const { mode, toggleTheme } = useContext(ThemeContext); // получение значения mode и функции toggleTheme из контекста
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -148,9 +149,7 @@ export function Navigation() {
             onMouseLeave={handleMouseLeave}
             type="button"
             className="flex items-center justify-center h-8 w-8 rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
-            onClick={() =>
-              setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'))
-            }
+            onClick={toggleTheme}
           >
             {mode === 'dark' ? (
               <MoonIcon className="fill-dark " />
@@ -212,9 +211,8 @@ export function Navigation() {
               <button
                 type="button"
                 className="flex items-center h-12 w-12 justify-center rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
-                onClick={() =>
-                  setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'))
-                }
+                onClick={toggleTheme}
+
               >
                 {mode === 'dark' ? (
                   <MoonIcon className="fill-dark " />

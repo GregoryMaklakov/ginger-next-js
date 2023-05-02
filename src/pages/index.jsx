@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from 'react';
-import { CursorContext, } from '../lib/context';
+import { useContext, useState, useEffect } from 'react';
+import { CursorContext, ThemeContext } from '../lib/context';
 import HeroArtDark from "../../public/images/profile/heroDark.png";
 import HeroArtLight from "../../public/images/profile/heroLight.png";
 import {
@@ -14,7 +14,10 @@ import {
 } from "../components";
 
 export default function Home() {
-  const { setHoveringLink, isHoveringImage, setHoveringImage } = useContext(CursorContext);
+  const { setHoveringLink } = useContext(CursorContext);
+
+  const { mode } = useContext(ThemeContext);
+  const [heroArtSource, setHeroArtSource] = useState(HeroArtDark);
 
   const handleMouseEnter = () => {
     setHoveringLink(true);
@@ -23,14 +26,9 @@ export default function Home() {
     setHoveringLink(false);
   };
 
-  const handleImageEnter = () => {
-    setHoveringImage(true);
-  };
-  const handleImageLeave = () => {
-    setHoveringImage(false);
-  };
-
-  const heroArtSource = isHoveringImage ? HeroArtDark : HeroArtLight;
+  useEffect(() => {
+    setHeroArtSource(mode === 'dark' ? HeroArtDark : HeroArtLight);
+  }, [mode])
 
   return (
     <div>
@@ -44,15 +42,13 @@ export default function Home() {
           <div className="w-full flex items-center justify-between lg:flex-col">
             <div className="w-1/2 relative -top-[30px] p-14 lg:p-0  md:w-full">
               <Image
-                onMouseEnter={handleImageEnter}
-                onMouseLeave={handleImageLeave}
                 src={heroArtSource}
                 alt="Beauty"
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               50vw"
-                className="flex items-center justify-center rounded-md lg:hidden -z-10 md:inline-block md:w-full"
+                className="flex items-center justify-center rounded-md lg:hidden z-10 md:inline-block md:w-full"
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full">

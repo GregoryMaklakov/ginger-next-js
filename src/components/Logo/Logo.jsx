@@ -60,7 +60,6 @@ export function LogoImage({ className, size, color }) {
             fill="none"
             viewBox="0 0 46 24"
             {...props}
-            profile
         >
             <motion.path
                 initial={{ opacity: 0 }}

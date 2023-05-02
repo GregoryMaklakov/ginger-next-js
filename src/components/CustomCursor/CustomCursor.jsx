@@ -3,14 +3,15 @@ import { useEffect, useState, useRef, useContext } from 'react'
 import { motion } from 'framer-motion';
 import { CursorContext } from '../../lib/context';
 import HeroArtDark from "../../../public/images/profile/heroDark.png";
+import HeroArtLight from "../../../public/images/profile/heroLight.png";
 
 export function CustomCursor() {
 
 	const [mousePosition] = useState({
 		x: 0,
 		y: 0,
-
 	})
+
 	const cursorRef = useRef(null);
 	const { isHoveringLink, isHoveringText, isHoveringLogo, isHoveringImage } = useContext(CursorContext);
 
@@ -85,19 +86,13 @@ export function CustomCursor() {
 			}
 		},
 		imageHover: {
-			width: 200,
-			height: 200,
-			x: mousePosition.x - 100,
-			y: mousePosition.y - 100,
-			backgroundImage: `url(${HeroArtDark})`,
-			backgroundRepeat: "no-repeat",
-			backgroundPosition: "center",
+			width: 150,
+			height: 150,
+			x: mousePosition.x - 75,
+			y: mousePosition.y - 75,
 			backgroundColor: isHoveringImage ? "#f5f5f5" : "default",
 			border: isHoveringImage ? "4px solid #f5f5f5" : "2px solid transparent",
 			mixBlendMode: "difference",
-			// backgroundColor: isHoveringImage ? "#f5f5f5" : "default",
-			// border: isHoveringImage ? "4px solid #f5f5f5" : "2px solid transparent",
-			// mixBlendMode: "difference",
 			transition: {
 				backgroundColor: {
 					duration: isHoveringImage ? 0 : 0.3
@@ -105,7 +100,8 @@ export function CustomCursor() {
 				border: {
 					duration: isHoveringImage ? 0 : 0.3
 				},
-			}
+			},
+			backgroundImage: isHoveringImage ? `url(${HeroArtDark})` : `url(${HeroArtLight})`
 		}
 	};
 

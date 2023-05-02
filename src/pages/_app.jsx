@@ -6,7 +6,8 @@ import { AnimatePresence } from "framer-motion";
 import { useRouter } from 'next/router';
 import { useMemo, useState } from "react";
 import { CustomCursor, Footer, Navigation } from "../components";
-import { CursorContext } from '../lib/context';
+import { CursorContext, ThemeContext } from '../lib/context';
+import { useThemeSwitcher } from "../hooks/useThemeSwicher";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -20,18 +21,27 @@ export default function App({ Component, pageProps, }) {
   const [isHoveringLogo, setIsHoveringLogo] = useState(false);
   const [isHoveringImage, setIsHoveringImage] = useState(false);
 
+  const [mode, setMode] = useThemeSwitcher();
+
+
   const contextValue = useMemo(
     () => ({
-      isHoveringLink,
-      setHoveringLink: setIsHoveringLink,
-      isHoveringText,
-      setHoveringText: setIsHoveringText,
-      isHoveringLogo,
-      setHoveringLogo: setIsHoveringLogo,
-      isHoveringImage,
-      setHoveringImage: setIsHoveringImage,
+      cursor: {
+        isHoveringLink,
+        setHoveringLink: setIsHoveringLink,
+        isHoveringText,
+        setHoveringText: setIsHoveringText,
+        isHoveringLogo,
+        setHoveringLogo: setIsHoveringLogo,
+        isHoveringImage,
+        setHoveringImage: setIsHoveringImage,
+      },
+      theme: {
+        mode,
+        toggleTheme: () => setMode(mode === "dark" ? "light" : "dark"),
+      },
     }),
-    [isHoveringLink, isHoveringText, isHoveringLogo, isHoveringImage]
+    [isHoveringLink, isHoveringText, isHoveringLogo, isHoveringImage, mode, setMode]
   );
   return (
     <>
@@ -39,18 +49,19 @@ export default function App({ Component, pageProps, }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CursorContext.Provider value={contextValue}>
-        <CustomCursor />
-        <main
-          className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
-        >
-          <Navigation />
-          <AnimatePresence mode="wait">
-            <Component key={router.asPath} {...pageProps} />
-          </AnimatePresence>
-          <Footer />
-        </main>
-
+      <CursorContext.Provider value={contextValue.cursor}>
+        <ThemeContext.Provider value={contextValue.theme}>
+          <CustomCursor />
+          <main
+            className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
+          >
+            <Navigation />
+            <AnimatePresence mode="wait">
+              <Component key={router.asPath} {...pageProps} />
+            </AnimatePresence>
+            <Footer />
+          </main>
+        </ThemeContext.Provider>
       </CursorContext.Provider>
     </>
   );
