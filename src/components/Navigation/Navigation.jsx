@@ -71,21 +71,21 @@ export function Navigation() {
         className="relative z-50 w-8 h-8 focus:outline-none rounded-full hidden items-center justify-center p-2 lg:flex"
         onClick={handleClick}
       >
-        <div
+        <span
           className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition duration-300 transform ${isOpen ? 'rotate-45' : 'rotate-0'
             }`}
           style={{
             top: 'calc(50% - 1px)',
           }}
         />
-        <div
+        <span
           className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition duration-300 transform ${isOpen ? '-rotate-45 -translate-y-[5px] ' : 'rotate-0'
             }`}
           style={{
             top: 'calc(50% - -4px)',
           }}
         />
-        <div
+        <span
           className={`absolute h-0.5 w-6 bg-dark dark:bg-light rounded-full transition-all duration-300 transform ${isOpen ? 'opacity-0' : 'opacity-100'
             }`}
           style={{

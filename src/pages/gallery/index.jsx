@@ -12,7 +12,8 @@ export default function Gallery() {
             <TransitionPageEffect />
             <main data-scroll-container>
                 <Layount className="pt-8 max-w-full">
-                    <AnimatedText text="Nasza galeria: zobacz nasze prace i czerp inspirację!" />
+                    <AnimatedText text="Nasza galeria: zobacz nasze prace i czerp inspirację!"
+                        className="mb-16 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12" />
                 </Layount>
             </main>
         </>

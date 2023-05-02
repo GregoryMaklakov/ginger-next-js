@@ -31,7 +31,7 @@ export default function Home() {
   }, [mode])
 
   return (
-    <div>
+    <>
       <Head>
         <title>Ginger Beauty Zone</title>
         <meta name="description" content="Teren Twojego Piękna" />
@@ -40,7 +40,7 @@ export default function Home() {
       <main className="flex items-center w-full min-h-screen text-dark dark:text-light relative">
         <Layount className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
           <div className="w-full flex items-center justify-between lg:flex-col">
-            <div className="w-1/2 relative -top-[30px] p-14 lg:p-0  md:w-full">
+            <div className="w-1/2 -top-[30px] p-14 lg:p-0  md:w-full">
               <Image
                 src={heroArtSource}
                 alt="Beauty"
@@ -89,6 +89,6 @@ export default function Home() {
         </Layount>
         <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
       </main>
-    </div>
+    </>
   );
 }
