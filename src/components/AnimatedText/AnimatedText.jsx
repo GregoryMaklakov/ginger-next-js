@@ -50,7 +50,7 @@ export function AnimatedText({ text, className }) {
             variants={appearanceText}
             initial="initial"
             animate="animate"
-            className={`inline-blick w-full font-bold capitalize text-8xl ${isHoveringText ? "text-dark bg-light dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
+            className={`inline-block w-full font-bold capitalize text-8xl ${isHoveringText ? "text-dark bg-light dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
               } ${className}`}
           >
             {text.split(' ').map((word, index) => (

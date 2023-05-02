@@ -159,9 +159,5 @@ export function MoonIcon({ className, ...rest }) {
 }
 
 MoonIcon.propTypes = {
-  size: PropTypes.number,
   className: PropTypes.string,
-};
-MoonIcon.defaultProps = {
-  size: 32,
 };

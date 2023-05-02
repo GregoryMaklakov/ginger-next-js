@@ -32,14 +32,13 @@ export default function Price() {
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
       <TransitionPageEffect />
-      <main data-scroll-section className="flex w-full flex-col items-center justify-center">
+      <main className="flex w-full flex-col items-center justify-center">
         <Layount className="py-10">
           <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 bg-cover relative overflow-hidden lg:flex-col lg:p-0">
             <Image
               src={BlackLadyPrice}
               alt="beauty nails makeup"
               style={{ objectFit: 'cover' }}
-              as="image"
               fill
               className="absolurte -z-1 p-2 rounded-2xl"
               priority
@@ -69,10 +68,9 @@ export default function Price() {
               </CursorContext.Consumer>
             </div>
           </FrameWhiteBlack>
-          <AnimatedText
-            className="py-4 xl:text-6xl lg:text-5xl xs:text-3xl xs:py-0"
-            text="Nasze ceny"
-          />
+          <h2
+            className="inline-block w-full font-bold capitalize text-8xl text-dark dark:bg-dark dark:text-light text-center xl:!text-4xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
+          >Nasze ceny</h2>
           <PriceList />
         </Layount>
       </main>

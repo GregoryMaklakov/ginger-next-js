@@ -2,16 +2,16 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState, useEffect } from 'react';
-import { CursorContext, ThemeContext } from '../../lib/context';
-import HeroArtDark from "../../../public/images/profile/heroDark.png";
-import HeroArtLight from "../../../public/images/profile/heroLight.png";
+import { CursorContext, ThemeContext } from '../lib/context';
+import HeroArtDark from "../../public/images/profile/heroDark.webp";
+import HeroArtLight from "../../public/images/profile/heroLight.webp";
 import {
   Layount,
   AnimatedText,
   Icon,
   BooksyButton,
   TransitionPageEffect,
-} from "../../components";
+} from "../components";
 
 export default function Home() {
   const { setHoveringLink } = useContext(CursorContext);
@@ -37,13 +37,13 @@ export default function Home() {
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
       <TransitionPageEffect />
-      <main className="flex items-center w-full min-h-screen text-dark dark:text-light relative">
+      <main className="">
         <Layount className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
           <div className="w-full flex items-center justify-between lg:flex-col">
             <div className="w-1/2 -top-[30px] p-14 lg:p-0  md:w-full">
               <Image
                 src={heroArtSource}
-                alt="Beauty"
+                alt="Beauty woman in the shadow"
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
@@ -56,7 +56,7 @@ export default function Home() {
                 text="Twój wygląd nigdy nie był piękniejszy"
                 className="!text-6xl text-left xl:!text-4xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
-              <p className="my-4 text-base font-medium lg:text-center">
+              <p className="my-4 text-base font-medium lg:text-center text-dark dark:text-light">
                 Wiemy, jak ważne jest dla Was posiadanie niezawodnego miejsca, w
                 którym możecie uporządkować nie tylko swoje paznokcie, ale także
                 swoje myśli. Ginger to prawdziwie klimatyczne i uduchowione

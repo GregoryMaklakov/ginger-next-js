@@ -181,9 +181,5 @@ export function SunIcon({ className, ...rest }) {
 }
 
 SunIcon.propTypes = {
-  size: PropTypes.number,
   className: PropTypes.string,
-};
-SunIcon.defaultProps = {
-  size: 32,
 };

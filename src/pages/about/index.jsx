@@ -10,7 +10,7 @@ import {
   TransitionPageEffect,
 } from '../../components';
 import BlackLady from '../../../public/ginger/images/black-lady.webp';
-import KateImage from '../../../public/ginger/images/KateDark.png';
+import KateImage from '../../../public/ginger/images/KateDark22.png';
 
 export default function About() {
   const [daysSince, setDaysSince] = useState(0);
@@ -43,7 +43,7 @@ export default function About() {
         <meta name="description" content="Teren Twojego Piękna" />
       </Head>
       <TransitionPageEffect />
-      <main data-scroll-section className="flex w-full flex-col items-center justify-center dark:text-light">
+      <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layount className="pt-8">
           <AnimatedText
             text="Dowiedz się więcej o salonie piękności Ginger"
@@ -119,20 +119,20 @@ export default function About() {
           </div>
 
           <div className="w-full my-16 mx-auto">
-            <motion.div
+            <motion.h3
               {...motionSettings}
               className="text-8xl font-bold text-center lg:text-5xl xs:text-3xl "
             >
               Nasi specjaliści od piękna
-            </motion.div>
+            </motion.h3>
             <div className="flex flex-col items-center justify-center w-full my-16">
               <motion.div {...motionFrameWhiteBlack}>
                 <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
-                  <div className="w-1/3 sm:w-fit">
+                  <div className="w-1/3 sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
                       src={KateImage}
                       alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
+                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full z-10 relative"
                     />
                   </div>
                   <div className="flex flex-col w-2/3 pl-8 lg:max-h-60 overflow-y-auto sm:w-full sm:pl-0">
@@ -193,7 +193,7 @@ export default function About() {
                       jest właśnie dla Ciebie!
                     </p>
                   </div>
-                  <div className="w-1/3 sm:w-fit">
+                  <div className="w-1/3 sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
                       src={KateImage}
                       alt="KateImage"
@@ -205,7 +205,7 @@ export default function About() {
 
               <motion.div {...motionFrameWhiteBlack}>
                 <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
-                  <div className="w-1/3 sm:w-fit">
+                  <div className="w-1/3 sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
                       src={KateImage}
                       alt="KateImage"
@@ -270,7 +270,7 @@ export default function About() {
                       spędzona w towarzystwie profesjonalistki.
                     </p>
                   </div>
-                  <div className="w-1/3 sm:w-fit">
+                  <div className="w-1/3 sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
                       src={KateImage}
                       alt="KateImage"
@@ -281,7 +281,7 @@ export default function About() {
               </motion.div>
               <motion.div {...motionFrameWhiteBlack}>
                 <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
-                  <div className="w-1/3 sm:w-fit">
+                  <div className="w-1/3 sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
                       src={KateImage}
                       alt="KateImage"

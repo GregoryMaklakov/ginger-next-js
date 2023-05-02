@@ -2,8 +2,6 @@
 import { useEffect, useState, useRef, useContext } from 'react'
 import { motion } from 'framer-motion';
 import { CursorContext } from '../../lib/context';
-import HeroArtDark from "../../../public/images/profile/heroDark.png";
-import HeroArtLight from "../../../public/images/profile/heroLight.png";
 
 export function CustomCursor() {
 
@@ -90,9 +88,10 @@ export function CustomCursor() {
 			height: 150,
 			x: mousePosition.x - 75,
 			y: mousePosition.y - 75,
-			backgroundColor: isHoveringImage ? "#f5f5f5" : "default",
+			backgroundColor: isHoveringImage ? "transparent" : "default",
 			border: isHoveringImage ? "4px solid #f5f5f5" : "2px solid transparent",
-			mixBlendMode: "difference",
+			scale: isHoveringImage ? 1.2 : 1,
+			transform: isHoveringImage ? "translate(-10%, -10%)" : "translate(0, 0)",
 			transition: {
 				backgroundColor: {
 					duration: isHoveringImage ? 0 : 0.3
@@ -101,7 +100,6 @@ export function CustomCursor() {
 					duration: isHoveringImage ? 0 : 0.3
 				},
 			},
-			backgroundImage: isHoveringImage ? `url(${HeroArtDark})` : `url(${HeroArtLight})`
 		}
 	};
 
