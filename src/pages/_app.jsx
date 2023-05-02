@@ -20,9 +20,7 @@ export default function App({ Component, pageProps, }) {
   const [isHoveringText, setIsHoveringText] = useState(false);
   const [isHoveringLogo, setIsHoveringLogo] = useState(false);
   const [isHoveringImage, setIsHoveringImage] = useState(false);
-
   const [mode, setMode] = useThemeSwitcher();
-
 
   const contextValue = useMemo(
     () => ({

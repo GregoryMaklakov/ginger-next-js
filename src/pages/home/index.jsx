@@ -2,16 +2,16 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState, useEffect } from 'react';
-import { CursorContext, ThemeContext } from '../lib/context';
-import HeroArtDark from "../../public/images/profile/heroDark.png";
-import HeroArtLight from "../../public/images/profile/heroLight.png";
+import { CursorContext, ThemeContext } from '../../lib/context';
+import HeroArtDark from "../../../public/images/profile/heroDark.png";
+import HeroArtLight from "../../../public/images/profile/heroLight.png";
 import {
   Layount,
   AnimatedText,
   Icon,
   BooksyButton,
   TransitionPageEffect,
-} from "../components";
+} from "../../components";
 
 export default function Home() {
   const { setHoveringLink } = useContext(CursorContext);
