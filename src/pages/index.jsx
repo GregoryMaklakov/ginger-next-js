@@ -40,7 +40,7 @@ export default function Home() {
       <main className="">
         <Layount className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
           <div className="w-full flex items-center justify-between lg:flex-col">
-            <div className="w-1/2 -top-[30px] p-14 lg:p-0  md:w-full">
+            <div className="w-1/2 -top-[30px] p-14 lg:p-0  md:w-full md:mb-6 ">
               <Image
                 src={heroArtSource}
                 alt="Beauty woman in the shadow"
@@ -48,7 +48,7 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               50vw"
-                className="flex items-center justify-center rounded-md lg:hidden z-10 md:inline-block md:w-full"
+                className="flex items-center justify-center rounded-md lg:hidden z-10 md:inline-block md:w-full "
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full">
