@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   AnimatedText,
@@ -11,6 +12,7 @@ import {
 } from '../../components';
 import BlackLady from '../../../public/ginger/images/black-lady.webp';
 import KateImage from '../../../public/ginger/images/KateDark22.png';
+import { socialLink } from '../../lib/constant';
 
 export default function About() {
   const [daysSince, setDaysSince] = useState(0);
@@ -27,6 +29,7 @@ export default function About() {
     initial: { y: 50 },
     whileInView: { y: 0 },
     transition: { duration: 1, type: 'spring', delay: 0.1 },
+    viewport: { once: true },
   };
 
   const motionFrameWhiteBlack = {
@@ -90,7 +93,7 @@ export default function About() {
             <div className="col-span-2 xl:col-span-8 xl:flex-row xl:items-center flex flex-col items-end justify-between h-full md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center ">
                 <span className="inline-block text-7xl font-bold dark:text-light/75 md:text-4xl xs:text-2xl">
-                  <AnimatedValue value={400} className="dark:text-light/75 " />+
+                  <AnimatedValue value={780} className="dark:text-light/75 " />+
                 </span>
                 <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75 lg:text-center xs:text-xs xs:mr-1">
                   zadowolonych klientów
@@ -109,7 +112,7 @@ export default function About() {
               </div>
               <div className="flex flex-col items-end justify-center  xl:items-center">
                 <span className="inline-block text-7xl font-bold dark:text-light/75 md:text-4xl xs:text-2xl">
-                  <AnimatedValue value={54} className="dark:text-light/75" /> +
+                  <AnimatedValue value={24} className="dark:text-light/75" /> +
                 </span>
                 <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75 lg:text-center xs:text-xs xs:mr-1">
                   łączny staż pracy zespołu
@@ -127,40 +130,32 @@ export default function About() {
             </motion.h3>
             <div className="flex flex-col items-center justify-center w-full my-16">
               <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
-                  <div className="w-1/3 sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
+                <FrameWhiteBlack className="flex flex-col min-h-full p-16 items-center justify-between mb-16 lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full">
+                  <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
                       src={KateImage}
                       alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full z-10 relative"
+                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
                     />
                   </div>
-                  <div className="flex flex-col w-2/3 pl-8 lg:max-h-60 overflow-y-auto sm:w-full sm:pl-0">
-                    <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                      Kate
-                    </h4>
-                    <h5 className="text-lg font-bold text-primary/75">
-                      Manicurist
-                    </h5>
-                    <p className="my-4 font-medium xs:text-sm">
-                      Mam na imię Katarzyna, od 10 lat pracuję w branży
-                      kosmetycznej i mogę z całą pewnością powiedzieć, że
-                      manicure to trochę więcej niż malowanie paznokci. To
-                      prawdziwa magia dla duszy, fajny anty-stres, a czasem
-                      zbawienna sesja psychoterapeutyczna. Zależało mi, aby
-                      stworzyć dla Was ciepłe i przytulne miejsce, gdzie
-                      będziecie mogli poczuć się komfortowo i pięknie.
-                    </p>
-                    <p className="font-medium xs:text-sm">
-                      Trzy lata temu, kiedy przyjechałam do Polski z Ukrainy,
-                      widziałam jak tutejsze dziewczyny (mężczyźni zresztą też)
-                      lubią bardzo spersonalizowaną obsługę, kiedy kosmetyczka
-                      zna Twoje osobiste preferencje - jaką kawę pijesz,
-                      podkręcić głośniej muzykę, ściszyć ją bądź może całkowicie
-                      wyłączyć. Dokładnie taki rodzaj spersonalizowanej obsługi
-                      wraz z najwyższą jakością usług kosmetycznych oferuję w
-                      Ginger
-                    </p>
+                  <div className='w-full flex items-center justify-center'>
+                    <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
+                      <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+                        Kate
+                      </h4>
+                      <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
+                        Manicurist
+                      </h5>
+                    </div>
+                    <Link
+                      href={socialLink.booksyKate}
+                      className="flex items-center justify-center bg-dark text-light shadow-md border border-solid border-dark w-32 h-12 rounded-full font-semibold hover:bg-light hover:text-dark hover:dark:border-light dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light md:w-[52px] md:h-[52px]"
+                      target="_blank"
+                    >
+                      <span className="flex items-center justify-center text-center leading-5 md:text-xs">
+                        Umów
+                      </span>
+                    </Link>
                   </div>
                 </FrameWhiteBlack>
               </motion.div>
@@ -197,7 +192,7 @@ export default function About() {
                     <Image
                       src={KateImage}
                       alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
+                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full"
                     />
                   </div>
                 </FrameWhiteBlack>
@@ -209,7 +204,7 @@ export default function About() {
                     <Image
                       src={KateImage}
                       alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
+                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full"
                     />
                   </div>
                   <div className="flex flex-col w-2/3 pl-8 lg:max-h-60 overflow-y-auto sm:w-full sm:pl-0">
@@ -274,7 +269,7 @@ export default function About() {
                     <Image
                       src={KateImage}
                       alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
+                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full"
                     />
                   </div>
                 </FrameWhiteBlack>
@@ -285,7 +280,7 @@ export default function About() {
                     <Image
                       src={KateImage}
                       alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:mb-6 sm:max-w-full"
+                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full"
                     />
                   </div>
                   <div className="flex flex-col w-2/3 pl-8 lg:max-h-60 overflow-y-auto sm:w-full sm:pl-0">
