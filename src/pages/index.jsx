@@ -35,12 +35,28 @@ export default function Home() {
       <Head>
         <title>Ginger Beauty Zone</title>
         <meta name="description" content="Teren Twojego Piękna" />
+        <meta property="og:url" content="https://ginger-beauty-next-tailwind.netlify.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Ginger Beauty Zone" />
+        <meta property="og:description" content="Teren Twojego Piękna" />
+        <meta property="og:image" content="../../public/images/profile/meta-tag.jpg" />
+        <meta name="twitter:card" content="../../public/images/profile/meta-tag.jpg" />
+        <meta property="twitter:domain" content="ginger-beauty-next-tailwind.netlify.app" />
+        <meta property="twitter:url" content="https://ginger-beauty-next-tailwind.netlify.app/" />
+        <meta name="twitter:title" content="Ginger Beauty Zone" />
+        <meta name="twitter:description" content="Teren Twojego Piękna" />
+        <meta name="twitter:image" content="../../public/images/profile/meta-tag.jpg" />
+
       </Head>
+      {/* <Head>
+        <title>Ginger Beauty Zone</title>
+        <meta name="description" content="Teren Twojego Piękna" />
+      </Head> */}
       <TransitionPageEffect />
       <main className="">
         <Layount className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
           <div className="w-full flex items-center justify-between lg:flex-col">
-            <div className="w-1/2 -top-[30px] p-14 lg:p-0  md:w-full md:mb-6 ">
+            <div className="w-1/2 -top-[30px] p-14 lg:p-0  md:w-full md:mb-6">
               <Image
                 src={heroArtSource}
                 alt="Beauty woman in the shadow"

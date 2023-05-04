@@ -7,7 +7,7 @@ export default function Gallery() {
         <>
             <Head>
                 <title>Galery | Ginger</title>
-                <meta name="description" content="Teren Twojego Piękna" />
+                <meta name="description" content="Obejrzyj naszą galerię zdjęć, aby zobaczyć, jakie efekty osiągamy w naszym salonie Ginger Beauty Zone." />
             </Head>
             <TransitionPageEffect />
             <section >

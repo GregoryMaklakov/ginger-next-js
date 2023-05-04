@@ -43,7 +43,7 @@ export default function About() {
     <>
       <Head>
         <title>O nas | Ginger</title>
-        <meta name="description" content="Teren Twojego Piękna" />
+        <meta name="description" content="Dowiedz się więcej o naszym salonie Ginger Beauty Zone. Zapraszamy na profesjonalne zabiegi i miłą atmosferę." />
       </Head>
       <TransitionPageEffect />
       <section className="flex w-full flex-col items-center justify-center dark:text-light">

@@ -29,7 +29,7 @@ export default function Price() {
     <>
       <Head>
         <title>Cennik | Ginger</title>
-        <meta name="description" content="Teren Twojego Piękna" />
+        <meta name="description" content="Zapoznaj się z naszym cennikiem na zabiegi kosmetyczne w salonie Ginger Beauty Zone." />
       </Head>
       <TransitionPageEffect />
       <section className="flex w-full flex-col items-center justify-center">
