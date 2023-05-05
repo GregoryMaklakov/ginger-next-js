@@ -33,22 +33,32 @@ export default function Home() {
   return (
     <>
       <Head>
+        <meta property="og:type" content="business.business" />
+        <meta property="og:title" content="Ginger Beauty Zone" />
+        <meta property="og:url" content="https://ginger-beauty-next-tailwind.netlify.app/" />
+        <meta property="og:image" content="/meta-tag.jpg" />
+        <meta property="og:description" content="Teren Twojego Piękna" />
+        <meta property="business:contact_data:street_address" content="278 Grochowska" />
+        <meta property="business:contact_data:locality" content="Warsaw" />
+        <meta property="business:contact_data:region" content="" />
+        <meta property="business:contact_data:postal_code" content="03-841" />
+        <meta property="business:contact_data:country_name" content="Poland" />
 
-        <title>Ginger Beauty Zone</title>
+        {/* <title>Ginger Beauty Zone</title>
         <meta name="description" content="Teren Twojego Piękna" />
 
         <meta property="og:url" content="https://ginger-beauty-next-tailwind.netlify.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Ginger Beauty Zone" />
         <meta property="og:description" content="Teren Twojego Piękna" />
-        <meta property="og:image" content="https://ginger-beauty-next-tailwind.netlify.app/images/profile/meta-tag.jpg" />
+        <meta property="og:image" content="/meta-tag.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="ginger-beauty-next-tailwind.netlify.app" />
         <meta property="twitter:url" content="https://ginger-beauty-next-tailwind.netlify.app/" />
         <meta name="twitter:title" content="Ginger Beauty Zone" />
         <meta name="twitter:description" content="Teren Twojego Piękna" />
-        <meta name="twitter:image" content="https://ginger-beauty-next-tailwind.netlify.app/images/profile/meta-tag.jpg" />
+        <meta name="twitter:image" content="https://ginger-beauty-next-tailwind.netlify.app/images/profile/meta-tag.jpg" /> */}
       </Head>
       {/* <Head>
         <title>Ginger Beauty Zone</title>
