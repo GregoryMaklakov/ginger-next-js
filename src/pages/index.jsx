@@ -34,6 +34,8 @@ export default function Home() {
     <>
       <Head>
         <title>Ginger Beauty Zone</title>
+        <title>O nas | Ginger</title>
+        <meta name="description" content="Teren Twojego Piękna w Warszawe" />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content="Ginger Beauty Zone" />
         <meta property="og:url" content="https://ginger-beauty-next-tailwind.netlify.app/" />
