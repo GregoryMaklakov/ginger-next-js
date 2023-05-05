@@ -4,10 +4,12 @@ import Head from "next/head";
 import { Montserrat } from 'next/font/google';
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from 'next/router';
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CustomCursor, Footer, Navigation } from "../components";
 import { CursorContext, ThemeContext } from '../lib/context';
 import { useThemeSwitcher } from "../hooks/useThemeSwicher";
+import { initGA, logPageView } from "../utils/analytics";
+import { GOOGLE_ANALITICS_KEY } from "../utils/key";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,6 +23,16 @@ export default function App({ Component, pageProps, }) {
   const [isHoveringLogo, setIsHoveringLogo] = useState(false);
   const [isHoveringImage, setIsHoveringImage] = useState(false);
   const [mode, setMode] = useThemeSwitcher();
+
+  // Google An
+  useEffect(() => {
+    initGA(GOOGLE_ANALITICS_KEY);
+    logPageView();
+    router.events.on("routeChangeComplete", logPageView);
+    return () => {
+      router.events.off("routeChangeComplete", logPageView);
+    };
+  }, [router.events]);
 
   const contextValue = useMemo(
     () => ({
