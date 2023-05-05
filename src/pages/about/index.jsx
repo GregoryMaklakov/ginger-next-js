@@ -138,7 +138,7 @@ export default function About() {
                       className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
                     />
                   </div>
-                  <div className='w-full flex items-center justify-center'>
+                  <div className='w-full flex items-center justify-center min-h-[84px]'>
                     <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
                       <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                         Kate
@@ -169,7 +169,7 @@ export default function About() {
                       className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
                     />
                   </div>
-                  <div className='w-full flex items-center justify-center'>
+                  <div className='w-full flex items-center justify-center min-h-[84px]'>
                     <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
                       <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                         Jana
@@ -200,7 +200,7 @@ export default function About() {
                       className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
                     />
                   </div>
-                  <div className='w-full flex items-center justify-center'>
+                  <div className='w-full flex items-center justify-center min-h-[84px]'>
                     <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
                       <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                         Maria
@@ -231,13 +231,13 @@ export default function About() {
                       className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
                     />
                   </div>
-                  <div className='w-full flex items-center justify-center'>
+                  <div className='w-full flex items-center justify-center h-[84px]'>
                     <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
                       <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                         Liza
                       </h4>
-                      <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
-                        Manicurist
+                      <h5 className="text-sm font-bold text-primary/75 dark:text-primaryDark/75 overflow-hidden max-w-[120px]">
+                        Brow, Lash, and Makeup Artist
                       </h5>
                     </div>
                     <Link
@@ -262,13 +262,13 @@ export default function About() {
                       className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
                     />
                   </div>
-                  <div className='w-full flex items-center justify-center'>
+                  <div className='w-full flex items-center justify-center min-h-[84px]'>
                     <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
                       <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                         Luda
                       </h4>
                       <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
-                        Manicurist
+                        Masażysta
                       </h5>
                     </div>
                     <Link
