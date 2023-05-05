@@ -39,14 +39,13 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Ginger Beauty Zone" />
         <meta property="og:description" content="Teren Twojego Piękna" />
-        <meta property="og:image" content="../../public/images/profile/meta-tag.jpg" />
-        <meta name="twitter:card" content="../../public/images/profile/meta-tag.jpg" />
+        <meta property="og:image" content="/images/profile/meta-tag.jpg" />
+        <meta name="twitter:card" content="/images/profile/meta-tag.jpg" />
         <meta property="twitter:domain" content="ginger-beauty-next-tailwind.netlify.app" />
         <meta property="twitter:url" content="https://ginger-beauty-next-tailwind.netlify.app/" />
         <meta name="twitter:title" content="Ginger Beauty Zone" />
         <meta name="twitter:description" content="Teren Twojego Piękna" />
-        <meta name="twitter:image" content="../../public/images/profile/meta-tag.jpg" />
-
+        <meta name="twitter:image" content="/images/profile/meta-tag.jpg" />
       </Head>
       {/* <Head>
         <title>Ginger Beauty Zone</title>
