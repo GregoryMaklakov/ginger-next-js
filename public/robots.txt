@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ginger-beauty-zone.com/
+
+# Sitemaps
+Sitemap: https://ginger-beauty-zone.com/sitemap.xml
