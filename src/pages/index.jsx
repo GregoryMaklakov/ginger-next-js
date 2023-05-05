@@ -49,8 +49,6 @@ export default function Home() {
         <meta name="twitter:title" content="Ginger Beauty Zone" />
         <meta name="twitter:description" content="Teren Twojego Piękna" />
         <meta name="twitter:image" content="https://ginger-beauty-next-tailwind.netlify.app/images/profile/meta-tag.jpg" />
-
-
       </Head>
       {/* <Head>
         <title>Ginger Beauty Zone</title>
