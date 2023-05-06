@@ -9,7 +9,6 @@ import { CustomCursor, Footer, Navigation } from "../components";
 import { CursorContext, ThemeContext } from '../lib/context';
 import { useThemeSwitcher } from "../hooks/useThemeSwicher";
 import { initGA, logPageView } from "../utils/analytics";
-import { GOOGLE_ANALITICS_KEY } from "../utils/key";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -24,15 +23,16 @@ export default function App({ Component, pageProps, }) {
   const [isHoveringImage, setIsHoveringImage] = useState(false);
   const [mode, setMode] = useThemeSwitcher();
 
-  // Google An
+  // Google Analytics
+
   useEffect(() => {
-    initGA(GOOGLE_ANALITICS_KEY);
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
     logPageView();
-    router.events.on("routeChangeComplete", logPageView);
-    return () => {
-      router.events.off("routeChangeComplete", logPageView);
-    };
-  }, [router.events]);
+  }, [router.asPath]);
+
 
   const contextValue = useMemo(
     () => ({
