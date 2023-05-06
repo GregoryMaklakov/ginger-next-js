@@ -8,7 +8,8 @@ import { useEffect, useMemo, useState } from "react";
 import { CustomCursor, Footer, Navigation } from "../components";
 import { CursorContext, ThemeContext } from '../lib/context';
 import { useThemeSwitcher } from "../hooks/useThemeSwicher";
-import { initGA, logPageView } from "../utils/analytics";
+import * as ga from '../utils/analytics';
+import { logPageView } from "../utils/analytics";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -26,13 +27,19 @@ export default function App({ Component, pageProps, }) {
   // Google Analytics
 
   useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      initGA();
-      window.GA_INITIALIZED = true;
-    }
+    ga.initGA();
     logPageView();
-  }, [router.asPath]);
 
+    const handleRouteChange = (url) => {
+      logPageView();
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   const contextValue = useMemo(
     () => ({

@@ -1,15 +1,20 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import ReactGA from "react-ga";
+/* eslint-disable import/no-extraneous-dependencies */
+import { createLogger } from "redux-logger";
+import { initialize } from "react-ga4";
 import { GOOGLE_ANALITICS_KEY } from "./key";
 
-ReactGA.initialize("UA-000000-01");
-ReactGA.pageview(window.location.pathname + window.location.search);
+export const GA_ID = GOOGLE_ANALITICS_KEY;
+
+export const logger = createLogger({
+  collapsed: true,
+});
 
 export const initGA = () => {
-  ReactGA.initialize(GOOGLE_ANALITICS_KEY);
+  initialize(GA_ID);
 };
 
 export const logPageView = () => {
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname);
+  window.gtag("config", GA_ID, {
+    page_path: window.location.pathname,
+  });
 };
