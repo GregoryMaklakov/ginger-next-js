@@ -30,7 +30,7 @@ export default function App({ Component, pageProps, }) {
     ga.initGA();
     logPageView();
 
-    const handleRouteChange = (url) => {
+    const handleRouteChange = () => {
       logPageView();
     };
 
