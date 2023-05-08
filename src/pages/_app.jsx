@@ -9,7 +9,6 @@ import { useMemo, useState } from "react";
 import { CustomCursor, Footer, Navigation } from "../components";
 import { CursorContext, ThemeContext } from '../lib/context';
 import { useThemeSwitcher } from "../hooks/useThemeSwicher";
-import { GOOGLE_ANALITICS_KEY } from "../utils/key";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -62,7 +61,7 @@ export default function App({ Component, pageProps, }) {
       </Head>
       <Script
         srtategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALITICS_KEY}`}
+        src="https://www.googletagmanager.com/gtag/js?id=G-FEZ3384TFD"
       />
       <Script
         id="googleAn"
@@ -72,7 +71,7 @@ export default function App({ Component, pageProps, }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
-            gtag('config', '${GOOGLE_ANALITICS_KEY}');`
+            gtag('config', 'G-FEZ3384TFD');`
         }
       </Script>
       <CursorContext.Provider value={contextValue.cursor}>
