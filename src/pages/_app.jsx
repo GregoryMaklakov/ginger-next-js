@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import PropTypes from 'prop-types';
 import Head from "next/head";
+import Script from 'next/script';
 import { Montserrat } from 'next/font/google';
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from 'next/router';
@@ -8,6 +9,7 @@ import { useMemo, useState } from "react";
 import { CustomCursor, Footer, Navigation } from "../components";
 import { CursorContext, ThemeContext } from '../lib/context';
 import { useThemeSwitcher } from "../hooks/useThemeSwicher";
+import { GOOGLE_ANALITICS_KEY } from "../utils/key";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -23,7 +25,15 @@ export default function App({ Component, pageProps, }) {
   const [mode, setMode] = useThemeSwitcher();
 
   // Google Analytics
+  // <!-- Google tag (gtag.js) -->
+  // <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEZ3384TFD"></script>
+  // <script>
+  //   window.dataLayer = window.dataLayer || [];
+  //   function gtag(){dataLayer.push(arguments);}
+  //   gtag('js', new Date());
 
+  //   gtag('config', 'G-FEZ3384TFD');
+  // </script>
 
   const contextValue = useMemo(
     () => ({
@@ -50,6 +60,21 @@ export default function App({ Component, pageProps, }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script
+        srtategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALITICS_KEY}`}
+      />
+      <Script
+        id="googleAn"
+        srtategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', '${GOOGLE_ANALITICS_KEY}');`
+        }
+      </Script>
       <CursorContext.Provider value={contextValue.cursor}>
         <ThemeContext.Provider value={contextValue.theme}>
           <CustomCursor />
