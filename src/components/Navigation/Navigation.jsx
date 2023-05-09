@@ -233,7 +233,7 @@ export function Navigation() {
   );
 }
 
-function CustomLink({ href, title, className }) {
+export function CustomLink({ href, title, className }) {
   const router = useRouter();
   const { setHoveringLink } = useContext(CursorContext);
 

@@ -1,23 +1,26 @@
 /* eslint-disable react/no-unknown-property */
 import Image from 'next/image';
 import Head from 'next/head';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { motion, useScroll } from 'framer-motion';
 import { useRef, useContext } from 'react';
-import { priceListData } from '../../lib/constant';
+import { priceListData, socialLink } from '../../lib/constant';
 import { CursorContext } from '../../lib/context';
-
 import {
   AnimatedText,
+  BooksyButton,
   FrameWhiteBlack,
   GingerButton,
+  Icon,
   Layount,
   TransitionPageEffect,
 } from '../../components';
 import BlackLadyPrice from '../../../public/ginger/images/2.webp';
 
 export default function Price() {
-  const { setHoveringText } = useContext(CursorContext);
+  const { setHoveringText, setHoveringLink } = useContext(CursorContext);
+
   const handleMouseEnter = () => {
     setHoveringText(true);
   };
@@ -25,6 +28,17 @@ export default function Price() {
     setHoveringText(false);
   };
 
+
+  const handleMouseEnterLink = () => {
+    setHoveringLink(true);
+  };
+  const handleMouseLeaveLink = () => {
+    setHoveringLink(false);
+  };
+
+
+
+  const AnimatedLink = motion(Link);
   return (
     <>
       <Head>
@@ -72,8 +86,22 @@ export default function Price() {
             className="inline-block w-full font-bold capitalize text-8xl text-dark dark:bg-dark dark:text-light text-center xl:!text-4xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
           >Nasze ceny</h2>
           <PriceList />
+          <div className="grid place-content-center">
+            <AnimatedLink
+              className="inline-flex"
+              href={socialLink.booksy}
+              target="_blank"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              onMouseEnter={handleMouseEnterLink}
+              onMouseLeave={handleMouseLeaveLink}
+            >
+              <Icon name="booksy" size={140} color='#B63E96' />
+            </AnimatedLink>
+          </div>
+          <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
         </Layount>
-      </section>
+      </section >
     </>
   );
 }
@@ -87,7 +115,7 @@ export function PriceList() {
   });
 
   return (
-    <div className="my-32 mt-0">
+    <div className="mb-16 mt-0">
       <div ref={ref} className="w-[75%] mx-auto relative pt-16 xl:w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}

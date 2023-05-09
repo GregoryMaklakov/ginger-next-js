@@ -57,6 +57,7 @@ export default function Home() {
                 src={heroArtSource}
                 alt="Beauty woman in the shadow"
                 loading="lazy"
+                placeholder="blur"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               50vw"
