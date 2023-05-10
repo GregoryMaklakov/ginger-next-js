@@ -38,7 +38,7 @@ export default function Home() {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content="Ginger Beauty Zone" />
         <meta property="og:url" content="https://ginger-beauty-zone.com" />
-        <meta property="og:image" content="https://drive.google.com/file/d/1qvfj_WuDJmv6sqlzctGX9DYtFMA8Nviq/view?usp=share_link" />
+        <meta property="og:image" content="https://d375139ucebi94.cloudfront.net/region2/pl/162702/logo/87abe39eef5d4f5cb4968854db35be-ginger-beauty-zone-logo-0b4580ef172240329bb5c6e7f314b3-booksy.jpeg" />
         <meta property="og:description" content="Teren Twojego Piękna" />
         <meta property="business:contact_data:street_address" content="278 Grochowska" />
         <meta property="business:contact_data:locality" content="Warsaw" />
