@@ -28,7 +28,6 @@ export default function Price() {
     setHoveringText(false);
   };
 
-
   const handleMouseEnterLink = () => {
     setHoveringLink(true);
   };
@@ -36,9 +35,8 @@ export default function Price() {
     setHoveringLink(false);
   };
 
-
-
   const AnimatedLink = motion(Link);
+
   return (
     <>
       <Head>
@@ -51,7 +49,7 @@ export default function Price() {
           <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 bg-cover relative overflow-hidden lg:flex-col lg:p-0">
             <Image
               src={BlackLadyPrice}
-              alt="beauty nails makeup"
+              alt="beauty nails makeup BlackLadyPrice"
               style={{ objectFit: 'cover' }}
               fill
               className="absolurte -z-1 p-2 rounded-2xl"
