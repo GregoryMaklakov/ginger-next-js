@@ -15,7 +15,7 @@ export function Footer() {
     };
     return (
         <footer className='w-full border-t-2 border-solid  border-dark font-medium text-lg dark:border-light'>
-            <Layount className='flex items-center justify-between py-6 xl:!p-6 dark:text-light lg:flex-col lg:gap-2 xs:text-sm'>
+            <Layount className='flex items-center justify-between py-6 xl:!p-6 dark:text-light lg:flex-col lg:gap-8 xs:text-sm'>
                 <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
                 <div>
                     <Link
