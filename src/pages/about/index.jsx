@@ -12,6 +12,8 @@ import {
 } from '../../components';
 import BlackLady from '../../../public/ginger/images/black-lady.webp';
 import KateImage from '../../../public/ginger/images/KateDark22.png';
+import LizaImage from '../../../public/ginger/images/liza.png';
+
 import { socialLink } from '../../lib/constant';
 
 export default function About() {
@@ -236,7 +238,7 @@ export default function About() {
                 <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
                   <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
-                      src={KateImage}
+                      src={LizaImage}
                       alt="KateImage"
                       className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
                     />

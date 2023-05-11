@@ -9,7 +9,7 @@ export default function Gallery() {
                 <title>Galery | Ginger</title>
                 <meta name="description" content="Teren Twojego Piękna w Warszawe" />
                 <meta property="og:type" content="business.business" />
-                <meta property="og:title" content="Galery | Ginger" />
+                <meta property="og:title" content="Gallery | Ginger" />
                 <meta property="og:url" content="https://ginger-beauty-zone.com" />
                 <meta property="og:image" content="/meta-tag.jpg" />
                 <meta property="og:description" content="Teren Twojego Piękna" />
