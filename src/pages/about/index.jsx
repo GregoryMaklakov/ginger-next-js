@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import {
   AnimatedText,
   AnimatedValue,
-  Layount,
+  Layout,
   FrameWhiteBlack,
   TransitionPageEffect,
 } from '../../components';
@@ -59,7 +59,7 @@ export default function About() {
       </Head>
       <TransitionPageEffect />
       <section className="flex w-full flex-col items-center justify-center dark:text-light">
-        <Layount className="pt-8">
+        <Layout className="pt-8">
           <AnimatedText
             text="Dowiedz się więcej o salonie piękności Ginger"
             className="mb-16 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12"
@@ -265,7 +265,8 @@ export default function About() {
                 </FrameWhiteBlack>
               </motion.div>
 
-              <motion.div {...motionFrameWhiteBlack}>
+              {/* LUDA */}
+              {/* <motion.div {...motionFrameWhiteBlack}>
                 <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
                   <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
@@ -294,10 +295,10 @@ export default function About() {
                     </Link>
                   </div>
                 </FrameWhiteBlack>
-              </motion.div>
+              </motion.div> */}
             </div>
           </div>
-        </Layount>
+        </Layout>
       </section>
     </>
   );

@@ -13,7 +13,7 @@ import {
   FrameWhiteBlack,
   GingerButton,
   Icon,
-  Layount,
+  Layout,
   TransitionPageEffect,
 } from '../../components';
 import BlackLadyPrice from '../../../public/ginger/images/2.webp';
@@ -45,7 +45,7 @@ export default function Price() {
       </Head>
       <TransitionPageEffect />
       <section className="flex w-full flex-col items-center justify-center">
-        <Layount className="py-10">
+        <Layout className="py-10">
           <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 bg-cover relative overflow-hidden lg:flex-col lg:p-0">
             <Image
               src={BlackLadyPrice}
@@ -98,7 +98,7 @@ export default function Price() {
             </AnimatedLink>
           </div>
           <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
-        </Layount>
+        </Layout>
       </section >
     </>
   );

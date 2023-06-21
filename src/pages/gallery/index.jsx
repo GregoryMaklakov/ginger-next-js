@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { AnimatedText, Layount, TransitionPageEffect } from "../../components";
+import { AnimatedText, Layout, TransitionPageEffect } from "../../components";
 
 
 export default function Gallery() {
@@ -21,10 +21,11 @@ export default function Gallery() {
             </Head>
             <TransitionPageEffect />
             <section >
-                <Layount className="pt-8 max-w-full">
+                <Layout className="pt-8 max-w-full">
                     <AnimatedText text="Nasza galeria: zobacz nasze prace i czerp inspirację!"
                         className="mb-16 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12" />
-                </Layount>
+                    <h2 className="mb-16 text-2xl font-bold lg:text-5xl xs:text-3xl xs:mb-12 text-dark dark:text-light ">Soon....</h2>
+                </Layout>
             </section>
         </>
     )

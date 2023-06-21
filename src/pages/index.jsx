@@ -6,7 +6,7 @@ import { CursorContext, ThemeContext } from '../lib/context';
 import HeroArtDark from "../../public/images/profile/heroDark.webp";
 import HeroArtLight from "../../public/images/profile/heroLight.webp";
 import {
-  Layount,
+  Layout,
   AnimatedText,
   Icon,
   BooksyButton,
@@ -48,7 +48,7 @@ export default function Home() {
 
       <TransitionPageEffect />
       <main className="">
-        <Layount className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
+        <Layout className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
           <div className="w-full flex items-center justify-between lg:flex-col">
             <div className="w-1/2 -top-[30px] p-14 lg:p-0  md:w-full md:mb-6">
               <Image
@@ -83,7 +83,7 @@ export default function Home() {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  Odbierz zniżkę 30%
+                  Odbierz zniżkę 20%
                   <Icon name="linkArrow" size={24} className="ml-2" />
                 </Link>
                 <Link
@@ -97,7 +97,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </Layount>
+        </Layout>
         <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
       </main>
     </>

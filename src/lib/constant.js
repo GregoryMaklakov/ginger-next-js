@@ -273,35 +273,35 @@ export const priceListData = [
       },
     ],
   },
-  {
-    id: 12,
-    name: "Masaż",
-    items: [
-      {
-        id: 1,
-        name: "Masaż klasyczny całościowy",
-        price: 200,
-      },
-      {
-        id: 2,
-        name: "Masaż antycellulitowy modelujący (z bańką)",
-        price: 150,
-      },
-      {
-        id: 3,
-        name: "Masaż pleców (leczniczy)",
-        price: 100,
-      },
-      {
-        id: 4,
-        name: "Masaż twarzy",
-        price: 150,
-      },
-      {
-        id: 5,
-        name: "Masaż antycellulitowy modelujący",
-        price: 150,
-      },
-    ],
-  },
+  // {
+  //   id: 12,
+  //   name: "Masaż",
+  //   items: [
+  //     {
+  //       id: 1,
+  //       name: "Masaż klasyczny całościowy",
+  //       price: 200,
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "Masaż antycellulitowy modelujący (z bańką)",
+  //       price: 150,
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "Masaż pleców (leczniczy)",
+  //       price: 100,
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "Masaż twarzy",
+  //       price: 150,
+  //     },
+  //     {
+  //       id: 5,
+  //       name: "Masaż antycellulitowy modelujący",
+  //       price: 150,
+  //     },
+  //   ],
+  // },
 ];
