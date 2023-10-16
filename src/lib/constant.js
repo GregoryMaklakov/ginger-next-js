@@ -273,6 +273,7 @@ export const priceListData = [
       },
     ],
   },
+  // Masaż
   // {
   //   id: 12,
   //   name: "Masaż",
