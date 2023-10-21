@@ -46,7 +46,7 @@ function ArticlePage() {
           <div className="grid w-full grid-cols-8 gap-16 lg:gap-6 sm:gap-8 items-center">
             <div className="col-span-4 xl:col-span-4 flex flex-col items-start justify-start md:order-2 lg:col-span-8">
               {article.text.map(text => (
-                <p key={text.id} className="my-4 font-medium">
+                <p key={text} className="my-4 font-medium">
                   {text}
                 </p>
               ))}
