@@ -10,9 +10,8 @@ import {
   FrameWhiteBlack,
   TransitionPageEffect,
 } from '../../components';
-import BlackLady from '../../../public/ginger/images/black-lady.webp';
-import KateImage from '../../../public/ginger/images/KateDark22.png';
-import LizaImage from '../../../public/ginger/images/liza.png';
+import BlackLady from '../../../public/images/about/black-lady.webp';
+
 
 import { socialLink } from '../../lib/constant';
 
@@ -140,163 +139,11 @@ export default function About() {
             >
               Nasi specjaliści od piękna
             </motion.h3>
-            <div className="flex flex-wrap gap-16 items-center justify-center w-full my-16">
-              <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
-                  <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
-                    <Image
-                      src={KateImage}
-                      alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
-                    />
-                  </div>
-                  <div className='w-full flex items-center justify-center min-h-[84px]'>
-                    <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
-                      <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                        Kate
-                      </h4>
-                      <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
-                        Manicurist
-                      </h5>
-                    </div>
-                    <Link
-                      href={socialLink.booksyKate}
-                      className="flex items-center justify-center bg-dark text-light shadow-md border border-solid border-dark w-32 h-12 rounded-full font-semibold hover:bg-light hover:text-dark hover:dark:border-light dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light "
-                      target="_blank"
-                    >
-                      <span className="flex items-center justify-center text-center leading-5 md:text-xs">
-                        Umów
-                      </span>
-                    </Link>
-                  </div>
-                </FrameWhiteBlack>
-              </motion.div>
 
-              <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
-                  <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
-                    <Image
-                      src={KateImage}
-                      alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
-                    />
-                  </div>
-                  <div className='w-full flex items-center justify-center min-h-[84px]'>
-                    <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
-                      <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                        Jana
-                      </h4>
-                      <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
-                        Manicurist
-                      </h5>
-                    </div>
-                    <Link
-                      href={socialLink.booksyJana}
-                      className="flex items-center justify-center bg-dark text-light shadow-md border border-solid border-dark w-32 h-12 rounded-full font-semibold hover:bg-light hover:text-dark hover:dark:border-light dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light "
-                      target="_blank"
-                    >
-                      <span className="flex items-center justify-center text-center leading-5 md:text-xs">
-                        Umów
-                      </span>
-                    </Link>
-                  </div>
-                </FrameWhiteBlack>
-              </motion.div>
+            {/* Wrapper employees */}
+            {/* <div className="flex flex-wrap gap-16 items-center justify-center w-full my-16">
 
-              <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
-                  <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
-                    <Image
-                      src={KateImage}
-                      alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
-                    />
-                  </div>
-                  <div className='w-full flex items-center justify-center min-h-[84px]'>
-                    <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
-                      <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                        Maria
-                      </h4>
-                      <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
-                        Manicurist
-                      </h5>
-                    </div>
-                    <Link
-                      href={socialLink.booksyMaria}
-                      className="flex items-center justify-center bg-dark text-light shadow-md border border-solid border-dark w-32 h-12 rounded-full font-semibold hover:bg-light hover:text-dark hover:dark:border-light dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light "
-                      target="_blank"
-                    >
-                      <span className="flex items-center justify-center text-center leading-5 md:text-xs">
-                        Umów
-                      </span>
-                    </Link>
-                  </div>
-                </FrameWhiteBlack>
-              </motion.div>
-
-              <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
-                  <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
-                    <Image
-                      src={LizaImage}
-                      alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
-                    />
-                  </div>
-                  <div className='w-full flex items-center justify-center h-[84px]'>
-                    <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
-                      <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                        Liza
-                      </h4>
-                      <h5 className="text-sm font-bold text-primary/75 dark:text-primaryDark/75 overflow-hidden max-w-[120px]">
-                        Brow, Lash, and Makeup Artist
-                      </h5>
-                    </div>
-                    <Link
-                      href={socialLink.booksyLiza}
-                      className="flex items-center justify-center bg-dark text-light shadow-md border border-solid border-dark w-32 h-12 rounded-full font-semibold hover:bg-light hover:text-dark hover:dark:border-light dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light "
-                      target="_blank"
-                    >
-                      <span className="flex items-center justify-center text-center leading-5 md:text-xs">
-                        Umów
-                      </span>
-                    </Link>
-                  </div>
-                </FrameWhiteBlack>
-              </motion.div>
-
-              {/* LUDA */}
-              {/* <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
-                  <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
-                    <Image
-                      src={KateImage}
-                      alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
-                    />
-                  </div>
-                  <div className='w-full flex items-center justify-center min-h-[84px]'>
-                    <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
-                      <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                        Luda
-                      </h4>
-                      <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
-                        Masażysta
-                      </h5>
-                    </div>
-                    <Link
-                      href={socialLink.booksy}
-                      className="flex items-center justify-center bg-dark text-light shadow-md border border-solid border-dark w-32 h-12 rounded-full font-semibold hover:bg-light hover:text-dark hover:dark:border-light dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light "
-                      target="_blank"
-                    >
-                      <span className="flex items-center justify-center text-center leading-5 md:text-xs">
-                        Umów
-                      </span>
-                    </Link>
-                  </div>
-                </FrameWhiteBlack>
-              </motion.div> */}
-            </div>
+            </div> */}
           </div>
         </Layout>
       </section>

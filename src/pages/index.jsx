@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState, useEffect } from 'react';
 import { CursorContext, ThemeContext } from '../lib/context';
-import HeroArtDark from "../../public/images/profile/heroDark.webp";
-import HeroArtLight from "../../public/images/profile/heroLight.webp";
+import HeroArtDark from "../../public/images/home/heroDark.webp";
+import HeroArtLight from "../../public/images/home/heroLight.webp";
 import {
   Layout,
   AnimatedText,

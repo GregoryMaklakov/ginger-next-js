@@ -1,14 +1,13 @@
-import Link from 'next/link';
 import { useState, useEffect, useContext } from 'react';
-import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
-import { PropTypes } from 'prop-types';
 import { Icon } from '../Icons/Icon';
 import { Routes, socialLink } from '../../lib/constant';
 import { Logo } from '../Logo';
 import { MoonIcon } from '../Icons/MoonIcon';
 import { SunIcon } from '../Icons/SunIcon';
-import { CursorContext, ThemeContext } from '../../lib/context';
+import { CursorContext, ThemeContext } from '../../lib';
+import { CustomMobileLink } from './CustomMobileLink';
+import { CustomLink } from './CustomLink';
 
 const navLinks = [
   {
@@ -23,8 +22,8 @@ const navLinks = [
   },
   {
     id: 3,
-    href: Routes.GALLERY,
-    label: 'Gallery',
+    href: Routes.BlOG,
+    label: 'Blog',
   },
   {
     id: 4,
@@ -35,8 +34,7 @@ const navLinks = [
 
 export function Navigation() {
 
-  // const [mode, setMode] = useThemeSwitcher();
-  const { mode, toggleTheme } = useContext(ThemeContext); // получение значения mode и функции toggleTheme из контекста
+  const { mode, toggleTheme } = useContext(ThemeContext);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -233,69 +231,3 @@ export function Navigation() {
   );
 }
 
-export function CustomLink({ href, title, className }) {
-  const router = useRouter();
-  const { setHoveringLink } = useContext(CursorContext);
-
-  const handleMouseEnter = () => {
-    setHoveringLink(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveringLink(false);
-  };
-
-  return (
-    <Link
-      href={href}
-      className={`relative group ${className}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {title}
-      <span
-        className={`
-            h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
-          }`}
-      />
-    </Link>
-  )
-}
-
-
-CustomLink.propTypes = {
-  href: PropTypes.string,
-  title: PropTypes.string,
-  className: PropTypes.string,
-};
-
-function CustomMobileLink({ href, title, className, toggle }) {
-  const router = useRouter();
-
-  const handleClick = () => {
-    toggle();
-    router.push(href);
-  };
-  return (
-    <button
-      type="button"
-      href={href}
-      className={`${className} relative group text-light dark:text-dark`}
-      onClick={handleClick}
-    >
-      {title}
-      <span
-        className={`
-            h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
-          }`}
-      />
-    </button>
-  );
-}
-
-CustomMobileLink.propTypes = {
-  href: PropTypes.string,
-  title: PropTypes.string,
-  className: PropTypes.string,
-  toggle: PropTypes.func,
-};
