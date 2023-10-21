@@ -12,3 +12,6 @@ export * from "./CustomCursor";
 export * from "./Footer";
 export * from "./ArticleCard";
 export * from "./Price";
+export * from "./Employee";
+export * from "./FlippedText";
+export * from "./ServicesBlock";

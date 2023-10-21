@@ -1,7 +1,7 @@
 // articles
 export const articles = [
   {
-    slug: "article-2",
+    slug: "article-1",
     title: "Bezpieczeństwo i Sterylizacja",
     time: "5 min read",
     subtitle:

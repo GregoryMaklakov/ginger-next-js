@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   AnimatedText,
@@ -9,11 +8,12 @@ import {
   Layout,
   FrameWhiteBlack,
   TransitionPageEffect,
+  Employee,
+  ServicesSchedule,
 } from '../../components';
 import BlackLady from '../../../public/images/about/black-lady.webp';
+import { employeeData, stagesDataAboutSchedule } from '../../lib';
 
-
-import { socialLink } from '../../lib/constant';
 
 export default function About() {
   const [daysSince, setDaysSince] = useState(0);
@@ -33,12 +33,6 @@ export default function About() {
     viewport: { once: true },
   };
 
-  const motionFrameWhiteBlack = {
-    initial: { opacity: 0, y: 50 },
-    whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 1, type: 'spring', delay: 0.1 },
-    viewport: { once: true },
-  };
 
   return (
     <>
@@ -60,7 +54,7 @@ export default function About() {
       <section className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-8">
           <AnimatedText
-            text="Dowiedz się więcej o salonie piękności Ginger"
+            text="Dowiedz się więcej o Ginger"
             className="mb-16 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 items-center">
@@ -140,10 +134,22 @@ export default function About() {
               Nasi specjaliści od piękna
             </motion.h3>
 
-            {/* Wrapper employees */}
-            {/* <div className="flex flex-wrap gap-16 items-center justify-center w-full my-16">
-
-            </div> */}
+            <ul className="flex flex-wrap gap-16 items-center justify-center w-full my-16">
+              {employeeData.map((employee) => (
+                <Employee
+                  key={employee.id}
+                  name={employee.name}
+                  position={employee.position}
+                  imageSrc={employee.imageSrc}
+                  booksyLink={employee.booksyLink}
+                />
+              ))}
+            </ul>
+          </div>
+          <div className="w-full my-16 mx-auto">
+            <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px]">
+              <ServicesSchedule name="DLACZEGO WARTO NAS WYBRAĆ?" data={stagesDataAboutSchedule} />
+            </div>
           </div>
         </Layout>
       </section>
