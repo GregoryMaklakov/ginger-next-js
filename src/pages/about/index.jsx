@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import {
   AnimatedText,
   AnimatedValue,
   Layout,
   FrameWhiteBlack,
   TransitionPageEffect,
-  Employee,
+  // Employee,
   ServicesSchedule,
 } from '../../components';
 import BlackLady from '../../../public/images/about/black-lady.webp';
-import { employeeData, stagesDataAboutSchedule } from '../../lib';
+import { stagesDataAboutSchedule } from '../../lib';
 
 
 export default function About() {
@@ -26,12 +26,12 @@ export default function About() {
     setDaysSince(daysDiff);
   }, []);
 
-  const motionSettings = {
-    initial: { y: 50 },
-    whileInView: { y: 0 },
-    transition: { duration: 1, type: 'spring', delay: 0.1 },
-    viewport: { once: true },
-  };
+  // const motionSettings = {
+  //   initial: { y: 50 },
+  //   whileInView: { y: 0 },
+  //   transition: { duration: 1, type: 'spring', delay: 0.1 },
+  //   viewport: { once: true },
+  // };
 
 
   return (
@@ -126,7 +126,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="w-full my-16 mx-auto">
+          {/* <div className="w-full my-16 mx-auto">
             <motion.h3
               {...motionSettings}
               className="text-8xl font-bold text-center lg:text-5xl xs:text-3xl "
@@ -145,7 +145,7 @@ export default function About() {
                 />
               ))}
             </ul>
-          </div>
+          </div> */}
           <div className="w-full my-16 mx-auto">
             <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px]">
               <ServicesSchedule name="DLACZEGO WARTO NAS WYBRAĆ?" data={stagesDataAboutSchedule} />
