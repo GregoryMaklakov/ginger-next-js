@@ -4,7 +4,14 @@ import Head from "next/head";
 import {
   FrameWhiteBlack,
   Layout,
+  ServicesResultThree,
+  ServicesSchedule,
+  ServicesTextRight,
   TransitionPageEffect,
+  Accordion,
+  ServicesAdvantages,
+  ServicesTitle,
+  ButtonBack
 } from "../../components";
 import { articles } from "../../lib";
 
@@ -38,18 +45,30 @@ function ArticlePage() {
         <meta name="description" content="Obejrzyj naszą galerię zdjęć, aby zobaczyć, jakie efekty osiągamy w naszym salonie Ginger Beauty Zone." />
       </Head>
       <TransitionPageEffect />
-      <section className="flex w-full flex-col items-center justify-center dark:text-light">
+      <section className="flex w-full flex-col items-center justify-center dark:text-light text-dark">
         <Layout className="pt-8">
-          <h1 className="w-full mx-auto py-2 flex items-center justify-center text-center sm:py-0 font-bold capitalize text-8xl xl:text-6xl lg:text-5xl xs:text-3xl mb-16">
-            {article.title}
-          </h1>
+          <div className="flex items-start lg:flex-col">
+            <ButtonBack className="mr-4 lg:mr-0 lg:mb-4" />
+            <h1 className="w-full mx-auto flex items-center justify-center text-center sm:py-0 font-bold capitalize text-8xl xl:text-6xl lg:text-5xl xs:text-3xl mb-16">
+              {article.title}
+            </h1>
+          </div>
           <div className="grid w-full grid-cols-8 gap-16 lg:gap-6 sm:gap-8 items-center">
             <div className="col-span-4 xl:col-span-4 flex flex-col items-start justify-start md:order-2 lg:col-span-8">
-              {article.text.map(text => (
-                <p key={text} className="my-4 font-medium">
-                  {text}
-                </p>
-              ))}
+              {article.text &&
+                article.text.map(text => (
+                  <p key={text} className="my-4 font-medium max-w-[480px] lg:max-w-full">
+                    {text}
+                  </p>
+                ))}
+              {article.resultThree &&
+                article.resultThree.map(three => (
+                  <ServicesResultThree
+                    key={three}
+                    name={three.name}
+                    data={three.data}
+                  />
+                ))}
             </div>
             <FrameWhiteBlack className="col-span-4 min-h-full xl:col-span-4 md:order-1 lg:col-span-8 h-auto lg:min-h-[450px]">
               <Image
@@ -63,6 +82,40 @@ function ArticlePage() {
               />
             </FrameWhiteBlack>
           </div>
+
+          {article.servicesAdvantage && (
+            <ServicesAdvantages list={article.servicesAdvantage.list} heading={article.servicesAdvantage.heading} />
+          )}
+
+          {article.additionalHeadingFirst && (
+            <ServicesTitle additionalHeading={article.additionalHeadingFirst} />
+          )}
+
+          {article && article.blockAccordion && article.blockAccordion.map(item => (
+            <Accordion heading={item.heading} data={item.data} />
+          ))}
+
+          {article.servicesSchedule &&
+            article.servicesSchedule.map(schedule => (
+              <ServicesSchedule name={schedule.name} data={schedule.data} key={schedule} />
+            ))}
+
+          {article.servicesAdvantageSecond && (
+            <ServicesAdvantages list={article.servicesAdvantageSecond.list} heading={article.servicesAdvantageSecond.heading} />
+          )}
+
+          {article.additionalHeadingSecond && (
+            <ServicesTitle additionalHeading={article.additionalHeadingSecond} />
+          )}
+
+          {article.servicesAdvantageThird && (
+            <ServicesAdvantages list={article.servicesAdvantageThird.list} heading={article.servicesAdvantageThird.heading} />
+          )}
+
+          {article.servicesTextRight && (
+            <ServicesTextRight data={article.servicesTextRight} />
+          )}
+          <ButtonBack className="my-12" label="всі послуги" />
         </Layout>
       </section>
     </>

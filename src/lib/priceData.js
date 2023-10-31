@@ -195,7 +195,7 @@ export const priceData = [
       {
         id: 2,
         name: "Męska regulacja brwi",
-        price: 50,
+        price: 40,
       },
       {
         id: 3,

@@ -14,7 +14,7 @@ export default function Blog({ summary }) {
                 <meta property="og:title" content="Blog | Ginger" />
                 <meta property="og:url" content="https://ginger-beauty-zone.com" />
                 <meta property="og:image" content="/meta-tag.jpg" />
-                <meta property="og:description" content="Teren Twojego Piękna" />
+                <meta property="og:description" content="Znajdź najlepsze usługi paznokciowe w Warszawie w Ginger Beauty Zone. Wybierz spośród manicure hybrydowego, żelowego, pedicure, nail art i wielu innych usług paznokciowych. Dołącz do Manicure Warszawy i ciesz się pięknymi paznokciami!" />
                 <meta property="business:contact_data:street_address" content="278 Grochowska" />
                 <meta property="business:contact_data:locality" content="Warsaw" />
                 <meta property="business:contact_data:postal_code" content="03-841" />
