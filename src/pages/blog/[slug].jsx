@@ -115,7 +115,7 @@ function ArticlePage() {
           {article.servicesTextRight && (
             <ServicesTextRight data={article.servicesTextRight} />
           )}
-          <ButtonBack className="my-12" label="всі послуги" />
+          <ButtonBack className="my-12" label="Wszystkie artykuły" />
         </Layout>
       </section>
     </>

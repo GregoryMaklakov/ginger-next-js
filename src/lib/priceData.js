@@ -4,22 +4,24 @@ export const priceData = [
     name: "Manicure Hybrydowy z Usunięciem Hybrydy",
     items: [
       { id: 1, name: "Manicure Hybrydowy + Jednolity Kolor", price: 140 },
+
       {
         id: 2,
-        name: "Manicure Hybrydowy + Ombre lub BabyBoomer",
-        price: 170,
-      },
-      {
-        id: 3,
         name: "Manicure Hybrydowy + Zdobienie",
+        description: "+ Zdobienie 2 szt, 4 szt, 6 szt",
         price: { min: 160, max: 180 },
       },
-      { id: 4, name: "Manicure Hybrydowy + French Hybrydą", price: 170 },
-      { id: 5, name: "Utwardzenie Płytki Żelem", price: 20 },
+      { id: 3, name: "Manicure Hybrydowy + French Hybrydą", price: 170 },
+      { id: 4, name: "Utwardzenie Płytki Żelem", price: 20 },
       {
-        id: 6,
+        id: 5,
         name: "Manicure Hybrydowy z Usunięciem + Peeling Rąk",
         price: 150,
+      },
+      {
+        id: 6,
+        name: "Manicure Hybrydowy + Ombre lub BabyBoomer",
+        price: 170,
       },
     ],
   },
@@ -59,6 +61,7 @@ export const priceData = [
       {
         id: 4,
         name: "Manicure hybrydowy + Zdobienie",
+        description: "+ Zdobienie 2 szt, 4 szt, 6 szt",
         price: { min: 150, max: 170 },
       },
     ],
@@ -100,13 +103,14 @@ export const priceData = [
       },
       {
         id: 3,
-        name: "Uzupełnienie Żelu + Zdobienie",
-        price: { min: 200, max: 210 },
+        name: "Uzupełnienie Żelu + French",
+        price: 200,
       },
       {
         id: 4,
-        name: "Uzupełnienie Żelu + French",
-        price: 200,
+        name: "Uzupełnienie Żelu + Zdobienie",
+        price: { min: 200, max: 220 },
+        description: "+ Zdobienie 2 szt, 4 szt, 6 szt",
       },
     ],
   },
@@ -169,15 +173,28 @@ export const priceData = [
       {
         id: 1,
         name: "Ściąganie Hybrydy + Kształt",
-        price: { min: 60, max: 100 },
+        description: "+ Hybryda Położona u Nas",
+        price: 60,
       },
       {
         id: 2,
+        name: "Ściąganie Hybrydy + Kształt",
+        description: "+ Manicure",
+        price: 110,
+      },
+      {
+        id: 3,
+        name: "Ściąganie Hybrydy + Kształt",
+        description: "+ Manicure z Pomalowaniem Zwykłym Lakieremure",
+        price: 130,
+      },
+      {
+        id: 4,
         name: "Ściąganie Hybrydy z Nóg",
         price: 30,
       },
       {
-        id: 3,
+        id: 5,
         name: "Ściąganie Żelu",
         price: 60,
       },
@@ -185,11 +202,28 @@ export const priceData = [
   },
   {
     id: 10,
+    name: "Naprawa Paznokcia",
+    items: [
+      {
+        id: 1,
+        name: "Naprawa Paznokcia Hybrydowego",
+        price: 20,
+      },
+      {
+        id: 2,
+        name: "Naprawa Paznokcia Żelowego",
+        price: 30,
+      },
+    ],
+  },
+  {
+    id: 11,
     name: "Brwi i Rzęsy",
     items: [
       {
         id: 1,
         name: "Regulacja Brwi",
+        description: "Regulacja brwi (pęseta lub wosk)",
         price: 40,
       },
       {
@@ -215,6 +249,7 @@ export const priceData = [
       {
         id: 6,
         name: "Wąsik",
+        description: "Depilacja wąsika woskiem",
         price: 20,
       },
       {
@@ -225,7 +260,7 @@ export const priceData = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     name: "Makijaż",
     items: [
       {
@@ -255,36 +290,4 @@ export const priceData = [
       },
     ],
   },
-  // Masaż
-  // {
-  //   id: 12,
-  //   name: "Masaż",
-  //   items: [
-  //     {
-  //       id: 1,
-  //       name: "Masaż klasyczny całościowy",
-  //       price: 200,
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Masaż antycellulitowy modelujący (z bańką)",
-  //       price: 150,
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Masaż pleców (leczniczy)",
-  //       price: 100,
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Masaż twarzy",
-  //       price: 150,
-  //     },
-  //     {
-  //       id: 5,
-  //       name: "Masaż antycellulitowy modelujący",
-  //       price: 150,
-  //     },
-  //   ],
-  // },
 ];

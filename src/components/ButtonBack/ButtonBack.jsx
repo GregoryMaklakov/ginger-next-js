@@ -1,7 +1,6 @@
 import { PropTypes } from "prop-types";
 import { useRouter } from "next/router";
 
-
 export function ButtonBack({ label, className }) {
     const router = useRouter();
     const clickBack = () => {
@@ -12,10 +11,11 @@ export function ButtonBack({ label, className }) {
         <button
             aria-label="back"
             type="button"
-            className={`flex max-w-max items-center gap-[10px] ${className} `}
+            className={`flex max-w-max items-center gap-[10px] ${className} transition ease-in hover:text-primary dark:hover:text-primary`}
             onClick={clickBack}
+
         >
-            <span className="rounded-full border-[2px] dark:border-light py-[11px] px-[14px] transition-all ease-in border-dark dark:group-hover:border-light dark:group-hover:bg-light">
+            <span className="rounded-full border-[2px] dark:border-light  py-[11px] px-[14px] transition-all ease-in border-dark dark:group-hover:border-light dark:group-hover:bg-light">
                 <svg
                     className="stroke-dark transition-all ease-in group-hover:stroke-light dark:stroke-light dark:group-hover:stroke-black"
                     width="7"

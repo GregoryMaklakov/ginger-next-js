@@ -56,7 +56,7 @@ export default function Home() {
 
       <TransitionPageEffect />
       <main className="">
-        <section className="flex w-full flex-col items-center justify-center min-h-[80vh]">
+        <section className="flex w-full flex-col items-center justify-center min-h-[100vh]">
           <Layout className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
             <div className="w-full flex flex-col items-center justify-between">
               <div className="w-full flex flex-col items-center self-center">
@@ -86,7 +86,7 @@ export default function Home() {
                 </CursorContext.Consumer>
               </div>
 
-              <p className="my-4 text-base font-medium self-start  text-light w-[80%] xs:w-full">
+              <p className="my-4 text-base font-medium self-start text-dark dark:text-light w-[80%] xs:w-full">
                 Wiemy, jak ważne jest dla Was posiadanie niezawodnego miejsca, w
                 którym możecie uporządkować nie tylko swoje paznokcie, ale także
                 swoje myśli. Ginger to prawdziwie klimatyczne i uduchowione
