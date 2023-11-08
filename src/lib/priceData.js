@@ -243,17 +243,12 @@ export const priceData = [
       },
       {
         id: 5,
-        name: "Laminacja rzęs",
-        price: 120,
-      },
-      {
-        id: 6,
         name: "Wąsik",
         description: "Depilacja wąsika woskiem",
         price: 20,
       },
       {
-        id: 7,
+        id: 6,
         name: "Regulacja brwi + Farbka + Wąsik",
         price: 90,
       },
