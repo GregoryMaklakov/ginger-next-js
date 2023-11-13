@@ -9,7 +9,7 @@ import { CursorContext, ThemeContext } from '../../lib';
 import { CustomMobileLink } from './CustomMobileLink';
 import { CustomLink } from './CustomLink';
 
-const navLinks = [
+export const navLinks = [
   {
     id: 1,
     href: Routes.HOME,
@@ -32,6 +32,12 @@ const navLinks = [
   },
 ];
 
+export const socialLinks = [
+  { name: "insta", url: socialLink.instagram, icon: "insta", ariaLabel: "instagram" },
+  { name: "facebook", url: socialLink.facebook, icon: "facebook", ariaLabel: "facebook" },
+  { name: "gmail", url: socialLink.google, icon: "gmail", ariaLabel: "gmail" },
+  { name: "booksy", url: socialLink.booksy, icon: "booksy", ariaLabel: "booksy" },
+];
 export function Navigation() {
 
   const { mode, toggleTheme } = useContext(ThemeContext);
@@ -109,39 +115,21 @@ export function Navigation() {
           ))}
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
-          <motion.a
-            className="mr-3 dark:fill-light"
-            href={socialLink.instagram}
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Icon name="insta" />
-          </motion.a>
-          <motion.a
-            className="mr-3 dark:fill-light"
-            href={socialLink.facebook}
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Icon name="facebook" />
-          </motion.a>
-          <motion.a
-            className="mr-0 dark:fill-light"
-            href={socialLink.booksy}
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Icon name="booksy" size={100} />
-          </motion.a>
+          {socialLinks.map((link) => (
+            <motion.a
+              key={link.name}
+              className="mr-3 dark:fill-light"
+              href={link.url}
+              target="_blank"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              aria-label={link.ariaLabel}
+            >
+              <Icon name={link.name} />
+            </motion.a>
+          ))}
           <button
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -164,8 +152,8 @@ export function Navigation() {
           <motion.div
             initial={{ scale: 0, opacity: 0, y: '-50%', x: '-50%' }}
             animate={{ scale: 1, opacity: 1 }}
-            className="min-w-[70vw] sm:min-w-[90vw] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50
-                      bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
+            className="min-w-[70vw] sm:min-w-[90vw] min-h-[80vh] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50
+                      bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md pt-24 pb-16"
           >
             <nav className="flex flex-col items-center justify-center mb-8">
               {navLinks.map(link => (
@@ -174,41 +162,31 @@ export function Navigation() {
                   key={link.href}
                   href={link.href}
                   title={link.label}
-                  className="mb-4"
+                  className="mb-8 font-semibold"
                 />
               ))}
             </nav>
-            <nav className="flex items-center justify-center flex-wrap ">
-              <motion.a
-                className="mr-3 dark:fill-dark fill-light"
-                href={socialLink.instagram}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon name="insta" />
-              </motion.a>
-              <motion.a
-                className="mr-3 dark:fill-dark fill-light"
-                href={socialLink.facebook}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon name="facebook" />
-              </motion.a>
-              <motion.a
-                className="mr-0 dark:fill-dark fill-light"
-                href={socialLink.booksy}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon name="booksy" size={100} />
-              </motion.a>
+            <nav className="flex items-center justify-center flex-wrap flex-col">
+              <div className='flex items-center justify-center mb-12 flex-wrap'>
+                {socialLinks.map((link) => (
+                  <motion.a
+                    key={link.name}
+                    className="mr-3 fill-light dark:fill-dark"
+                    href={link.url}
+                    target="_blank"
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.9 }}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    aria-label={link.ariaLabel}
+                  >
+                    <Icon name={link.name} size={44} />
+                  </motion.a>
+                ))}
+              </div>
               <button
                 type="button"
-                className="flex items-center h-12 w-12 justify-center rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
+                className="flex items-center h-12 w-12 md:h-16 md:w-16 justify-center rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
                 onClick={toggleTheme}
 
               >

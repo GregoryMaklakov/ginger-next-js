@@ -13,7 +13,7 @@ export function CustomMobileLink({ href, title, className, toggle }) {
         <button
             type="button"
             href={href}
-            className={`${className} relative group text-light dark:text-dark`}
+            className={`${className} text-xl relative group text-light dark:text-dark`}
             onClick={handleClick}
         >
             {title}

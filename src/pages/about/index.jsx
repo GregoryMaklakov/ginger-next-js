@@ -98,7 +98,7 @@ export default function About() {
             <div className="col-span-2 xl:col-span-8 xl:flex-row xl:items-center flex flex-col items-end justify-between h-full md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center ">
                 <span className="inline-block text-7xl font-bold dark:text-light/75 md:text-4xl xs:text-2xl">
-                  <AnimatedValue value={780} className="dark:text-light/75 " />+
+                  <AnimatedValue value={1080} className="dark:text-light/75 " />+
                 </span>
                 <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75 lg:text-center xs:text-xs xs:mr-1">
                   zadowolonych klientów
