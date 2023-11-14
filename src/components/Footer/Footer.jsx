@@ -124,7 +124,6 @@ export function Footer() {
                         <span className="underline underline-offset-2">
                             Grochowska 278, 03-841
                         </span>
-
                     </Link>
                 </div>
             </div>

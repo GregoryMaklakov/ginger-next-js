@@ -196,7 +196,7 @@ export const priceData = [
       {
         id: 5,
         name: "Ściąganie Żelu",
-        price: 60,
+        price: 70,
       },
     ],
   },
