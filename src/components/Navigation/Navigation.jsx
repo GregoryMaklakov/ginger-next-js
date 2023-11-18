@@ -152,7 +152,7 @@ export function Navigation() {
           <motion.div
             initial={{ scale: 0, opacity: 0, y: '-50%', x: '-50%' }}
             animate={{ scale: 1, opacity: 1 }}
-            className="min-w-[70vw] sm:min-w-[90vw] min-h-[80vh] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50
+            className="min-w-[70vw] sm:min-w-[90vw] min-h-[74vh] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50
                       bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md pt-24 pb-16"
           >
             <nav className="flex flex-col items-center justify-center mb-8">
