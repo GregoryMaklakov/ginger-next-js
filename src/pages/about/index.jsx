@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { PropTypes } from 'prop-types';
 import Head from 'next/head';
 import Image from 'next/image';
 // import { motion } from 'framer-motion';
@@ -10,12 +11,13 @@ import {
   TransitionPageEffect,
   // Employee,
   ServicesSchedule,
+  HistoryCard,
 } from '../../components';
 import BlackLady from '../../../public/images/about/aboutHeroKate.webp';
-import { stagesDataAboutSchedule, aboutMainText } from '../../lib';
+import { stagesDataAboutSchedule, aboutMainText, aboutHistory } from '../../lib';
 
 
-export default function About() {
+export default function About({ summary }) {
   const [daysSince, setDaysSince] = useState(0);
 
   useEffect(() => {
@@ -114,6 +116,10 @@ export default function About() {
               </div>
             </div>
           </div>
+
+
+
+          {/* //? Employee */}
           {/* 
           <div className="w-full my-16 mx-auto">
             <motion.h3
@@ -140,8 +146,21 @@ export default function About() {
               <ServicesSchedule name="DLACZEGO WARTO NAS WYBRAĆ?" data={stagesDataAboutSchedule} />
             </div>
           </div>
+
+          {/* //? Historia Ginger */}
+          <div className='history'>
+            <HistoryCard
+              title={aboutHistory.title}
+              image={aboutHistory.image}
+              link='/about/history'
+              subtitle={aboutHistory.subtitle}
+            />
+          </div>
         </Layout>
       </section>
     </>
   );
 }
+About.propTypes = {
+  summary: PropTypes.string,
+};

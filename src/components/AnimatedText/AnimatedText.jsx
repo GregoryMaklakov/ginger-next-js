@@ -32,6 +32,7 @@ const singleWord = {
 
 export function AnimatedText({ text, className }) {
   const { setHoveringText } = useContext(CursorContext);
+
   const handleMouseEnter = () => {
     setHoveringText(true);
   };
@@ -39,18 +40,19 @@ export function AnimatedText({ text, className }) {
     setHoveringText(false);
   };
 
+
   return (
     <CursorContext.Consumer>
       {({ isHoveringText }) => (
         <div
-          className="w-full mx-auto py-2 flex items-center justify-center text-center sm:py-0">
+          className="w-full mx-auto flex items-center justify-center text-center sm:py-0">
           <motion.h1
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             variants={appearanceText}
             initial="initial"
             animate="animate"
-            className={`inline-block w-full font-bold capitalize text-8xl ${isHoveringText ? "text-dark bg-light dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
+            className={`inline-block w-full font-bold capitalize text-8xl ${isHoveringText ? "text-dark bg-inherit dark:bg-inherit dark:text-light" : "text-dark dark:bg-inherit dark:text-light"
               } ${className}`}
           >
             {text.split(' ').map((word, index) => (

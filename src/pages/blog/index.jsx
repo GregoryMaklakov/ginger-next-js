@@ -44,6 +44,7 @@ export default function Blog({ summary }) {
         </>
     )
 }
+
 Blog.propTypes = {
     summary: PropTypes.string,
 };

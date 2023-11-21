@@ -18,3 +18,4 @@ export * from "./Employee";
 export * from "./ArticlesBlock";
 export * from "./Tag";
 export * from "./ButtonBack";
+export * from "./AboutBlock";

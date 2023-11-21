@@ -9,6 +9,13 @@ export const aboutMainText = {
     " W naszym salonie każdy klient jest traktowany indywidualnie i z pełnym zaangażowaniem. Jest to miejsce, w którym każdy może poczuć się wyjątkowo i zrelaksować się w przyjemnej atmosferze. Zapraszamy do naszego prawdziwego miejsca piękna w Warszawie!",
 };
 
+// About History
+export const aboutHistory = {
+  title: "Historia  Ginger",
+  subtitle: "Kate Maklakova - story of creating Ginger.",
+  image: "/images/about/aboutHistory.webp",
+};
+
 // About Schedule
 export const stagesDataAboutSchedule = [
   {
