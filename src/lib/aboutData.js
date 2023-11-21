@@ -1,3 +1,14 @@
+// O nas
+export const aboutMainText = {
+  heading: "O nas",
+  paragraph01:
+    "Witaj w naszym nowym salonie piękna w Warszawie! Nasze usługi to coś więcej niż tylko zabiegi kosmetyczne - to sposób na odkrycie piękna, który drzemie w Tobie. Nasz salon to miejsce, w którym  używamy tylko najlepszych materiałów, dbamy o pełną sterylizację narzędzi, a nasz personel potrzebom każdego klienta.",
+  paragraph02:
+    " Jesteśmy dumni z naszego doświadczenia i zaangażowania w pracę, a nasze usługi obejmują pełen zakres zabiegów manicure i pedicure. Oferujemy również stylizację brwi i rzęs oraz makijaż.",
+  paragraph03:
+    " W naszym salonie każdy klient jest traktowany indywidualnie i z pełnym zaangażowaniem. Jest to miejsce, w którym każdy może poczuć się wyjątkowo i zrelaksować się w przyjemnej atmosferze. Zapraszamy do naszego prawdziwego miejsca piękna w Warszawie!",
+};
+
 // About Schedule
 export const stagesDataAboutSchedule = [
   {

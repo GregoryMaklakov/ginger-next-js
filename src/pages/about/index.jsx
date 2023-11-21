@@ -11,8 +11,8 @@ import {
   // Employee,
   ServicesSchedule,
 } from '../../components';
-import BlackLady from '../../../public/images/about/black-lady.webp';
-import { stagesDataAboutSchedule } from '../../lib';
+import BlackLady from '../../../public/images/about/aboutHeroKate.webp';
+import { stagesDataAboutSchedule, aboutMainText } from '../../lib';
 
 
 export default function About() {
@@ -60,31 +60,20 @@ export default function About() {
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 items-center">
             <div className="col-span-3 xl:col-span-4 flex flex-col items-start justify-start md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                O nas
+                {aboutMainText.heading}
               </h2>
               <p className="font-medium">
-                Witaj w naszym nowym salonie piękna w Warszawie! Nasze usługi to
-                coś więcej niż tylko zabiegi kosmetyczne - to sposób na odkrycie
-                piękna, który drzemie w Tobie. Nasz salon to miejsce, w którym
-                używamy tylko najlepszych materiałów, dbamy o pełną sterylizację
-                narzędzi, a nasz personel wychodzi naprzeciw indywidualnym
-                potrzebom każdego klienta.
+                {aboutMainText.paragraph01}
               </p>
               <p className="my-4 font-medium">
-                Jesteśmy dumni z naszego doświadczenia i zaangażowania w pracę,
-                a nasze usługi obejmują pełen zakres zabiegów manicure i
-                pedicure. Oferujemy również masaże, stylizację brwi i rzęs oraz
-                makijaż.
+                {aboutMainText.paragraph02}
               </p>
               <p className="font-medium">
-                W naszym salonie każdy klient jest traktowany indywidualnie i z
-                pełnym zaangażowaniem. Jest to miejsce, w którym każdy może
-                poczuć się wyjątkowo i zrelaksować się w przyjemnej atmosferze.
-                Zapraszamy do naszego prawdziwego miejsca piękna w Warszawie!
+                {aboutMainText.paragraph03}
               </p>
             </div>
 
-            <FrameWhiteBlack className="col-span-3 xl:col-span-4 min-h-full md:order-1 md:col-span-8 md:min-h-[450px]">
+            <FrameWhiteBlack className="col-span-3 xl:col-span-4 md:order-1 md:col-span-8 min-h-[600px]">
               <Image
                 src={BlackLady}
                 alt="BlackLady"
@@ -125,8 +114,8 @@ export default function About() {
               </div>
             </div>
           </div>
-
-          {/* <div className="w-full my-16 mx-auto">
+          {/* 
+          <div className="w-full my-16 mx-auto">
             <motion.h3
               {...motionSettings}
               className="text-8xl font-bold text-center lg:text-5xl xs:text-3xl "
