@@ -11,7 +11,7 @@ import {
   TransitionPageEffect,
   // Employee,
   ServicesSchedule,
-  HistoryCard,
+  History,
 } from '../../components';
 import BlackLady from '../../../public/images/about/aboutHeroKate.webp';
 import { stagesDataAboutSchedule, aboutMainText, aboutHistory } from '../../lib';
@@ -149,18 +149,14 @@ export default function About({ summary }) {
 
           {/* //? Historia Ginger */}
           <div className='history'>
-            <HistoryCard
-              title={aboutHistory.title}
-              image={aboutHistory.image}
-              link='/about/history'
-              subtitle={aboutHistory.subtitle}
-            />
+            <History />
           </div>
         </Layout>
       </section>
     </>
   );
 }
+
 About.propTypes = {
   summary: PropTypes.string,
 };

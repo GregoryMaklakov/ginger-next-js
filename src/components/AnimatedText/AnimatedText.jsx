@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { CursorContext } from '../../lib/context';
 
 const appearanceText = {
@@ -32,6 +32,8 @@ const singleWord = {
 
 export function AnimatedText({ text, className }) {
   const { setHoveringText } = useContext(CursorContext);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const handleMouseEnter = () => {
     setHoveringText(true);
@@ -45,15 +47,19 @@ export function AnimatedText({ text, className }) {
     <CursorContext.Consumer>
       {({ isHoveringText }) => (
         <div
+          ref={ref}
           className="w-full mx-auto flex items-center justify-center text-center sm:py-0">
           <motion.h1
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             variants={appearanceText}
             initial="initial"
-            animate="animate"
-            className={`inline-block w-full font-bold capitalize text-8xl ${isHoveringText ? "text-dark bg-inherit dark:bg-inherit dark:text-light" : "text-dark dark:bg-inherit dark:text-light"
+            animate={isInView ? 'animate' : 'initial'}
+            className={`inline-block w-full font-bold capitalize text-8xl ${isHoveringText
+              ? 'text-dark bg-inherit dark:bg-inherit dark:text-light'
+              : 'text-dark dark:bg-inherit dark:text-light'
               } ${className}`}
+
           >
             {text.split(' ').map((word, index) => (
               <motion.span
