@@ -49,7 +49,7 @@ export function AnimatedText({ text, className }) {
         <div
           ref={ref}
           className="w-full mx-auto flex items-center justify-center text-center sm:py-0">
-          <motion.h1
+          <motion.h2
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             variants={appearanceText}
@@ -71,7 +71,7 @@ export function AnimatedText({ text, className }) {
                 {word}&nbsp;
               </motion.span>
             ))}
-          </motion.h1>
+          </motion.h2>
         </div>
       )}
     </CursorContext.Consumer>

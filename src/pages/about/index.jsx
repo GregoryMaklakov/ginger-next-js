@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { PropTypes } from 'prop-types';
 import Head from 'next/head';
 import Image from 'next/image';
 // import { motion } from 'framer-motion';
@@ -14,10 +13,10 @@ import {
   History,
 } from '../../components';
 import BlackLady from '../../../public/images/about/aboutHeroKate.webp';
-import { stagesDataAboutSchedule, aboutMainText, aboutHistory } from '../../lib';
+import { stagesDataAboutSchedule, aboutMainText } from '../../lib';
 
 
-export default function About({ summary }) {
+export default function About() {
   const [daysSince, setDaysSince] = useState(0);
 
   useEffect(() => {
@@ -156,7 +155,3 @@ export default function About({ summary }) {
     </>
   );
 }
-
-About.propTypes = {
-  summary: PropTypes.string,
-};

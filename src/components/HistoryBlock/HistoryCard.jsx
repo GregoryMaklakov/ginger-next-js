@@ -17,12 +17,11 @@ export function HistoryCard({ image, title, subtitle, className }) {
         transition: { delay: 0.5, duration: 1 },
     }
     const subtitleAnimation = {
-        y: isInView ? [0, 2, -2, -1, 0] : 0,
+        y: isInView ? 1 : 0,
         opacity: isInView ? 1 : 0,
         transition: {
             duration: 1,
             delay: 1,
-            times: [0, 0.25, 0.5, 0.8, 1],
         },
     }
 
