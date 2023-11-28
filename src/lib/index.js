@@ -7,6 +7,5 @@ export { textScramble } from "./textScramble";
 export {
   stagesDataAboutSchedule,
   aboutMainText,
-  aboutHistoryCard,
-  aboutHistoryMainText,
+  aboutHistory,
 } from "./aboutData";

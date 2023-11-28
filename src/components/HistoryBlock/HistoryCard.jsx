@@ -3,10 +3,11 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { AnimatedText } from "../AnimatedText";
+import { StoryLine } from ".";
 
 const FramerHistoryImage = motion(Image);
 
-export function HistoryCard({ image, title, subtitle, className }) {
+export function HistoryCard({ image, title, subtitle, className, year }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -58,6 +59,7 @@ export function HistoryCard({ image, title, subtitle, className }) {
                     </motion.h4>
                 )}
             </div>
+            <StoryLine year={year} />
         </section>
     );
 }
@@ -67,4 +69,5 @@ HistoryCard.propTypes = {
     title: PropTypes.string,
     subtitle: PropTypes.string,
     className: PropTypes.string,
+    year: PropTypes.number,
 };

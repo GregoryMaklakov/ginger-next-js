@@ -24,6 +24,9 @@ module.exports = {
       boxShadow: {
         "3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)",
       },
+      transitionTimingFunction: {
+        "ease-OutCubic": "cubic-bezier(0.215,0.610,0.355,1.000)",
+      },
     },
     screens: {
       "2xl": { max: "1535px" },
@@ -38,6 +41,8 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
       xs: { max: "479px" },
       // => @media (max-width: 479px) { ... }
+      "2xs": { max: "374px" },
+      // => @media (max-width: 374px) { ... }
     },
   },
   // eslint-disable-next-line import/no-extraneous-dependencies

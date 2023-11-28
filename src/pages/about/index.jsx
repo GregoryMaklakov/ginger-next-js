@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-// import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import {
   AnimatedText,
   AnimatedValue,
@@ -18,6 +18,14 @@ import { stagesDataAboutSchedule, aboutMainText } from '../../lib';
 
 export default function About() {
   const [daysSince, setDaysSince] = useState(0);
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress)
+
+  const background = useTransform(
+    scrollYProgress,
+    [0, .125, .25, 1],
+    ["#1b1b1b", "#1b1b1b", "#7053ff", "#B63E96"]
+  )
 
   useEffect(() => {
     const decemberSecond = new Date('December 02, 2022');
@@ -52,11 +60,24 @@ export default function About() {
         <meta name="description" content="Dowiedz się więcej o naszym salonie Ginger Beauty Zone. Zapraszamy na profesjonalne zabiegi i miłą atmosferę." />
       </Head>
       <TransitionPageEffect />
+
       <section className="flex w-full flex-col items-center justify-center dark:text-light">
+        <motion.div
+          className='z-[1001] sticky w-full h-[20px] top-0 rounded-r-lg'
+          style={{
+            scaleX,
+            transformOrigin: "left",
+            background,
+            zIndex: 1001,
+          }}
+        />
         <Layout className="pt-8">
+
+          {/* //? Historia Ginger */}
+          <History />
           <AnimatedText
             text="Dowiedz się więcej o Ginger"
-            className="mb-16 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12"
+            className="my-24 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 items-center">
             <div className="col-span-3 xl:col-span-4 flex flex-col items-start justify-start md:order-2 md:col-span-8">
@@ -144,11 +165,6 @@ export default function About() {
             <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px]">
               <ServicesSchedule name="DLACZEGO WARTO NAS WYBRAĆ?" data={stagesDataAboutSchedule} />
             </div>
-          </div>
-
-          {/* //? Historia Ginger */}
-          <div className='history'>
-            <History />
           </div>
         </Layout>
       </section>

@@ -9,41 +9,64 @@ export const aboutMainText = {
     " W naszym salonie każdy klient jest traktowany indywidualnie i z pełnym zaangażowaniem. Jest to miejsce, w którym każdy może poczuć się wyjątkowo i zrelaksować się w przyjemnej atmosferze. Zapraszamy do naszego prawdziwego miejsca piękna w Warszawie!",
 };
 
-// About HistoryCard
-export const aboutHistoryCard = {
-  title: "Historia  Ginger",
-  subtitle: "Kate Maklakova - story of creating Ginger.",
-  image: "/images/about/aboutHistory.webp",
+// About History
+export const aboutHistory = {
+  aboutHistoryCard: {
+    title: "Historia  Ginger",
+    subtitle: "Kate Maklakova - historia stworzenia Ginger.",
+    image: "/images/about/aboutHistory.webp",
+  },
+  aboutHistoryMainText: [
+    // 01 block
+    {
+      paragraph01:
+        "Wszystko zaczęło się od mojej inspiracji mistrzem manicure. Oczarowana jego pracą, postanowiłam, że chcę robić to samo, jeśli nie lepiej.",
+      paragraph02:
+        "To właśnie wtedy narodziła się moja pasja do usług paznokciowych. Z każdym krokiem w tej fascynującej dziedzinie doskonaliłam moje umiejętności.",
+      paragraph03:
+        "Wtedy rozpoczęłam swoją naukę w tej sztuce, dążąc do jej uczynienia sztuką. Dziś jestem gotowa dzielić się moim doświadczeniem z klientami salonu Ginger.",
+    },
+    // 02 block
+    {
+      paragraph01:
+        "Moje pierwsze próby manicure to były zabiegi dla moich przyjaciółek, wykonane na desce do prasowania.",
+      paragraph02:
+        " Przeszłałam dziesiątki kursów, ciągle doskonaląc moje umiejętności. Podróżowałam do innych miast, ścigając się za najlepszymi praktykami.",
+    },
+    // 03 block
+    {
+      paragraph01:
+        "Z Ukrainy do Polski, Warszawa. Pracowałam trzy lata, rozwijając się jako mistrzyni w salonie.",
+      paragraph02:
+        "Nauka prowadzenia biznesu, zdobywanie doświadczenia i doskonalenie technik. Szybko zorientowałam się, że marzę o własnym biznesie.",
+      paragraph03:
+        "Trzy lata na etacie utwierdziły mnie w przekonaniu, że pragnę mieć własną firmę. Dążę do spełnienia marzenia o własnym salonie.",
+    },
+    // 04 block
+    {
+      title: "Koniec września... Przyjmuję decyzję - czas!",
+      line01: "Miesiąc do otwarcia",
+      line02: "Ginger...",
+    },
+    // block 05
+    {
+      // Beforre
+      alt: "Before Image Block with Kate",
+      imageBefore: "/images/about/aboutHistoryBefore.webp",
+      beforeText:
+        "Na początku listopada 2022 roku trafiliśmy na idealne miejsce dla salonu Ginger. Mamy zaledwie 3 tygodnie na przemianę tego lokalu w nasz wymarzony salon (nowe meble, sprzęt i wiele innych rzeczy). To niewiele czasu, ale kiedy jesteś zainspirowany pomysłem i oddajesz się pracy dzień i noc - wszystko staje się możliwe.",
+      // After
+      line01: "i udało się!",
+      line02: "Zdążyliśmy!",
+      line03: "2 grudnia",
+      line04: "pierwszy dzień pracy",
+      imageAfter: "/images/about/aboutHistoryAfter.webp",
+      afterText:
+        "Na początku listopada 2022 roku trafiliśmy na idealne miejsce dla salonu Ginger. Mamy zaledwie 3 tygodnie na przemianę tego lokalu w nasz wymarzony salon (nowe meble, sprzęt i wiele innych rzeczy). To niewiele czasu, ale kiedy jesteś zainspirowany pomysłem i oddajesz się pracy dzień i noc - wszystko staje się możliwe.",
+    },
+  ],
 };
 
-// AboutHistoryMainText
-export const aboutHistoryMainText = [
-  // 01 block
-  {
-    paragraph01:
-      "Wszystko zaczęło się od mojej inspiracji mistrzem manicure. Oczarowana jego pracą, postanowiłam, że chcę robić to samo, jeśli nie lepiej.",
-    paragraph02:
-      "To właśnie wtedy narodziła się moja pasja do usług paznokciowych. Z każdym krokiem w tej fascynującej dziedzinie doskonaliłam moje umiejętności.",
-    paragraph03:
-      "Wtedy rozpoczęłam swoją naukę w tej sztuce, dążąc do jej uczynienia sztuką. Dziś jestem gotowa dzielić się moim doświadczeniem z klientami salonu Ginger.",
-  },
-  // 02 block
-  {
-    paragraph01:
-      "Moje pierwsze próby manicure to były zabiegi dla moich przyjaciółek, wykonane na desce do prasowania.",
-    paragraph02:
-      " Przeszłałam dziesiątki kursów, ciągle doskonaląc moje umiejętności.Podróżowałam do innych miast, ścigając się za najlepszymi praktykami. ",
-  },
-  // 03block
-  {
-    paragraph01:
-      "Przeprowadziłam się z Ukrainy do Polski, do Warszawy, gdzie rozpoczęła się nowa rozdział w moim życiu. Znalazłam pracę w salonie i przepracowałam tam trzy lata. W tym czasie bardzo się rozwinęłam, zarówno jako mistrzyni, jak i jako specjalistka w moim fachu",
-    paragraph02:
-      "W trakcie tych lat nauczyłam się wielu rzeczy i zrozumiałam, jak prowadzić biznes. Wyciągałam wnioski, ciągle się dokształcałam, zwiększałam szybkość pracy i doskonaliłam techniki. Prawie od pierwszego dnia pracy na etacie zrozumiałam, że marzę o własnym biznesie i zaczęłam podążać w kierunku tego celu ",
-    paragraph03:
-      "Mój trzyletni okres pracy na etacie nauczył mnie, że pragnę mieć własną firmę. Od tamtej pory nieustannie dążę do przodu, dążąc do spełnienia mojego marzenia o posiadaniu własnego salonu.",
-  },
-];
 // About Schedule
 export const stagesDataAboutSchedule = [
   {

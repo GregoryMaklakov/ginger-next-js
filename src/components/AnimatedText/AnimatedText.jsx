@@ -82,4 +82,3 @@ AnimatedText.propTypes = {
   text: PropTypes.string,
   className: PropTypes.string,
 };
-

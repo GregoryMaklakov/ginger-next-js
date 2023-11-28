@@ -1,34 +1,54 @@
-import { HistoryCard, MainStoryText, StoryLine } from ".";
-import { aboutHistoryCard, aboutHistoryMainText } from "../../lib";
-import { AnimatedText } from "../AnimatedText";
+import { HistoryCard, MainStoryText, SecondaryStoryText } from ".";
+import { AnimatedText, GradientText } from "..";
+import { aboutHistory } from "../../lib";
 
 export function History() {
+    const [block1, block2, block3, block4, block5] =
+        aboutHistory.aboutHistoryMainText;
+
+    const gradientTextBlock04 = [block4.line01, block4.line02];
+    const gradientTextBlock05 = [
+        block5.line01,
+        block5.line02,
+        block5.line03,
+        block5.line04,
+    ];
+
     return (
         <section className="flex flex-col items-center justify-center">
             <HistoryCard
-                title={aboutHistoryCard.title}
-                image={aboutHistoryCard.image}
-                subtitle={aboutHistoryCard.subtitle}
+                title={aboutHistory.aboutHistoryCard.title}
+                image={aboutHistory.aboutHistoryCard.image}
+                subtitle={aboutHistory.aboutHistoryCard.subtitle}
+                year={2018}
             />
-            <StoryLine year={2018} />
-            <MainStoryText className="py-12" data={aboutHistoryMainText[0]} />
-            <StoryLine />
-            <MainStoryText className="py-12" data={aboutHistoryMainText[1]} />
-            <StoryLine year={2019} />
-            <MainStoryText className="py-12" data={aboutHistoryMainText[2]} />
-            <StoryLine year={2022} />
+            <MainStoryText className="py-12" data={block1} />
+            <MainStoryText className="py-12" data={block2} year={2019} />
+            <MainStoryText className="py-12" data={block3} year={2022} />
             <AnimatedText
-                className="pt-24 max-w-5xl text-[5rem]"
-                text="Koniec września... Przyjmuję decyzję - czas! "
+                className="pt-24 max-w-5xl text-[5rem] xl:text-6xl lg:text-5xl xs:text-3xl"
+                text={block4.title}
             />
-            <h5
-                className="w-full font-bold capitalize text-8xl flex items-center justify-center text-center
-                py-24 max-w-5xl text-[5rem] bg-gradient-to-r from-[#7053ff] to-[#e0658c] bg-clip-text"
-                style={{ WebkitBackgroundClip: "text", color: "transparent" }}
-            >
-                Miesiąc do otwarcia Ginger...
-            </h5>
+            <GradientText
+                className="text-8xl flex flex-col items-center justify-center text-center py-24 max-w-5xl text-[5rem] xl:text-6xl lg:text-5xl xs:text-3xl"
+                lines={gradientTextBlock04}
+            />
+            <SecondaryStoryText
+                image={block5.imageBefore}
+                text={block5.beforeText}
+                title={block5.alt}
+            />
+
+            <GradientText
+                className="text-8xl flex flex-col items-center justify-center text-center py-24 max-w-5xl text-[5rem] xl:text-6xl lg:text-5xl xs:text-3xl"
+                lines={gradientTextBlock05}
+            />
+            <SecondaryStoryText
+                image={block5.imageAfter}
+                text={block5.afterText}
+                title={block5.alt}
+                reverse
+            />
         </section>
     );
 }
-History.propTypes = {};
