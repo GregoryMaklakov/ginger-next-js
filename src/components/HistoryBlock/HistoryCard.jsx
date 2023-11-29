@@ -1,22 +1,25 @@
 import PropTypes from "prop-types";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import Link from "next/link";
 import { AnimatedText } from "../AnimatedText";
 import { StoryLine } from ".";
+import { aboutHistory } from "../../lib";
 
 const FramerHistoryImage = motion(Image);
 
 export function HistoryCard({ image, title, subtitle, className, year }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
+    const [isHovered, setIsHovered] = useState(false);
 
     const cardAnimation = {
         opacity: isInView ? 1 : 0,
         scale: isInView ? 1 : 0.85,
         borderRadius: isInView ? "20%" : "0%",
         transition: { delay: 0.5, duration: 1 },
-    }
+    };
     const subtitleAnimation = {
         y: isInView ? 1 : 0,
         opacity: isInView ? 1 : 0,
@@ -24,10 +27,14 @@ export function HistoryCard({ image, title, subtitle, className, year }) {
             duration: 1,
             delay: 1,
         },
-    }
+    };
+
+    const handleLinkHover = () => {
+        setIsHovered(!isHovered);
+    };
 
     return (
-        <section className="card-container dark:text-light block w-full" >
+        <section className="card-container dark:text-light block w-full">
             <div ref={ref} className="image-container h-auto relative w-full">
                 <motion.div
                     className={`${className} max-w-[43vw] md:max-w-full block mx-auto rounded-3xl overflow-hidden m-6`}
@@ -37,8 +44,8 @@ export function HistoryCard({ image, title, subtitle, className, year }) {
                         src={image}
                         alt={title}
                         width={1920}
-                        transition={{ ease: "linear" }}
                         height={1920}
+                        transition={{ ease: "linear" }}
                         loading="lazy"
                         placeholder="blur"
                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQg..."
@@ -51,11 +58,35 @@ export function HistoryCard({ image, title, subtitle, className, year }) {
                     />
                 </motion.div>
                 {subtitle && (
-                    <motion.h4 className="flex items-center justify-center dark:text-light/75 text-xl font-bold py-4 text-center"
+                    <motion.h4
+                        className="flex items-end justify-center sm:flex-col sm:items-center sm:gap-3 dark:text-light/75 text-xl font-bold py-4 text-center"
                         animate={subtitleAnimation}
-
                     >
-                        {subtitle}
+                        <Link
+                            href="https://www.instagram.com/ket_maklakova/"
+                            area-aria-label="Kate Maklakova"
+                            className="flex items-end"
+                            target="_blank"
+                            onMouseEnter={handleLinkHover}
+                            onMouseLeave={handleLinkHover}
+                        >
+                            <Image
+                                src={aboutHistory.aboutHistoryCard.avatar}
+                                alt="InstagramKate"
+                                width={38}
+                                height={38}
+                                className="mr-4 rounded-lg"
+                            />
+                            <span className="mr-2 underline">Kate Maklakova</span>
+                        </Link>
+                        <motion.span
+                            className={`${isHovered
+                                    ? "dark:text-light/25 text-primary"
+                                    : "dark:text-light/75 text-dark"
+                                } transition-all duration-500 `}
+                        >
+                            {subtitle}
+                        </motion.span>
                     </motion.h4>
                 )}
             </div>

@@ -13,8 +13,9 @@ export const aboutMainText = {
 export const aboutHistory = {
   aboutHistoryCard: {
     title: "Historia  Ginger",
-    subtitle: "Kate Maklakova - historia stworzenia Ginger.",
+    subtitle: "historia stworzenia Ginger.",
     image: "/images/about/aboutHistory.webp",
+    avatar: "/images/about/ava.jpg",
   },
   aboutHistoryMainText: [
     // 01 block
