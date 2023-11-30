@@ -1,6 +1,12 @@
-import { HistoryCard, MainStoryText, SecondaryStoryText } from ".";
+import {
+    HistoryCard,
+    MainStoryText,
+    ReviewsStory,
+    SecondaryStoryText,
+    TertiaryStoryText,
+} from ".";
 import { AnimatedText, GradientText } from "..";
-import { aboutHistory } from "../../lib";
+import { aboutHistory, costumerData } from "../../lib";
 
 export function History() {
     const [block1, block2, block3, block4, block5] =
@@ -48,7 +54,17 @@ export function History() {
                 text={block5.afterText}
                 title={block5.alt}
                 reverse
+                year={2023}
             />
+
+            {costumerData && (
+                <ReviewsStory
+                    className="py-24 max-w-5xl"
+                    data={costumerData}
+                    textData={block5.tertiaryText}
+                    gradientWord="rodziny"
+                />
+            )}
         </section>
     );
 }

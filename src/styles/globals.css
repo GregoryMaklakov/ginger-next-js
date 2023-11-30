@@ -8,3 +8,6 @@ body,
 ::before {
   cursor: none;
 }
+main {
+  overflow: hidden;
+}

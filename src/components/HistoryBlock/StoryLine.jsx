@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Icon } from "../Icons";
 
-export function StoryLine({ year }) {
+export function StoryLine({ year, className }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -30,7 +30,7 @@ export function StoryLine({ year }) {
     return (
         <div
             ref={ref}
-            className="wrapper flex items-center justify-center flex-col"
+            className={`${className} flex items-center justify-center flex-col`}
         >
             <motion.div
                 className="line w-[1px] h-[15rem] dark:bg-gradient-to-b dark:from-dark dark:to-light/25 bg-gradient-to-b from-light to-dark/25 mb-6 ease-ease-OutCubic"
@@ -50,5 +50,6 @@ export function StoryLine({ year }) {
 }
 
 StoryLine.propTypes = {
+    className: PropTypes.string,
     year: PropTypes.number,
 };

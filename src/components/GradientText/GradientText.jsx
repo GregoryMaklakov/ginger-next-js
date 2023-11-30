@@ -19,9 +19,10 @@ export function GradientText({ lines, className }) {
             style={{ WebkitBackgroundClip: "text", color: "transparent" }}
         >
             {lineAnimations.map((animation, index) => (
+                // eslint-disable-next-line react/no-array-index-key
                 <span key={index} className="overflow-hidden block">
                     <motion.em
-                        className="not-italic inline-block pb-2 bg-gradient-to-r from-[#7053ff] to-[#e0658c] bg-clip-text ease-ease-OutCubic"
+                        className="not-italic inline-block pb-2 bg-gradient-to-r from-gradientFrom to-gradientTo bg-clip-text ease-ease-OutCubic"
                         animate={animation}
                     >
                         {animation.lineText}

@@ -8,4 +8,5 @@ export {
   stagesDataAboutSchedule,
   aboutMainText,
   aboutHistory,
+  costumerData,
 } from "./aboutData";

@@ -12,7 +12,7 @@ export const aboutMainText = {
 // About History
 export const aboutHistory = {
   aboutHistoryCard: {
-    title: "Historia  Ginger",
+    title: "History of Ginger",
     subtitle: "historia stworzenia Ginger.",
     image: "/images/about/aboutHistory.webp",
     avatar: "/images/about/ava.jpg",
@@ -63,10 +63,86 @@ export const aboutHistory = {
       line04: "pierwszy dzień pracy",
       imageAfter: "/images/about/aboutHistoryAfter.webp",
       afterText:
-        "Na początku listopada 2022 roku trafiliśmy na idealne miejsce dla salonu Ginger. Mamy zaledwie 3 tygodnie na przemianę tego lokalu w nasz wymarzony salon (nowe meble, sprzęt i wiele innych rzeczy). To niewiele czasu, ale kiedy jesteś zainspirowany pomysłem i oddajesz się pracy dzień i noc - wszystko staje się możliwe.",
+        "2 grudnia 2023 roku! Poprzedni miesiąc był trudny - pełen wyzwań, ale udało nam się wszystko zrobić i przygotować dla was usługi na najwyższym poziomie! Jednak nasz rozwój dopiero się zaczyna, a przed nami jeszcze wiele wyzwań",
+      // TetriaryText
+      tertiaryText: "Coraz więcej klientów staje się częścią rodziny Ginger",
     },
   ],
 };
+// About Customer Data
+export const costumerData = [
+  {
+    id: 1,
+    name: "Martyna N...",
+    avatarImg: "/images/about/costumers/01.jpeg",
+    date: "08 Dec 2022",
+    review:
+      "Miejsce przepiękne, urządzone z gustem. Praca Kasi to dzieło sztuki. Wszystko wykonane starannie, pięknie i dokładnie tak jak chce. Kasia rozumie klientki bez słów 😉 dziękuję.",
+  },
+  {
+    id: 2,
+    name: "Paulina M…",
+    avatarImg: "/images/about/costumers/02.jpeg",
+    date: "05 Dec 2022",
+    review:
+      "Pani Kasia jest niezawodna, profesjonalistka w każdym tego słowa znaczeniu. Chodzę już długi czas i moje paznokcie są zawsze zadbane i piękne. Miejsce jest gustowne, a atmosfera tak przyjemna, że z niecierpliwością czekam na kolejne wizyty ❤",
+  },
+  {
+    id: 3,
+    name: "Violeta R…",
+    avatarImg: "/images/about/costumers/03.jpeg",
+    date: "06 Dec 2022",
+    review: "Jak zwykle cudownie !!😍😍 jakość i perfekcja !!🫦",
+  },
+  {
+    id: 4,
+    name: "Martyna K...",
+    avatarImg: "/images/about/costumers/04.jpeg",
+    date: "23 May 2023",
+    review:
+      "Profesjonalnie wykonana usługa, miła atmosfera. Dodatkowo bardzo ładne wnętrze lokalu. Wszystko na wysokim poziomie.",
+  },
+  {
+    id: 5,
+    name: "Kinga B...",
+    avatarImg: "/images/about/costumers/05.jpeg",
+    date: "08 Dec 2022",
+    review:
+      "Piękny i przytulny salon, cicho, spokojnie i profesjonalnie 😍 i jak zawsze przepiękne paznokcie od Kasi. Polecam bardzo ❤️",
+  },
+  {
+    id: 6,
+    name: "Marysia K...",
+    avatarImg: "/images/about/costumers/06.jpeg",
+    date: "23 Jun 2023",
+    review:
+      "Z całego serca polecam Marie! Podchodzi do usług z niezwykłą starannością, zawsze podpowie i posłuży dobrą radą pomyśle na stylizacje.Niezastąpiona ❤",
+  },
+  {
+    id: 7,
+    name: "Magdalena S...",
+    avatarImg: "/images/about/costumers/07.jpeg",
+    date: "13 Jul 2023",
+    review:
+      "Od pierwszej wizyty robię paznokcie u Pani Jany. Cóż za cudowny traf. Uprzejma, wyrozumiała i dokładna. Cudowne paznokcie po każdej wizycie. Polecam bardzo mocno. Atmosfera w salonie świetna, a sam salon pięknie się prezentuje. Na pewno zostanę na dłużej niż tylko 3 wizyty",
+  },
+  {
+    id: 8,
+    name: "Justyna P...",
+    avatarImg: "/images/about/costumers/08.jpeg",
+    date: "29 Sep 2023",
+    review:
+      "Jak zawsze - jestem zachwycona 🥰 Profesjonalizm i dokładność na najwyższym poziomie !",
+  },
+  {
+    id: 9,
+    name: "Carën R...",
+    avatarImg: "/images/about/costumers/09.jpeg",
+    date: "28 Jul 2023",
+    review:
+      "Nice place , I am satisfied with the service and my nail tech got great attention to details ! Like it I recommend",
+  },
+];
 
 // About Schedule
 export const stagesDataAboutSchedule = [

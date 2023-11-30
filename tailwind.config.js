@@ -17,6 +17,8 @@ module.exports = {
         primaryDark: "#58E6D9", // 80,230,217
         lightGrey: "#E0E0E0",
         darkGrey: "#474747",
+        gradientFrom: "#7053ff",
+        gradientTo: "#e0658c",
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
