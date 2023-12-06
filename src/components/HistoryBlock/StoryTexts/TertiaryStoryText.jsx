@@ -1,5 +1,4 @@
 import { PropTypes } from "prop-types";
-import { StoryLine } from "..";
 
 export function TertiaryStoryText({ className, textData, gradientWord }) {
     const words = textData.split(" ");
@@ -13,7 +12,7 @@ export function TertiaryStoryText({ className, textData, gradientWord }) {
                 <span
                     key={word}
                     className={`${word === gradientWord
-                        ? "bg-gradient-to-r from-[#7053ff] to-[#e0658c] bg-clip-text ease-ease-OutCubic"
+                        ? "bg-gradient-to-r from-gradientFrom to-gradientTo bg-clip-text ease-ease-OutCubic"
                         : "text-dark dark:bg-inherit dark:text-light"
                         } inline w-full font-bold capitalize max-w-5xl text-[5rem] xl:text-6xl lg:text-5xl xs:text-3xl`}
                 >

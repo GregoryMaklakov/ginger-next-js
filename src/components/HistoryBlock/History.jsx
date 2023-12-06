@@ -1,12 +1,12 @@
 import {
     HistoryCard,
     MainStoryText,
+    ParallaxText,
     ReviewsStory,
     SecondaryStoryText,
-    TertiaryStoryText,
 } from ".";
 import { AnimatedText, GradientText } from "..";
-import { aboutHistory, costumerData } from "../../lib";
+import { aboutHistory, costumerData, socialLink } from "../../lib";
 
 export function History() {
     const [block1, block2, block3, block4, block5] =
@@ -59,12 +59,14 @@ export function History() {
 
             {costumerData && (
                 <ReviewsStory
-                    className="py-24 max-w-5xl"
+                    className="py-24 max-w-5xl lg:pb-2"
                     data={costumerData}
                     textData={block5.tertiaryText}
                     gradientWord="rodziny"
                 />
             )}
+            <ParallaxText link={socialLink.instagram} className="pt-24" baseVelocity={-10} count={20}>Join us</ParallaxText>
+            <ParallaxText link={socialLink.booksy} className="pb-24" baseVelocity={10} count={15}>See more reviews </ParallaxText>
         </section>
     );
 }

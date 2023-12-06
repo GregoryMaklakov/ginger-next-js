@@ -18,57 +18,47 @@ export const aboutHistory = {
     avatar: "/images/about/ava.jpg",
   },
   aboutHistoryMainText: [
-    // 01 block
+    {
+      paragraph01: "Inspiracja mistrza manicure zmieniła moje życie.",
+      paragraph02:
+        "Moja pasja do manicure narodziła się, chcąc być lepszą niż mistrz.",
+      paragraph03: "Dziś dzielę się tą pasją z klientami salonu Ginger.",
+    },
     {
       paragraph01:
-        "Wszystko zaczęło się od mojej inspiracji mistrzem manicure. Oczarowana jego pracą, postanowiłam, że chcę robić to samo, jeśli nie lepiej.",
+        "Pierwsze próby manicure dla przyjaciół, na desce do prasowania.",
+      paragraph02: "Przeszłałam dziesiątki kursów, doskonaląc umiejętności.",
+    },
+    {
+      paragraph01:
+        "Z Ukrainy do Polski, Warszawa. Trzy lata doświadczeń w salonie.",
       paragraph02:
-        "To właśnie wtedy narodziła się moja pasja do usług paznokciowych. Z każdym krokiem w tej fascynującej dziedzinie doskonaliłam moje umiejętności.",
+        "Nauka biznesu, zdobywanie doświadczenia, marzenie o własnym salonie.",
       paragraph03:
-        "Wtedy rozpoczęłam swoją naukę w tej sztuce, dążąc do jej uczynienia sztuką. Dziś jestem gotowa dzielić się moim doświadczeniem z klientami salonu Ginger.",
+        "Praca na etacie utwierdziła mnie, że marzę o własnym biznesie.",
     },
-    // 02 block
     {
-      paragraph01:
-        "Moje pierwsze próby manicure to były zabiegi dla moich przyjaciółek, wykonane na desce do prasowania.",
-      paragraph02:
-        " Przeszłałam dziesiątki kursów, ciągle doskonaląc moje umiejętności. Podróżowałam do innych miast, ścigając się za najlepszymi praktykami.",
-    },
-    // 03 block
-    {
-      paragraph01:
-        "Z Ukrainy do Polski, Warszawa. Pracowałam trzy lata, rozwijając się jako mistrzyni w salonie.",
-      paragraph02:
-        "Nauka prowadzenia biznesu, zdobywanie doświadczenia i doskonalenie technik. Szybko zorientowałam się, że marzę o własnym biznesie.",
-      paragraph03:
-        "Trzy lata na etacie utwierdziły mnie w przekonaniu, że pragnę mieć własną firmę. Dążę do spełnienia marzenia o własnym salonie.",
-    },
-    // 04 block
-    {
-      title: "Koniec września... Przyjmuję decyzję - czas!",
+      title: "Koniec września... Decyzja - czas!",
       line01: "Miesiąc do otwarcia",
       line02: "Ginger...",
     },
-    // block 05
     {
-      // Beforre
       alt: "Before Image Block with Kate",
       imageBefore: "/images/about/aboutHistoryBefore.webp",
       beforeText:
-        "Na początku listopada 2022 roku trafiliśmy na idealne miejsce dla salonu Ginger. Mamy zaledwie 3 tygodnie na przemianę tego lokalu w nasz wymarzony salon (nowe meble, sprzęt i wiele innych rzeczy). To niewiele czasu, ale kiedy jesteś zainspirowany pomysłem i oddajesz się pracy dzień i noc - wszystko staje się możliwe.",
-      // After
-      line01: "i udało się!",
+        "W listopadzie 2022 roku znaleźliśmy idealne miejsce na salon Ginger. Mamy tylko 3 tygodnie, aby przekształcić lokal w wymarzony salon. To krótko, ale inspiracja i praca dniem i nocą sprawiły, że wszystko stało się możliwe.",
+      line01: "I udało się!",
       line02: "Zdążyliśmy!",
       line03: "2 grudnia",
       line04: "pierwszy dzień pracy",
       imageAfter: "/images/about/aboutHistoryAfter.webp",
       afterText:
-        "2 grudnia 2023 roku! Poprzedni miesiąc był trudny - pełen wyzwań, ale udało nam się wszystko zrobić i przygotować dla was usługi na najwyższym poziomie! Jednak nasz rozwój dopiero się zaczyna, a przed nami jeszcze wiele wyzwań",
-      // TetriaryText
-      tertiaryText: "Coraz więcej klientów staje się częścią rodziny Ginger",
+        "2 grudnia 2023 roku! Poprzedni miesiąc był trudny, pełen wyzwań, ale udało nam się wszystko zrobić i przygotować dla was usługi na najwyższym poziomie! Jednak nasz rozwój dopiero się zaczyna, a przed nami jeszcze wiele wyzwań.",
+      tertiaryText: "Coraz więcej klientów staje się częścią rodziny Ginger.",
     },
   ],
 };
+
 // About Customer Data
 export const costumerData = [
   {
@@ -92,7 +82,8 @@ export const costumerData = [
     name: "Violeta R…",
     avatarImg: "/images/about/costumers/03.jpeg",
     date: "06 Dec 2022",
-    review: "Jak zwykle cudownie !!😍😍 jakość i perfekcja !!🫦",
+    review:
+      "Jak zwykle cudownie!!😍😍 jakość i perfekcja !! 🫦 🫦 🫦 🫦 🫦 🫦 🫦 🫦 🫦 ",
   },
   {
     id: 4,
@@ -140,7 +131,23 @@ export const costumerData = [
     avatarImg: "/images/about/costumers/09.jpeg",
     date: "28 Jul 2023",
     review:
-      "Nice place , I am satisfied with the service and my nail tech got great attention to details ! Like it I recommend",
+      "Nice place, I am satisfied with the service and my nail tech got great attention to details ! Like it I recommend",
+  },
+  {
+    id: 10,
+    name: "Aleksandra N...",
+    avatarImg: "/images/about/costumers/10.jpeg",
+    date: "12 Nov 2023",
+    review:
+      "Pani Jana jest bardzo dokładna. Z przyjemnością wracam do Niej na kolejny manicure. W salonie panuje miła atmosfera. Jest czysto i profesjonalnie. Serdecznie polecam! 😊",
+  },
+  {
+    id: 11,
+    name: "Nataliia V...",
+    avatarImg: "/images/about/costumers/11.jpeg",
+    date: "09 Nov 2023",
+    review:
+      "Serdecznie polecam Pani od brwi, wszystko zrobi idealnie  😍😍  😍😍 ",
   },
 ];
 

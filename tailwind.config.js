@@ -25,6 +25,7 @@ module.exports = {
       },
       boxShadow: {
         "3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)",
+        fromShadow: "inset 0px 14px 33px 9px rgba(112, 83, 255, 1)",
       },
       transitionTimingFunction: {
         "ease-OutCubic": "cubic-bezier(0.215,0.610,0.355,1.000)",

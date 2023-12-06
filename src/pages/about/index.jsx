@@ -23,8 +23,8 @@ export default function About() {
 
   const background = useTransform(
     scrollYProgress,
-    [0, .125, .25, 1],
-    ["#1b1b1b", "#1b1b1b", "#7053ff", "#B63E96"]
+    [0, .0125, .25, 1],
+    ["#7053ff", "#53b4ff", "#7053ff", "#B63E96"]
   )
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function About() {
 
       <section className="flex w-full flex-col items-center justify-center dark:text-light">
         <motion.div
-          className='z-[1001] sticky w-full h-[20px] top-0 rounded-r-lg'
+          className='z-[1001] fixed w-full h-[20px] md:h-3 top-0 rounded-r-lg'
           style={{
             scaleX,
             transformOrigin: "left",

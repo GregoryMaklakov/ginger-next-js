@@ -41,7 +41,7 @@ export function StoryLine({ year, className }) {
                     className="year flex items-center justify-center gap-1 rounded-2xl py-1 pl-3 pr-4 dark:bg-light bg-dark"
                     animate={yearWrapperAnimation}
                 >
-                    <Icon size={20} name="year" />
+                    <Icon size={20} name="year" className="fill-gradientFrom" />
                     <span className="dark:text-dark font-bold text-light/75">{year}</span>
                 </motion.div>
             )}
