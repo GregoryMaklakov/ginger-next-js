@@ -24,7 +24,7 @@ export function AccordionDesktop({ data }) {
                     </button>
                 ))}
             </div>
-            <div className="dark:border-l-light/50 border-l-dark/75 border-l-[1px] pt-8 pl-24">
+            <div className="dark:border-l-light/50 border-l-dark/75 border-l-[1px] pt-8 pl-24 min-h-[280px]">
                 <div className="flex">
                     <div className="max-w-[540px] 2xl:max-w-[400px]">
                         <div className="mb-[20px] flex items-center gap-[18px] lg:mb-[41px] xl:mb-[18px] 2xl:mb-[34px]">
