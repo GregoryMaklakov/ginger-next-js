@@ -63,7 +63,7 @@ export default function About() {
 
       <section className="flex w-full flex-col items-center justify-center dark:text-light">
         <motion.div
-          className='z-[1001] fixed w-full h-[20px] md:h-3 top-0 rounded-r-lg'
+          className='z-[1001] fixed w-full h-[20px] md:h-1 top-0 rounded-r-lg'
           style={{
             scaleX,
             transformOrigin: "left",
@@ -73,7 +73,7 @@ export default function About() {
         />
         <Layout className="pt-8">
 
-          {/* //? Historia Ginger */}
+          {/* //? History of Ginger */}
           <History />
           <AnimatedText
             text="Dowiedz się więcej o Ginger"

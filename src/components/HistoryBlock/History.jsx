@@ -4,12 +4,13 @@ import {
     ParallaxText,
     ReviewsStory,
     SecondaryStoryText,
+    TwoCardInOne,
 } from ".";
 import { AnimatedText, GradientText } from "..";
 import { aboutHistory, costumerData, socialLink } from "../../lib";
 
 export function History() {
-    const [block1, block2, block3, block4, block5] =
+    const [block1, block2, block3, block4, block5, block6] =
         aboutHistory.aboutHistoryMainText;
 
     const gradientTextBlock04 = [block4.line01, block4.line02];
@@ -18,6 +19,11 @@ export function History() {
         block5.line02,
         block5.line03,
         block5.line04,
+    ];
+    const gradientTextBlock06 = [
+        block6.line01,
+        block6.line02,
+        block6.line03,
     ];
 
     return (
@@ -67,6 +73,9 @@ export function History() {
             )}
             <ParallaxText link={socialLink.instagram} className="pt-24" baseVelocity={-10} count={20}>Join us</ParallaxText>
             <ParallaxText link={socialLink.booksy} className="pb-24" baseVelocity={10} count={15}>See more reviews </ParallaxText>
+
+            <TwoCardInOne card01={aboutHistory.card01} card02={aboutHistory.card02} alt="card-birthday-cake" year={2024} />
+            <GradientText lines={gradientTextBlock06} className="text-8xl flex flex-col items-center justify-center text-center py-24 max-w-5xl text-[5rem] xl:text-6xl lg:text-5xl xs:text-3xl" />
         </section>
     );
 }

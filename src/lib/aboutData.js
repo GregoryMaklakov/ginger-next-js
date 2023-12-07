@@ -56,7 +56,14 @@ export const aboutHistory = {
         "2 grudnia 2023 roku! Poprzedni miesiąc był trudny, pełen wyzwań, ale udało nam się wszystko zrobić i przygotować dla was usługi na najwyższym poziomie! Jednak nasz rozwój dopiero się zaczyna, a przed nami jeszcze wiele wyzwań.",
       tertiaryText: "Coraz więcej klientów staje się częścią rodziny Ginger.",
     },
+    {
+      line01: "2 grudnia 2023",
+      line02: "Happy Birthday",
+      line03: "To dopiero początek",
+    },
   ],
+  card01: "/images/about/card01.webp",
+  card02: "/images/about/card02.webp",
 };
 
 // About Customer Data

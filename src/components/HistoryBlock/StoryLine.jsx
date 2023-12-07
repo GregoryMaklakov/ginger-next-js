@@ -1,7 +1,7 @@
 import { PropTypes } from "prop-types";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Icon } from "../Icons";
+import { LogoImage } from "../Logo";
 
 export function StoryLine({ year, className }) {
     const ref = useRef(null);
@@ -38,10 +38,10 @@ export function StoryLine({ year, className }) {
             />
             {year && (
                 <motion.div
-                    className="year flex items-center justify-center gap-1 rounded-2xl py-1 pl-3 pr-4 dark:bg-light bg-dark"
+                    className="year flex items-center justify-center gap-1 rounded-2xl py-0 pl-3 pr-4 dark:bg-light bg-dark"
                     animate={yearWrapperAnimation}
                 >
-                    <Icon size={20} name="year" className="fill-gradientFrom" />
+                    <LogoImage size={32} className="fill-gradientFrom" />
                     <span className="dark:text-dark font-bold text-light/75">{year}</span>
                 </motion.div>
             )}

@@ -41,7 +41,7 @@ export function SecondaryStoryText({
                     <span className="hidden lg:block w-full lg:absolute bottom-0 left-0 right-0 z-[1] bg-gradient-to-t from-dark via-transparent to-transparent h-full" />
                 </motion.div>
                 <p
-                    className={`text-light col-span-4 max-w-[600px]  font-semibold text-2xl lg:text-lg sm:text-base 2xs:text-[14px] lg:absolute lg:bottom-24 lg:p-4 z-[2] xs:leading-4 xs:p-2 
+                    className={`dark:text-light text-dark col-span-4 max-w-[600px]  font-semibold text-2xl lg:text-lg sm:text-base 2xs:text-[14px] lg:absolute lg:bottom-24 lg:p-4 z-[2] xs:leading-4 xs:p-2 
                ${reverse ? "pr-20" : "pl-20"}
                 `}
                 >

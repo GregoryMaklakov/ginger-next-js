@@ -68,7 +68,7 @@ export function HistoryCard({ image, title, subtitle, className, year }) {
                 </motion.div>
                 {subtitle && (
                     <motion.h4
-                        className="flex items-center justify-center sm:flex-col sm:items-center sm:gap-3 dark:text-light/75 text-xl font-bold py-4 text-center"
+                        className="flex items-center justify-center sm:flex-col sm:items-center sm:gap-3 dark:text-light/75 text-xl 2xs:text-base font-bold py-4 text-center"
                         animate={subtitleAnimation}
                     >
                         <Link
