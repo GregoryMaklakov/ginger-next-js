@@ -1,6 +1,5 @@
 import { PropTypes } from "prop-types";
 import { motion, useInView } from "framer-motion";
-import Link from "next/link";
 import { useRef } from "react";
 import { TertiaryStoryText } from "../StoryTexts";
 import { ReviewItem, StoryLine } from "..";
