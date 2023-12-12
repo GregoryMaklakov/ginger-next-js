@@ -23,17 +23,6 @@ export default function App({ Component, pageProps, }) {
   const [isHoveringImage, setIsHoveringImage] = useState(false);
   const [mode, setMode] = useThemeSwitcher();
 
-  // Google Analytics
-  // <!-- Google tag (gtag.js) -->
-  // <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEZ3384TFD"></script>
-  // <script>
-  //   window.dataLayer = window.dataLayer || [];
-  //   function gtag(){dataLayer.push(arguments);}
-  //   gtag('js', new Date());
-
-  //   gtag('config', 'G-FEZ3384TFD');
-  // </script>
-
   const contextValue = useMemo(
     () => ({
       cursor: {

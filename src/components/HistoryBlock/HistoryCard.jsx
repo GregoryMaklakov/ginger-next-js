@@ -73,13 +73,13 @@ export function HistoryCard({ image, title, subtitle, className, year }) {
                     >
                         <Link
                             href="https://www.instagram.com/ket_maklakova/"
-                            area-aria-label="Kate Maklakova"
+                            aria-label="Kate Maklakova"
                             className="flex items-center "
                             target="_blank"
                             onMouseEnter={handleLinkHover}
                             onMouseLeave={handleLinkHover}
                         >
-                            <div
+                            <span
                                 className={`${isHovered ? "shadow-fromShadow" : "shadow-current"} p-[2px] rounded-lg mr-4 transition-all duration-500`}
                                 style={{
                                     background:
@@ -93,7 +93,7 @@ export function HistoryCard({ image, title, subtitle, className, year }) {
                                     height={38}
                                     className="rounded-lg"
                                 />
-                            </div>
+                            </span>
                             <span className="mr-2 underline">Kate Maklakova</span>
                         </Link>
                         <motion.span
