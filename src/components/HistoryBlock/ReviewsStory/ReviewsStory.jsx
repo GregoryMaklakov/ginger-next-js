@@ -1,6 +1,6 @@
 import { PropTypes } from "prop-types";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TertiaryStoryText } from "../StoryTexts";
 import { ReviewItem, StoryLine } from "..";
 
@@ -19,8 +19,6 @@ export function ReviewsStory({
         positions: isInView ? 1 : 0,
     };
 
-
-
     const positions = [
         { top: "-10%", left: "-50%" }, // 1
         { top: "-7%", right: "-44%" }, // 2
@@ -31,10 +29,26 @@ export function ReviewsStory({
         { bottom: "0%", right: "-40%" }, // 7
         { bottom: "-12%", right: "0%", zIndex: 2 }, // 8
         { bottom: "-32%", right: "23%" }, // 9
-
         { bottom: "-10%", left: "-52%", zIndex: 2 }, // 10
         { bottom: "-28%", right: "-45%" }, // 11
     ];
+
+    // remove Draggable on touch screen
+    const [isDraggable, setIsDraggable] = useState(true);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 1024 || window.matchMedia("(pointer: coarse)").matches) {
+                setIsDraggable(false);
+            } else {
+                setIsDraggable(true);
+            }
+        };
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     return (
         <>
@@ -52,10 +66,12 @@ export function ReviewsStory({
                             animate={reviewCardAnimation}
                             transition={{ duration: 0.25, delay: index * 0.25, }}
                             className="absolute ease-ease-OutCubic lg:static"
-                            drag
-                            dragConstraints={{ left: 30, right: 30, top: 30, bottom: 30 }}
-                            dragElastic={0.2}
-                            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                            {...(isDraggable && {
+                                drag: true,
+                                dragConstraints: { left: 30, right: 30, top: 30, bottom: 30 },
+                                dragElastic: 0.2,
+                                dragTransition: { bounceStiffness: 600, bounceDamping: 20 }
+                            })}
 
                             style={{
                                 top: positions[index] ? positions[index].top : '0%',
@@ -72,7 +88,6 @@ export function ReviewsStory({
 
             </div>
             <StoryLine year={year} className="pt-36 lg:hidden" />
-
         </>
     );
 }

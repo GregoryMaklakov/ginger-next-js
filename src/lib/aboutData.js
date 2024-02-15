@@ -18,17 +18,20 @@ export const aboutHistory = {
     avatar: "/images/about/ava.jpg",
   },
   aboutHistoryMainText: [
+    // block01
     {
       paragraph01: "Inspiracja mistrza manicure zmieniła moje życie.",
       paragraph02:
         "Moja pasja do manicure narodziła się, chcąc być lepszą niż mistrz.",
       paragraph03: "Dziś dzielę się tą pasją z klientami salonu Ginger.",
     },
+    // block02
     {
       paragraph01:
         "Pierwsze próby manicure dla przyjaciół, na desce do prasowania.",
       paragraph02: "Przeszłałam dziesiątki kursów, doskonaląc umiejętności.",
     },
+    // block03
     {
       paragraph01:
         "Z Ukrainy do Polski, Warszawa. Trzy lata doświadczeń w salonie.",
@@ -37,11 +40,13 @@ export const aboutHistory = {
       paragraph03:
         "Praca na etacie utwierdziła mnie, że marzę o własnym biznesie.",
     },
+    // block04
     {
       title: "Koniec września... Decyzja - czas!",
       line01: "Miesiąc do otwarcia",
       line02: "Ginger...",
     },
+    // block05
     {
       alt: "Before Image Block with Kate",
       imageBefore: "/images/about/aboutHistoryBefore.webp",
@@ -56,6 +61,7 @@ export const aboutHistory = {
         "2 grudnia 2023 roku! Poprzedni miesiąc był trudny, pełen wyzwań, ale udało nam się wszystko zrobić i przygotować dla was usługi na najwyższym poziomie! Jednak nasz rozwój dopiero się zaczyna, a przed nami jeszcze wiele wyzwań.",
       tertiaryText: "Coraz więcej klientów staje się częścią rodziny Ginger.",
     },
+    // block06
     {
       line01: "2 grudnia 2023",
       line02: "Happy Birthday",

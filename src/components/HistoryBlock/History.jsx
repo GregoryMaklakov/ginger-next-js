@@ -14,6 +14,7 @@ export function History() {
         aboutHistory.aboutHistoryMainText;
 
     const gradientTextBlock04 = [block4.line01, block4.line02];
+
     const gradientTextBlock05 = [
         block5.line01,
         block5.line02,
