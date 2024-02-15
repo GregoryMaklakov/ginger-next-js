@@ -1,5 +1,5 @@
 export { articles } from "./articlesData";
-export { priceData } from "./priceData";
+export { priceDataNails, priceDataEyes } from "./priceData";
 export { CursorContext, ThemeContext } from "./context";
 export { Routes, socialLink } from "./constant";
 export { employeeData } from "./employeeData";

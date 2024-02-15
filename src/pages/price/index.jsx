@@ -13,10 +13,11 @@ import {
   Icon,
   Layout,
   PriceList,
+  Tabs,
   TransitionPageEffect,
 } from '../../components';
 import BlackLadyPrice from '../../../public/images/price/2.webp';
-import { priceData, CursorContext, socialLink } from '../../lib';
+import { CursorContext, priceDataEyes, priceDataNails, socialLink } from '../../lib';
 
 export default function Price() {
   const { setHoveringText, setHoveringLink } = useContext(CursorContext);
@@ -36,6 +37,25 @@ export default function Price() {
   };
 
   const AnimatedLink = motion(Link);
+
+  const tabsPriceItems = [
+    {
+      title: 'Paznokcie',
+      content: (
+        <div className='p-4'>
+          <PriceList categories={priceDataNails} />
+        </div>
+      ),
+    },
+    {
+      title: 'Brwi/Rzęsy/Makeup',
+      content: (
+        <div className='p-4'>
+          <PriceList categories={priceDataEyes} />
+        </div>
+      ),
+    },
+  ];
 
   return (
     <>
@@ -90,22 +110,21 @@ export default function Price() {
               </CursorContext.Consumer>
             </div>
           </FrameWhiteBlack>
-          <h2
+          <h1
             className="inline-block w-full font-bold capitalize text-8xl text-dark dark:bg-dark dark:text-light text-center xl:!text-4xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
-          >Nasze ceny</h2>
+          >Nasze ceny</h1>
+          <Tabs items={tabsPriceItems} />
 
-          <PriceList categories={priceData} />
           <div className="grid place-content-center">
             <AnimatedLink
               className="inline-flex"
               href={socialLink.booksy}
               target="_blank"
-              whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               onMouseEnter={handleMouseEnterLink}
               onMouseLeave={handleMouseLeaveLink}
             >
-              <Icon name="booksy" size={140} color='#B63E96' />
+              <Icon name="booksy" size={140} className='fill-current text-dark dark:text-light' />
             </AnimatedLink>
           </div>
           <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />

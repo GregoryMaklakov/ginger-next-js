@@ -1,4 +1,4 @@
-export const priceData = [
+export const priceDataNails = [
   {
     id: 1,
     name: "Manicure Hybrydowy z Usunięciem Hybrydy",
@@ -216,9 +216,12 @@ export const priceData = [
       },
     ],
   },
+];
+
+export const priceDataEyes = [
   {
-    id: 11,
-    name: "Brwi i Rzęsy",
+    id: 0,
+    name: "Brwi",
     items: [
       {
         id: 1,
@@ -234,28 +237,75 @@ export const priceData = [
       {
         id: 3,
         name: "Regulacja Brwi + Farbka",
-        price: 70,
+        price: 60,
       },
       {
         id: 4,
+        name: "Regulacja brwi + Farbka + Wąsik",
+        price: 80,
+      },
+      {
+        id: 5,
         name: "Laminacja brwi + Farbka",
         price: 120,
       },
       {
-        id: 5,
+        id: 6,
+        name: "Laminacja brwi + Farbka + Botox",
+        price: 140,
+      },
+      {
+        id: 7,
         name: "Wąsik",
         description: "Depilacja wąsika woskiem",
         price: 20,
       },
+    ],
+  },
+  {
+    id: 1,
+    name: "Laminacja Rzęs",
+    items: [
       {
-        id: 6,
-        name: "Regulacja brwi + Farbka + Wąsik",
-        price: 90,
+        id: 1,
+        name: "Laminacja rzęs",
+        price: 120,
+      },
+      {
+        id: 2,
+        name: "Laminacja rzęs + Farbka",
+        price: 130,
+      },
+      {
+        id: 3,
+        name: "Pomalowanie rzęs",
+        price: 30,
       },
     ],
   },
   {
-    id: 12,
+    id: 2,
+    name: "Przedłużanie rzęs",
+    items: [
+      {
+        id: 1,
+        name: "Przedłużanie rzęs 1:1",
+        price: 130,
+      },
+      {
+        id: 2,
+        name: "Przedłużanie rzęs 1:1 + Strzałka",
+        price: 140,
+      },
+      {
+        id: 3,
+        name: "Efect mokrych rzęs",
+        price: 160,
+      },
+    ],
+  },
+  {
+    id: 3,
     name: "Makijaż",
     items: [
       {
@@ -276,7 +326,7 @@ export const priceData = [
       {
         id: 4,
         name: "Makijaż okazjonalny",
-        price: 150,
+        price: 190,
       },
       {
         id: 5,

@@ -3,7 +3,7 @@ import Script from 'next/script'
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="pl">
       <Head />
       <body>
         <Script id="theme-swither" strategy='beforeInteractive'>

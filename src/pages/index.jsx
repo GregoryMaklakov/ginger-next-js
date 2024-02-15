@@ -2,8 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useContext, } from 'react';
 import { CursorContext } from '../lib/context';
-// import HeroArtDark from "../../public/images/home/heroDark.webp";
-// import HeroArtLight from "../../public/images/home/heroLight.webp";
+
 import {
   Layout,
   Icon,
@@ -14,9 +13,6 @@ import {
 
 export default function Home() {
   const { setHoveringLink } = useContext(CursorContext);
-
-  // const { mode } = useContext(ThemeContext);
-  // const [heroArtSource, setHeroArtSource] = useState(HeroArtDark);
 
   const handleMouseEnter = () => {
     setHoveringLink(true);
@@ -31,9 +27,6 @@ export default function Home() {
   const handleMouseLeaveText = () => {
     setHoveringText(false);
   };
-  // useEffect(() => {
-  //   setHeroArtSource(mode === 'dark' ? HeroArtDark : HeroArtLight);
-  // }, [mode])
 
   const flippedTextHero = ['paznokcie', 'urodę', 'spojrzenie'];
   const flippedTextHeroSecond = ['troskę', 'delikatność', 'pewność'];
