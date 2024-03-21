@@ -100,12 +100,12 @@ export const articles = [
           },
           {
             before: "Ponad",
-            amount: "7",
+            amount: "13",
             subtitle: "osób pokonało alergię na hipoalergiczne materiały",
           },
           {
             before: "Oferujemy ponad",
-            amount: "30",
+            amount: "40",
             subtitle: "kolorów hipoalergicznych lakierów hybrydowych",
           },
         ],
@@ -149,38 +149,55 @@ export const articles = [
         "Zapraszamy do naszego salonu paznokci, gdzie piękno spotyka się z troską o Twoje zdrowie!",
     },
   },
+  // ! Przeciwwskazania do laminowania rzęs i brwi
+  {
+    slug: "article-3",
+    title: "Przeciwwskazania do laminowania rzęs i brwi!",
+    time: "2 min read",
+    subtitle: "Komu nie zaleca się laminowania rzęs i brwi?",
+    text: [
+      "Cieszymy się, że możemy przywitać was w naszym salonie, gdzie oferujemy usługi związane z laminowaniem i stylizacją rzęs oraz brwi! Nasz salon zatrudnia wykwalifikowanego mistrza, który jest gotowy uczynić wasz wygląd jeszcze bardziej atrakcyjnym i wyrazistym.",
+      "Najważniejszym aspektem naszej pracy jest troska o wasz komfort i bezpieczeństwo. Dlatego przed rozpoczęciem procedury laminowania rzęs i brwi ważne jest zrozumienie warunków i przeciwwskazań. Dążymy do zapewnienia wam nie tylko pięknego wyglądu, ale również zdrowia waszych rzęs i brwi.",
+      "Rozumiemy, że każdy klient jest wyjątkowy, dlatego ważne jest dla nas uwzględnienie wszystkich waszych życzeń i potrzeb. Naszym celem jest sprawienie, aby wasze doświadczenie w naszym salonie było jak najbardziej przyjemne i satysfakcjonujące.",
+      "W tej artykule chcielibyśmy podzielić się z wami głównymi przeciwwskazaniami dotyczącymi laminowania rzęs i brwi. To pozwoli wam podjąć przemyślaną decyzję i przygotować się do procedury. Mamy nadzieję, że nasza współpraca będzie przyjemna i udana, a wyniki naszej pracy przyniosą wam satysfakcję!",
+    ],
+    imgURL: "/images/blog/article-03.webp",
+
+    // Services Advantage First
+    servicesAdvantage: {
+      heading: "Laminowanie rzęs:",
+      list: [
+        "Choroby błony śluzowej powiek, oczu (np. zapalenie spojówek, blefaryt, zapalenie rogówki i inne)",
+        "Operacje na oczach",
+        "Operacje na oczach",
+        "Ciąża, karmienie piersią",
+      ],
+    },
+    // Services Advantage Second
+    servicesAdvantageSecond: {
+      heading: "Laminowanie brwi:",
+      list: [
+        "Obfite wysypki",
+        "Świeże rany w okolicach brwi",
+        "Peeling lub wizyta na solarium mniej niż dwa tygodnie przed zabiegiem",
+        "Ciąża, karmienie piersią",
+      ],
+    },
+  },
 ];
 
 /* 
 ?  *Tytuł:** *Gipolergiczne Laki - Bezpieczeństwo i Styl w Jednym*
+🌿 Laminowanie rzęs:
+• Choroby błony śluzowej powiek, oczu (np. zapalenie spojówek, blefaryt, zapalenie rogówki i inne);
+• Operacje na oczach;
+• Ciąża, karmienie piersią.
 
-**Czas czytania:** *Ok. 3 minut*
-
-**Subtitle:** *Odpowiedź na Alergię: Nasza Linia Gipolergicznych Lakierów*
-
-W dzisiejszym świecie dbałość o zdrowie stała się nieodłącznym elementem życia, a to dotyczy także świata urody. W naszym salonie paznokci, nie tylko kładziemy nacisk na doskonały wygląd, ale również na bezpieczeństwo i komfort naszych klientów. Dlatego chcemy podzielić się z Wami tajemnicą naszej linii gipolergicznych lakierów.
-
-**1. Świadomość Alergii na Lakier do Paznokci**
-
-Rozumiemy, że niektórzy z naszych klientów mogą mieć skłonność do alergii na tradycyjne lakiery do paznokci, zwłaszcza na składniki używane w topach i bazach. Dlatego wprowadziliśmy naszą ekskluzywną gamę gipolergicznych lakierów, aby zapewnić naszym klientom bezpieczeństwo i równocześnie piękne paznokcie.
-
-**2. Wyjątkowe Składniki Gipolergicznych Lakierów**
-
-Nasze gipolergiczne laki są specjalnie opracowane z myślą o osobach ze skłonnością do alergii. Bezpieczne dla skóry, hypoalergiczne formuły naszych lakierów eliminują ryzyko reakcji alergicznych, jednocześnie zachowując intensywne kolory i długotrwałe efekty.
-
-**3. Badania i Gwarancja Bezpieczeństwa**
-
-Przed wprowadzeniem na rynek każdy lakier przechodzi rygorystyczne testy dermatologiczne, abyśmy mogli z pewnością powiedzieć: "Tak, to bezpieczne dla Ciebie!" Nasze gipolergiczne laki są wolne od szkodliwych substancji, które mogą wywołać reakcje alergiczne, co czyni je doskonałym wyborem dla osób z wrażliwą skórą.
-
-**4. Długotrwała Moda bez Ryzyka**
-
-Dzięki naszym gipolergicznym lakierom, nie musisz rezygnować z modnych i stylowych paznokci ze względu na obawy związane z alergią. Nasza linia gipolergicznych lakierów łączy w sobie modę i bezpieczeństwo, zapewniając trwały efekt i jednocześnie chroniąc Twoją skórę.
-
-**Podsumowanie:**
-
-Wybierając nasze gipolergiczne laki, wybierasz piękno bez ryzyka. Nasza linia jest dowodem na to, że można cieszyć się modą, nie narażając się na potencjalne problemy z alergią. Z nami możesz być pewien/pewna, że styl idzie w parze z bezpieczeństwem!
-
-Zapraszamy do naszego salonu paznokci, gdzie piękno spotyka się z troską o Twoje zdrowie! 💅✨
+🌿 Laminowanie brwi:
+• Obfite wysypki;
+• Świeże rany w okolicach brwi;
+• Peeling lub wizyta na solarium mniej niż dwa tygodnie przed zabiegiem.
+• Ciąża, karmienie piersią.
 
 
 */

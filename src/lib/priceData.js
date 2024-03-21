@@ -241,21 +241,41 @@ export const priceDataEyes = [
       },
       {
         id: 4,
+        name: "Regulacja Brwi + Henna",
+        price: 70,
+      },
+      {
+        id: 5,
         name: "Regulacja brwi + Farbka + Wąsik",
         price: 80,
       },
       {
-        id: 5,
+        id: 6,
         name: "Laminacja brwi + Farbka",
         price: 120,
       },
       {
-        id: 6,
+        id: 7,
         name: "Laminacja brwi + Farbka + Botox",
         price: 140,
       },
       {
-        id: 7,
+        id: 8,
+        name: "Laminacja Brwi bez pomalowania",
+        price: 100,
+      },
+      {
+        id: 9,
+        name: "Farbka Brwi",
+        price: 30,
+      },
+      {
+        id: 10,
+        name: "Pomalowanie rzęs",
+        price: 30,
+      },
+      {
+        id: 11,
         name: "Wąsik",
         description: "Depilacja wąsika woskiem",
         price: 20,

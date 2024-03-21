@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 
 export function Tabs({ items }) {
   const [selectedTab, setSelectedTab] = useState(0);
+
   const firstBtnRef = useRef();
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export function Tabs({ items }) {
               key={item.title}
               onClick={() => setSelectedTab(index)}
               className={`flex w-[50%] sm:w-full items-center justify-center bg-dark text-light p-4 px-6 rounded-lg text-xl font-bold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4 ${selectedTab === index
-                ? "dark:text-dark border-dark dark:bg-dark underline "
+                ? "dark:text-dark border-dark dark:bg-dark underline"
                 : ""
                 } `}
             >
