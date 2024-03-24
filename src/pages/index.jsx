@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useContext, } from 'react';
-import { CursorContext, ThemeContext } from '../lib/context';
+import { CursorContext } from '../lib/context';
 
 import {
   Layout,
@@ -13,7 +13,6 @@ import {
 
 export default function Home() {
   const { setHoveringLink } = useContext(CursorContext);
-  const { mode } = useContext(ThemeContext);
 
   const handleMouseEnter = () => {
     setHoveringLink(true);
