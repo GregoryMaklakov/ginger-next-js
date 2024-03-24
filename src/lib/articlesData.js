@@ -187,17 +187,5 @@ export const articles = [
 ];
 
 /* 
-?  *Tytuł:** *Gipolergiczne Laki - Bezpieczeństwo i Styl w Jednym*
-🌿 Laminowanie rzęs:
-• Choroby błony śluzowej powiek, oczu (np. zapalenie spojówek, blefaryt, zapalenie rogówki i inne);
-• Operacje na oczach;
-• Ciąża, karmienie piersią.
-
-🌿 Laminowanie brwi:
-• Obfite wysypki;
-• Świeże rany w okolicach brwi;
-• Peeling lub wizyta na solarium mniej niż dwa tygodnie przed zabiegiem.
-• Ciąża, karmienie piersią.
-
 
 */

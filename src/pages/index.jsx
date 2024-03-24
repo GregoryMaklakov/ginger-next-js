@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useContext, } from 'react';
-import { CursorContext } from '../lib/context';
+import { CursorContext, ThemeContext } from '../lib/context';
 
 import {
   Layout,
@@ -13,6 +13,7 @@ import {
 
 export default function Home() {
   const { setHoveringLink } = useContext(CursorContext);
+  const { mode } = useContext(ThemeContext);
 
   const handleMouseEnter = () => {
     setHoveringLink(true);
@@ -50,6 +51,7 @@ export default function Home() {
       <TransitionPageEffect />
       <main className="">
         <section className="flex w-full flex-col items-center justify-center min-h-[100vh]">
+
           <Layout className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
             <div className="w-full flex flex-col items-center justify-between">
               <div className="w-full flex flex-col items-center self-center">
@@ -116,3 +118,7 @@ export default function Home() {
     </>
   );
 }
+
+/*         
+<section className="flex w-full flex-col items-center justify-center min-h-[100vh]">
+ */
