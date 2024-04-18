@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Icon } from '../Icons/Icon';
-import { Routes, socialLink } from '../../lib/constant';
+import { socialLink } from '../../lib/constant';
+import { Routes } from '../../lib/routes';
 import { Logo } from '../Logo';
 import { MoonIcon } from '../Icons/MoonIcon';
 import { SunIcon } from '../Icons/SunIcon';
@@ -27,6 +28,11 @@ export const navLinks = [
   },
   {
     id: 4,
+    href: Routes.GALLERY,
+    label: 'Gallery',
+  },
+  {
+    id: 5,
     href: Routes.PRICE,
     label: 'Cennik',
   },

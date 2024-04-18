@@ -118,6 +118,3 @@ export default function Home() {
   );
 }
 
-/*         
-<section className="flex w-full flex-col items-center justify-center min-h-[100vh]">
- */

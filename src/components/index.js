@@ -20,3 +20,4 @@ export * from "./Tag";
 export * from "./ButtonBack";
 export * from "./HistoryBlock";
 export * from "./GradientText";
+export * from "./ParallaxScroll";
