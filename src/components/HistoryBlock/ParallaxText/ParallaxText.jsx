@@ -12,6 +12,7 @@ import {
     wrap,
 } from "framer-motion";
 import { LogoImage } from "../../Logo";
+import { Icon } from "../../Icons";
 
 export function ParallaxText({
     link,
@@ -19,6 +20,7 @@ export function ParallaxText({
     className,
     children,
     count,
+    icon,
 }) {
     const baseX = useMotionValue(0);
     const { scrollY } = useScroll();
@@ -66,11 +68,14 @@ export function ParallaxText({
                     // eslint-disable-next-line react/no-array-index-key
                     <span className="flex items-center gap-6" key={index}>
                         {span}
-                        <LogoImage
-                            size={44}
-                            className="mr-6 fill-dark dark:fill-light dark:group-hover:fill-gradientTo group-hover:fill-gradientFrom"
-                        // name="year"
-                        />
+                        {icon === "insta" ? (
+                            <Icon name="insta" size={44} className="mr-6 fill-dark dark:fill-light dark:group-hover:fill-gradientTo group-hover:fill-gradientFrom" />
+                        ) : (
+                            <LogoImage
+                                size={44}
+                                className="mr-6 fill-dark dark:fill-light dark:group-hover:fill-gradientTo group-hover:fill-gradientFrom"
+                            />
+                        )}
                     </span>
                 ))}
             </motion.div>
@@ -79,6 +84,7 @@ export function ParallaxText({
 }
 
 ParallaxText.propTypes = {
+    icon: PropTypes.string,
     link: PropTypes.string.isRequired,
     className: PropTypes.string,
     children: PropTypes.string,

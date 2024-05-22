@@ -10,6 +10,10 @@ module.exports = {
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
+      backgroundImage: {
+        "gallery-dark": "url('/images/gallery/bg02.png')",
+        "gallery-light": "url('/images/gallery/bg01.jpg')",
+      },
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",

@@ -3,7 +3,7 @@ import { PropTypes, } from "prop-types";
 import { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
-import { FrameWhiteBlack } from "../FrameWhiteBlack";
+import { FrameWhiteBlack } from "../../FrameWhiteBlack";
 
 
 function Letter({ letter, scrollYProgress, }) {
@@ -38,15 +38,16 @@ export function ParallaxScrollBlock({ word, title, subtitle, picture1, picture2,
     ];
 
     return (
-        <div ref={container} className="mt-24 min-h-screen">
+        <div ref={container} className="mt-24 min-h-screen ">
+
             <div className="body">
                 <motion.h2
                     style={{ y: sm }}
-                    className="m-0 mt-3 text-8xl xl:text-6xl lg:text-5xl xs:text-3xl font-bold text-dark dark:text-light capitalize"
+                    className="m-0 mt-3 text-8xl xl:text-6xl lg:text-5xl xs:text-3xl font-bold dark:text-light text-dark capitalize"
                 >
                     {title}
                 </motion.h2>
-                <motion.h3 className="m-0 mt-3 text-8xl xl:text-6xl lg:text-5xl xs:text-3xl font-bold text-dark dark:text-light capitalize">
+                <motion.h3 className="m-0 mt-3 text-8xl xl:text-6xl lg:text-5xl xs:text-3xl font-bold dark:text-light text-dark capitalize">
                     {subtitle}
                 </motion.h3>
 
@@ -76,14 +77,15 @@ export function ParallaxScrollBlock({ word, title, subtitle, picture1, picture2,
 
                     return (
                         <motion.div style={{ y }} key={`i_${i}`} className={containerClass}>
-                            <FrameWhiteBlack><Image
-                                width={500}
-                                height={500}
-                                src={src}
-                                alt="image"
-                                className="object-cover w-full rounded-2xl"
-                            /></FrameWhiteBlack>
-
+                            <FrameWhiteBlack>
+                                <Image
+                                    width={500}
+                                    height={500}
+                                    src={src}
+                                    alt="image"
+                                    className="object-cover w-full rounded-2xl"
+                                />
+                            </FrameWhiteBlack>
                         </motion.div>
                     );
                 })}
