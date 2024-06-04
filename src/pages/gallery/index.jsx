@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import Lenis from '@studio-freight/lenis'
-import { ParallaxScrollBlock, TransitionPageEffect, BackgroundBlock, Layout } from "../../components";
+import { ParallaxScrollBlock, TransitionPageEffect, BackgroundBlock, Layout, ZoomParallax } from "../../components";
 import { galleryData } from "../../lib";
 
 export default function Gallery() {
@@ -40,7 +40,9 @@ export default function Gallery() {
                         <ParallaxScrollBlock key={data.id} {...data} />
                     ))}
                 </Layout>
+                <ZoomParallax />
             </main>
+
         </>
     )
 }

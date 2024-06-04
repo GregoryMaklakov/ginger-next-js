@@ -26,7 +26,6 @@ export function ParallaxScrollBlock({ word, title, subtitle, picture1, picture2,
         target: container,
         offset: ["start end", "end start"],
     });
-    // const word = "Razem tworzymy piękno";
     const sm = useTransform(scrollYProgress, [0, 1], [0, -50]);
     const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
     const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
