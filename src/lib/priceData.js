@@ -227,27 +227,27 @@ export const priceDataEyes = [
         id: 1,
         name: "Regulacja Brwi",
         description: "Regulacja brwi (pęseta lub wosk)",
-        price: 40,
+        price: 50,
       },
       {
         id: 2,
         name: "Męska regulacja brwi",
-        price: 40,
+        price: 50,
       },
       {
         id: 3,
         name: "Regulacja Brwi + Farbka",
-        price: 60,
+        price: 70,
       },
       {
         id: 4,
         name: "Regulacja Brwi + Henna",
-        price: 70,
+        price: 80,
       },
       {
         id: 5,
         name: "Regulacja brwi + Farbka + Wąsik",
-        price: 80,
+        price: 90,
       },
       {
         id: 6,
@@ -257,7 +257,7 @@ export const priceDataEyes = [
       {
         id: 7,
         name: "Laminacja brwi + Farbka + Botox",
-        price: 140,
+        price: 150,
       },
       {
         id: 8,
@@ -267,18 +267,18 @@ export const priceDataEyes = [
       {
         id: 9,
         name: "Farbka Brwi",
-        price: 30,
+        price: 40,
       },
       {
         id: 10,
         name: "Pomalowanie rzęs",
-        price: 30,
+        price: 40,
       },
       {
         id: 11,
         name: "Wąsik",
         description: "Depilacja wąsika woskiem",
-        price: 20,
+        price: 30,
       },
     ],
   },
@@ -289,12 +289,12 @@ export const priceDataEyes = [
       {
         id: 1,
         name: "Laminacja rzęs",
-        price: 120,
+        price: 130,
       },
       {
         id: 2,
         name: "Laminacja rzęs + Farbka",
-        price: 130,
+        price: 140,
       },
       {
         id: 3,
@@ -321,6 +321,21 @@ export const priceDataEyes = [
         id: 3,
         name: "Efect mokrych rzęs",
         price: 160,
+      },
+      {
+        id: 4,
+        name: "Przedłużanie rzęs 1:2 (2D)",
+        price: 180,
+      },
+      {
+        id: 5,
+        name: "Przedłużanie rzęs 1:3 (3D)",
+        price: 200,
+      },
+      {
+        id: 6,
+        name: "Zdejmowanie rzęs)",
+        price: 20,
       },
     ],
   },
