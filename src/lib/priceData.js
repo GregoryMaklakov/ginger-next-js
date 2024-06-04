@@ -334,7 +334,7 @@ export const priceDataEyes = [
       },
       {
         id: 6,
-        name: "Zdejmowanie rzęs)",
+        name: "Zdejmowanie rzęs",
         price: 20,
       },
     ],
