@@ -37,8 +37,7 @@ export function ParallaxScrollBlock({ word, title, subtitle, picture1, picture2,
     ];
 
     return (
-        <div ref={container} className="mt-24 min-h-screen ">
-
+        <div ref={container} className="mt-48 mb-24 min-h-screen md:mt-0">
             <div className="body">
                 <motion.h2
                     style={{ y: sm }}
@@ -62,7 +61,7 @@ export function ParallaxScrollBlock({ word, title, subtitle, picture1, picture2,
                     </p>
                 </div>
             </div>
-            <div className="flex justify-center relative mt-5vh w-full">
+            <div className="flex justify-center relative mt-25vh w-full">
                 {images.map(({ src, y }, i) => {
                     let containerClass = "absolute";
                     if (i === 0) {
@@ -71,25 +70,24 @@ export function ParallaxScrollBlock({ word, title, subtitle, picture1, picture2,
                         containerClass +=
                             " left-[40vw] transform -translate-x-1/2 top-[15vh] z-20 h-40vh w-[20vw] md:w-1/3 md:left-[60vw] md:w-1/3 2xl:left-[55vw]";
                     } else {
-                        containerClass += " right-[40vw] top-[30vh] z-30 h-[25vh] w-1/5 md:w-1/3 md:right-[60vw] lg:top-[40vw] 2xl:right-[54vw]";
+                        containerClass += " right-[40vw] top-[30vh] z-30 h-[25vh] w-1/3 md:w-1/3 md:right-[60vw] lg:top-[40vw] 2xl:right-[54vw]";
                     }
 
                     return (
                         <motion.div style={{ y }} key={`i_${i}`} className={containerClass}>
-                            <FrameWhiteBlack>
+                            <FrameWhiteBlack className="lg:p-2">
                                 <Image
                                     width={500}
                                     height={500}
                                     src={src}
                                     alt="image"
-                                    className="object-cover w-full rounded-2xl"
+                                    className="object-cover w-full rounded-2xl max-h-[650px]"
                                 />
                             </FrameWhiteBlack>
                         </motion.div>
                     );
                 })}
             </div>
-
         </div>
     );
 }

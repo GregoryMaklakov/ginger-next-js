@@ -1,20 +1,20 @@
 import Head from "next/head";
-import { useEffect } from "react";
-import Lenis from '@studio-freight/lenis'
-import { ParallaxScrollBlock, TransitionPageEffect, BackgroundBlock, Layout, ZoomParallax } from "../../components";
+// import { useEffect } from "react";
+// import Lenis from '@studio-freight/lenis'
+import { ParallaxScrollBlock, TransitionPageEffect, BackgroundBlock, Layout, ColumnsBlock, } from "../../components";
 import { galleryData } from "../../lib";
 
 export default function Gallery() {
-    useEffect(() => {
-        const lenis = new Lenis()
+    // useEffect(() => {
+    //     const lenis = new Lenis()
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
+    //     function raf(time) {
+    //         lenis.raf(time)
+    //         requestAnimationFrame(raf)
+    //     }
 
-        requestAnimationFrame(raf)
-    }, [])
+    //     requestAnimationFrame(raf)
+    // }, [])
 
     return (
         <>
@@ -39,8 +39,10 @@ export default function Gallery() {
                     {galleryData.map((data) => (
                         <ParallaxScrollBlock key={data.id} {...data} />
                     ))}
+
                 </Layout>
-                <ZoomParallax />
+                <ColumnsBlock />
+
             </main>
 
         </>

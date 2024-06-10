@@ -3,9 +3,9 @@ export const galleryData = [
     word: "Razem tworzymy piękno",
     title: "Nowe spojrzenie",
     subtitle: "na siebie",
-    picture1: "/images/gallery/gallery-01-1.webp",
-    picture2: "/images/gallery/gallery-01-2.webp",
-    picture3: "/images/gallery/gallery-01-3.webp",
+    picture1: "/images/gallery/gallery-01-1.jpg",
+    picture2: "/images/gallery/gallery-01-2.jpg",
+    picture3: "/images/gallery/gallery-01-3.jpg",
   },
   {
     word: "Twoje Piękno, Nasza Pasja",
