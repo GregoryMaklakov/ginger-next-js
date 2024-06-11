@@ -28,8 +28,8 @@ export const navLinks = [
   },
   {
     id: 4,
-    href: Routes.GALLERY,
-    label: 'Gallery',
+    href: Routes.WORK,
+    label: 'Praca',
   },
   {
     id: 5,

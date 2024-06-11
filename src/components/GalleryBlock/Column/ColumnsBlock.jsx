@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import Lenis from '@studio-freight/lenis';
-import { BackgroundBlock } from '../BackgroundBlock/BackgroundBlock';
 
 const imagesData = [
     "01.jpg",
@@ -20,7 +19,7 @@ const imagesData = [
     "12.gif",
 ];
 
-export function ColumnsBlock() {
+export function ColumnsBlock({ className }) {
     const gallery = useRef(null);
     const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
@@ -58,29 +57,27 @@ export function ColumnsBlock() {
     }, [])
 
     return (
-        <section className="main w-full">
-            <div className="spacer h-screen" />
-            <div ref={gallery} className="gallery h-[175vh] bg-dark overflow-hidden px-12">
-                <div className="galleryWrapper relative -top-[12vh] h-[200vh] flex items-center justify-center gap-12">
+        <section className={`${className} main w-full`}>
+            <div className="spacer h-[50vh]" />
+            <div ref={gallery} className="gallery h-[175vh] sm:h-screen bg-dark overflow-hidden px-12 xl:px-4 xs:px-0">
+                <div className="galleryWrapper relative -top-[12vh] h-[200vh] flex items-center justify-center gap-12 xl:gap-8 lg:gap-4 xs:gap-2">
                     <Column images={[imagesData[0], imagesData[1], imagesData[2]]} y={y} />
                     <Column images={[imagesData[3], imagesData[4], imagesData[5]]} y={y2} />
                     <Column images={[imagesData[6], imagesData[7], imagesData[8]]} y={y3} />
                     <Column images={[imagesData[9], imagesData[10], imagesData[11]]} y={y4} />
                 </div>
             </div>
-            <div className="spacer h-screen bg-light">
-                <BackgroundBlock />
-            </div>
+            <div className="spacer h-96" />
         </section>
     );
 }
 
 function Column({ images, y }) {
     return (
-        <motion.div className="column relative h-full w-1/4 min-w-[20%] flex flex-col gap-12"
+        <motion.div className="column relative h-full w-1/4 min-w-[20%] 2xs:min-w-[34%] flex flex-col gap-12 xl:gap-8 lg:gap-4 xs:gap-2 sm:w-1/3"
             style={{ y }}>
             {images.map((src) => (
-                <div key={src} className="imageContainer relative h-1/3 w-full rounded-xl">
+                <div key={src} className="imageContainer relative h-1/3 w-full rounded-xl xl:h-1/4 sm:h-1/6">
                     <Image src={`/images/gallery/columns/${src}`} alt={`image${src}`} fill className="object-cover rounded-xl" />
                 </div>
             ))}
@@ -93,4 +90,8 @@ Column.propTypes = {
     y: PropTypes.shape({
         current: PropTypes.number.isRequired,
     }).isRequired,
+};
+
+ColumnsBlock.propTypes = {
+    className: PropTypes.string,
 };

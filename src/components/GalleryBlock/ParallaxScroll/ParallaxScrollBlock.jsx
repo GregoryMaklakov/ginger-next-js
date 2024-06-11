@@ -37,7 +37,7 @@ export function ParallaxScrollBlock({ word, title, subtitle, picture1, picture2,
     ];
 
     return (
-        <div ref={container} className="mt-48 mb-24 min-h-screen md:mt-0">
+        <div ref={container} className="mt-48 mb-24 min-h-screen md:mt-0 lg:-mb-48">
             <div className="body">
                 <motion.h2
                     style={{ y: sm }}
@@ -65,12 +65,12 @@ export function ParallaxScrollBlock({ word, title, subtitle, picture1, picture2,
                 {images.map(({ src, y }, i) => {
                     let containerClass = "absolute";
                     if (i === 0) {
-                        containerClass += " z-10 h-[60vh] w-1/3 md:w-1/2 pt-32";
+                        containerClass += " z-10 h-[60vh] w-1/4 md:w-1/2 pt-32";
                     } else if (i === 1) {
                         containerClass +=
-                            " left-[40vw] transform -translate-x-1/2 top-[15vh] z-20 h-40vh w-[20vw] md:w-1/3 md:left-[60vw] md:w-1/3 2xl:left-[55vw]";
+                            " left-[40vw] transform -translate-x-1/2 top-[15vh] sm:top-[36vh] z-20 h-40vh w-[15vw] md:left-[60vw] md:w-1/3 2xl:left-[55vw]";
                     } else {
-                        containerClass += " right-[40vw] top-[30vh] z-30 h-[25vh] w-1/3 md:w-1/3 md:right-[60vw] lg:top-[40vw] 2xl:right-[54vw]";
+                        containerClass += " right-[40vw] top-[30vh] z-30 h-[25vh] w-1/4 md:w-1/3 md:right-[60vw] lg:top-[54vw] 2xl:right-[54vw]";
                     }
 
                     return (
@@ -81,7 +81,7 @@ export function ParallaxScrollBlock({ word, title, subtitle, picture1, picture2,
                                     height={500}
                                     src={src}
                                     alt="image"
-                                    className="object-cover w-full rounded-2xl max-h-[650px]"
+                                    className="object-cover w-full rounded-2xl max-h-[750px]"
                                 />
                             </FrameWhiteBlack>
                         </motion.div>

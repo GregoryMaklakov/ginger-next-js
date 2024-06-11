@@ -2,6 +2,6 @@ export const Routes = {
   HOME: "/",
   ABOUT: "/about",
   BlOG: "/blog",
-  GALLERY: "/gallery",
+  WORK: "/work",
   PRICE: "/price",
 };

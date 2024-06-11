@@ -9,7 +9,11 @@ import {
   BooksyButton,
   TransitionPageEffect,
   FlippedText,
+  BackgroundBlock,
+  ParallaxScrollBlock,
+  ColumnsBlock,
 } from "../components";
+import { galleryData } from "../lib";
 
 export default function Home() {
   const { setHoveringLink } = useContext(CursorContext);
@@ -49,9 +53,9 @@ export default function Home() {
 
       <TransitionPageEffect />
       <main className="">
-        <section className="flex w-full flex-col items-center justify-center min-h-[100vh]">
+        <section className="flex w-full flex-col">
 
-          <Layout className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
+          <Layout className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16 min-h-screen flex items-center justify-center">
             <div className="w-full flex flex-col items-center justify-between">
               <div className="w-full flex flex-col items-center self-center">
                 <CursorContext.Consumer>
@@ -110,6 +114,21 @@ export default function Home() {
               </div>
             </div>
           </Layout>
+          <section className="flex flex-col w-full items-center justify-center">
+            <BackgroundBlock />
+            <Layout className="w-full max-w-[1920px] mx-auto h-full sm:p-6w-full inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 py-10">
+              {galleryData.slice(0, 1).map((data) => (
+                <ParallaxScrollBlock key={data.id} {...data} />
+              ))}
+            </Layout>
+            <ColumnsBlock className="" />
+            <Layout className="w-full max-w-[1920px] mx-auto h-full sm:p-6w-full inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 py-10">
+
+              {galleryData.slice(1, 2).map((data) => (
+                <ParallaxScrollBlock key={data.id} {...data} />
+              ))}
+            </Layout>
+          </section>
         </section>
         <BooksyButton className="fixed right-4 bottom-2 lg:bottom-0" />
 
