@@ -62,7 +62,7 @@ export function HistoryCard({ image, title, subtitle, className, year }) {
                             ? "dark:text-light/25 text-primary"
                             : "dark:text-light text-dark"
                             }
-                            transition-all duration-500
+                            transition-all duration-500 font-bold text-8xl
                             dark:mix-blend-difference tracking-[2.3rem] 2xl:tracking-[1rem] lg:tracking-[0.5rem] xs:tracking-[0.25rem] xs:ml-2 mix-blend-hard-light py-0 2xl:text-6xl lg:text-5xl sm:text-3xl  xs:text-xl absolute bottom-36 z-10"`}
                     />
                 </motion.div>

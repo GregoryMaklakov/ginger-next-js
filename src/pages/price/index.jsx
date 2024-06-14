@@ -75,7 +75,7 @@ export default function Price() {
       </Head>
       <TransitionPageEffect />
       <section className="flex w-full flex-col items-center justify-center">
-        <Layout className="py-10">
+        <Layout className="py-10 mt-28">
           <FrameWhiteBlack className="flex min-h-full p-16 items-center justify-between mb-16 bg-cover relative lg:flex-col lg:p-0">
             <Image
               src={BlackLadyPrice}
@@ -103,7 +103,7 @@ export default function Price() {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     className={`${isHoveringText ? "text-dark bg-transparent dark:bg-transparent dark:text-light" : "text-dark dark:bg-transparent dark:text-light"
-                      } !text-4xl pt-8 text-left z-10 text-light lg:text-center lg:pt-0 md:!text-2xl sm:!text-lg xs:!text-sm`}
+                      } !text-4xl pt-8 text-left z-10 text-light lg:text-center lg:pt-0 md:!text-2xl sm:!text-lg xs:!text-sm font-bold`}
                     text={`W naszym salonie zawsze obowiązuje system zbierania punktów rabatowych. Za każdą ósmą usługę otrzymujesz ${30} % zniżki`}
                   />
                 )}

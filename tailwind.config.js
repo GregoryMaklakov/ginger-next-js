@@ -11,14 +11,16 @@ module.exports = {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
       backgroundImage: {
-        "gallery-dark": "url('/images/gallery/bg02.png')",
-        "gallery-light": "url('/images/gallery/bg01.jpg')",
+        "hero-dark": "url('/images/home/bg-hero-dark.webp')",
+        "hero-light": "url('/images/home/bg-hero-light-02.png')",
+        "home-parallax-dark": "url('/images/gallery/home-parallax-dark.jpg')",
       },
+
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",
-        primary: "#B63E96", // 240,86,199
-        primaryDark: "#58E6D9", // 80,230,217
+        primary: "#CC184B",
+        primaryDark: "rgb(175, 189, 165)",
         lightGrey: "#E0E0E0",
         darkGrey: "#474747",
         gradientFrom: "#7053ff",
@@ -33,6 +35,9 @@ module.exports = {
       },
       transitionTimingFunction: {
         "ease-OutCubic": "cubic-bezier(0.215,0.610,0.355,1.000)",
+      },
+      filter: {
+        logo: "contrast(100%) brightness(150%)",
       },
     },
     screens: {

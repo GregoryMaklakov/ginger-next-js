@@ -55,7 +55,7 @@ export function AnimatedText({ text, className }) {
             variants={appearanceText}
             initial="initial"
             animate={isInView ? 'animate' : 'initial'}
-            className={`inline-block w-full font-bold capitalize text-8xl ${isHoveringText
+            className={`inline-block w-full capitalize  ${isHoveringText
               ? 'text-dark bg-inherit dark:bg-inherit dark:text-light'
               : 'text-dark dark:bg-inherit dark:text-light'
               } ${className}`}
