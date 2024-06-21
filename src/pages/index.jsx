@@ -1,21 +1,19 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { useAnimation, motion } from "framer-motion";
+import Image from "next/image";
 import { CursorContext } from "../lib/context";
-
 import {
   Layout,
   Icon,
   BooksyButton,
-  TransitionPageEffect,
+  // TransitionPageEffect,
   FlippedText,
   BackgroundBlock,
-  ParallaxScrollBlock,
   ColumnsBlock,
-  LogoImage,
   AnimatedText,
 } from "../components";
-import { galleryData } from "../lib";
 
 export default function Home() {
   const { setHoveringLink } = useContext(CursorContext);
@@ -34,9 +32,20 @@ export default function Home() {
   const handleMouseLeaveText = () => {
     setHoveringText(false);
   };
+  const controls = useAnimation();
 
-  const flippedTextHero = ["paznokcie", "urodę", "spojrzenie"];
-  const flippedTextHeroSecond = ["troskę", "delikatność", "pewność"];
+  useEffect(() => {
+    controls.start({
+      filter: "blur(0px)",
+      scale: 1,
+      opacity: 1,
+      transition: { duration: 1 },
+      visibility: 1,
+    });
+  }, [controls]);
+
+  const flippedTextHero = ["styl", "blask", "nails", "spojrzenie"];
+  const flippedTextHeroSecond = ["delikatność", "pewność", "troska"];
 
   return (
     <>
@@ -63,71 +72,74 @@ export default function Home() {
         <meta property="business:contact_data:country_name" content="Poland" />
       </Head>
 
-      <TransitionPageEffect />
+      {/* <TransitionPageEffect /> */}
       <main className="">
         <section className="flex w-full flex-col">
-          <div className="relative min-h-screen w-[100vw] dark:bg-dark overflow-hidden bg-no-repeat bg-cover bg-top dark:bg-hero-dark bg-hero-light">
+          <motion.div
+            className="relative min-h-screen w-[100vw] dark:bg-dark overflow-hidden bg-no-repeat bg-cover bg-top dark:bg-hero-dark bg-hero-light"
+            initial={{
+              filter: "blur(12px)",
+              scale: 1.125,
+              opacity: 0,
+              visibility: 0,
+            }}
+            animate={controls}
+          >
             <span className="z-1 block w-full absolute top-0 left-0 right-0 z-[1] dark:bg-gradient-to-b from-dark via-transparent to-transparent h-2/3" />
             <span className="z-1 block w-full absolute bottom-0 left-0 right-0 z-[1] dark:bg-gradient-to-t from-dark via-transparent to-transparent h-full" />
-            <div className="flex items-center justify-center h-screen relative w-full max-w-[1920px] mx-auto">
-              <AnimatedText
-                text="GINGER"
-                className={`${isHovered
-                  ? "dark:text-light text-light"
-                  : "dark:text-primary text-dark"
-                  }
+          </motion.div>
+          <div className="flex items-center justify-center h-screen w-full max-w-[1920px] mx-auto absolute left-0 right-0">
+            <AnimatedText
+              text="GINGER"
+              className={`${isHovered
+                ? "dark:text-light text-light"
+                : "dark:text-primary text-dark"
+                }
                             w-min transition-all duration-500 
                             tracking-[2.3rem] 2xl:tracking-[1rem] lg:tracking-[0.5rem] xs:tracking-[0.25rem] "`}
-              />
+            />
 
-              <AnimatedText
-                text="Warsaw"
-                className={`${isHovered
-                  ? "dark:text-primary text-primary"
-                  : "dark:text-light text-light"
-                  }
+            <AnimatedText
+              text="Warsaw"
+              className={`${isHovered
+                ? "dark:text-primary text-primary"
+                : "dark:text-light text-primary"
+                }
                   w-min transition-all duration-500
                             tracking-[2.3rem] 2xl:tracking-[1rem] lg:tracking-[0.5rem] xs:tracking-[0.25rem] z-20"`}
-              />
-            </div>
+            />
           </div>
           <Layout className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16 min-h-screen flex items-center justify-center">
-            <div className="w-full flex flex-col items-center justify-between">
-              <div className="w-full flex flex-col items-center self-center">
-                <CursorContext.Consumer>
-                  {({ isHoveringText }) => (
-                    <div
-                      className={`inline-flex flex-col gap-2 w-full font-bold capitalize text-left text-8xl 2xl:text-6xl xl:text-4xl  ${isHoveringText
-                        ? "text-dark bg-inherit dark:bg-inherit dark:text-light"
-                        : "text-dark dark:bg-inherit dark:text-light"
-                        } md:text-4xl dark:bg-inherit text-dark`}
-                      onMouseEnter={handleMouseEnterText}
-                      onMouseLeave={handleMouseLeaveText}
-                    >
-                      <div>
-                        <div className="inline sm:block sm:mb-3">
-                          Zadbaj o swoje
-                        </div>{" "}
-                        <FlippedText textVariants={flippedTextHero} />
-                      </div>
-                      <div>
-                        <div className="inline sm:block sm:mb-3">I poczuj</div>{" "}
-                        <FlippedText textVariants={flippedTextHeroSecond} />
-                      </div>
-                      <div>razem z Ginger</div>
+            <div className="w-full flex flex-col items-center justify-center">
+              <CursorContext.Consumer>
+                {({ isHoveringText }) => (
+                  <div
+                    className={`inline-flex flex-col gap-2 w-full font-bold capitalize text-center text-6xl xl:text-4xl 2xs:text-2xl  ${isHoveringText
+                      ? "text-dark bg-inherit dark:bg-inherit dark:text-light"
+                      : "text-dark dark:bg-inherit dark:text-light"
+                      } md:text-4xl dark:bg-inherit text-dark`}
+                    onMouseEnter={handleMouseEnterText}
+                    onMouseLeave={handleMouseLeaveText}
+                  >
+                    <div>
+                      <FlippedText textVariants={flippedTextHero} />
                     </div>
-                  )}
-                </CursorContext.Consumer>
+                    <div>
+                      <FlippedText textVariants={flippedTextHeroSecond} />
+                    </div>
+                    <div>Razem z Ginger Beauty Zone</div>
+                  </div>
+                )}
+              </CursorContext.Consumer>
+              <div className="w-2/3 h-[50vh] relative rounded-xl my-12 xl:w-full md:h-[40vh] 2xs:h-[28vh]">
+                <Image
+                  src="/images/home/second-section-02.jpg"
+                  alt="squad ginger"
+                  fill
+                  className="object-cover rounded-xl"
+                />
               </div>
-
-              <p className="my-4 text-base font-medium self-start text-dark dark:text-light w-[80%] xs:w-full">
-                Wiemy, jak ważne jest dla Was posiadanie niezawodnego miejsca, w
-                którym możecie uporządkować nie tylko swoje paznokcie, ale także
-                swoje myśli. Ginger to prawdziwie klimatyczne i uduchowione
-                miejsce, które pomoże Wam się zrelaksować, naładować pięknem i
-                dobrymi wibracjami.
-              </p>
-              <div className="flex items-center self-start mt-2 sm:flex-col xs:w-full">
+              <div className="flex items-center justify-center sm:flex-col xs:w-full">
                 <Link
                   className="flex items-center justify-center bg-dark text-light p-2.5 px-6 xs:px-4 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4 xs:w-full"
                   href="/dummy.pdf"

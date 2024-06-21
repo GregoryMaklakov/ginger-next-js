@@ -59,7 +59,7 @@ export function ColumnsBlock({ className }) {
     return (
         <section className={`${className} main w-full`}>
             <div className="spacer h-[50vh]" />
-            <div ref={gallery} className="gallery h-[175vh] sm:h-screen bg-dark overflow-hidden px-12 xl:px-4 xs:px-0">
+            <div ref={gallery} className="gallery h-[175vh] sm:h-screen dark:bg-dark bg-light overflow-hidden px-12 xl:px-4 xs:px-0">
                 <div className="galleryWrapper relative -top-[12vh] h-[200vh] flex items-center justify-center gap-12 xl:gap-8 lg:gap-4 xs:gap-2">
                     <Column images={[imagesData[0], imagesData[1], imagesData[2]]} y={y} />
                     <Column images={[imagesData[3], imagesData[4], imagesData[5]]} y={y2} />
