@@ -5,7 +5,7 @@ export { socialLink } from "./constant";
 export { Routes } from "./routes";
 export { employeeData } from "./employeeData";
 export { textScramble } from "./textScramble";
-export { galleryData } from "./galleryData";
+export { trialImages } from "./trialImages";
 
 export {
   stagesDataAboutSchedule,
