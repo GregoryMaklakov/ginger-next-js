@@ -9,5 +9,4 @@ export const trialImages = [
   "/images/gallery/trail-08.jpg",
   "/images/gallery/trail-09.jpg",
   "/images/gallery/trail-10.jpg",
-  "/images/gallery/trail-11.jpg",
 ];

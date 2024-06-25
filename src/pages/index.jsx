@@ -111,68 +111,69 @@ export default function Home() {
             />
           </div>
 
-          <MouseImageTrail
-            renderImageBuffer={50}
-            rotationRange={25}
-            images={trialImages}>
-            <Layout className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16 min-h-screen flex items-center justify-center">
-              <div className="w-full flex flex-col items-center justify-center">
-                <CursorContext.Consumer>
-                  {({ isHoveringText }) => (
-                    <div
-                      className={`inline-flex flex-col gap-2 w-full font-bold capitalize text-center text-6xl xl:text-4xl 2xs:text-2xl  ${isHoveringText
-                        ? "text-dark bg-inherit dark:bg-inherit dark:text-light"
-                        : "text-dark dark:bg-inherit dark:text-light"
-                        } md:text-4xl dark:bg-inherit text-dark`}
-                      onMouseEnter={handleMouseEnterText}
-                      onMouseLeave={handleMouseLeaveText}
-                    >
-                      <div>
-                        <FlippedText textVariants={flippedTextHero} />
+          <div className="min-h-screen flex flex-col pt-12">
+            <MouseImageTrail
+              renderImageBuffer={50}
+              rotationRange={25}
+              images={trialImages}>
+              <Layout className="pt-0 pb-0 2xl:pb-4 md:pt-16 sm:pt-0 flex items-center justify-center">
+                <div className="w-full flex flex-col items-center justify-center">
+                  <CursorContext.Consumer>
+                    {({ isHoveringText }) => (
+                      <div
+                        className={`inline-flex flex-col gap-2 w-full font-bold capitalize text-center text-6xl 2xl:text-4xl 2xs:text-2xl  ${isHoveringText
+                          ? "text-dark bg-inherit dark:bg-inherit dark:text-light"
+                          : "text-dark dark:bg-inherit dark:text-light"
+                          } md:text-4xl dark:bg-inherit text-dark`}
+                        onMouseEnter={handleMouseEnterText}
+                        onMouseLeave={handleMouseLeaveText}
+                      >
+                        <div>
+                          <FlippedText textVariants={flippedTextHero} />
+                        </div>
+                        <div>
+                          <FlippedText textVariants={flippedTextHeroSecond} />
+                        </div>
+                        <div>Razem z Ginger Beauty Zone</div>
                       </div>
-                      <div>
-                        <FlippedText textVariants={flippedTextHeroSecond} />
-                      </div>
-                      <div>Razem z Ginger Beauty Zone</div>
-                    </div>
-                  )}
-                </CursorContext.Consumer>
-                <div className="w-2/3 h-[50vh] relative rounded-xl my-12 xl:w-full md:h-[40vh] 2xs:h-[28vh]">
-                  <Image
-                    src="/images/home/second-section-02.jpg"
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    alt="squad ginger"
-                    fill
-                    className="object-cover rounded-xl"
-                  />
-                </div>
+                    )}
+                  </CursorContext.Consumer>
+                  <div className="w-2/3 h-[50vh] relative rounded-xl my-12 2xl:my-6 xl:w-full 2xl:w-1/2 md:h-[40vh] 2xs:h-[28vh]">
+                    <Image
+                      src="/images/home/second-section-02.jpg"
+                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      alt="squad ginger"
+                      fill
+                      className="object-cover rounded-xl"
+                    />
+                  </div>
 
-                <div className="flex items-center justify-center sm:flex-col xs:w-full">
-                  <Link
-                    className="z-[1001] flex items-center justify-center bg-dark text-light p-2.5 px-6 xs:px-4 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4 xs:w-full"
-                    href="/dummy.pdf"
-                    target="_blank"
-                    download
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    Odbierz zniżkę 20%
-                    <Icon name="linkArrow" size={24} className="ml-2" />
-                  </Link>
-                  <Link
-                    className="z-[1001] flex items-center sx:w-full xs:mt-4 ml-4 xs:ml-0 font-medium capitalize underline text-lg dark:text-light text-dark "
-                    href="tel:48510001772"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    Zadzwoń
-                  </Link>
                 </div>
-              </div>
-            </Layout>
-
-          </MouseImageTrail>
+              </Layout>
+            </MouseImageTrail>
+            <div className="flex items-center justify-center sm:flex-col xs:w-full pt-3 lg:p-16 md:p-12 sm:p-6">
+              <Link
+                className="flex items-center justify-center bg-dark text-light p-2.5 px-6 xs:px-4 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4 xs:w-full"
+                href="/dummy.pdf"
+                target="_blank"
+                download
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                Odbierz zniżkę 20%
+                <Icon name="linkArrow" size={24} className="ml-2" />
+              </Link>
+              <Link
+                className="flex items-center sx:w-full xs:mt-4 ml-4 xs:ml-0 font-medium capitalize underline text-lg dark:text-light text-dark "
+                href="tel:48510001772"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                Zadzwoń
+              </Link>
+            </div>
+          </div>
 
           <div className="flex flex-col w-full items-center justify-center">
             <BackgroundBlock />
