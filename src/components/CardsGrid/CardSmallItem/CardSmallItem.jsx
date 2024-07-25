@@ -20,8 +20,8 @@ export function CardSmallItem() {
     const AnimatedLink = motion(Link);
 
     return (
-        <div className="flex items-center justify-center flex-col rounded-3xl flex-nowrap relative overflow-hidden h-full flex-grow flex-shrink-0 bg-cardGrey">
-            <div className="flex items-start justify-start flex-row flex-grow flex-nowrap flex-shrink-0 w-full p-8 relative overflow-hidden">
+        <div className="flex items-center justify-center flex-col rounded-3xl flex-nowrap relative overflow-hidden h-full flex-grow bg-cardGrey pb-3">
+            <div className="flex items-start justify-start flex-row flex-grow flex-nowrap w-full p-8 relative overflow-hidden">
                 <div className="flex flex-col items-start p-0 justify-end h-min gap-[6px] relative w-full">
                     <div className="flex flex-col justify-start">
                         <h3 className="text-lg text-dark dark:text-light">Read an audio message transcription</h3>
@@ -31,8 +31,8 @@ export function CardSmallItem() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col flex-nowrap">
-                <div className="flex items-center justify-center overflow-hidden p-0 w-full h-3/4 flex-nowrap">
+            <div className="flex flex-[75%] flex-col flex-nowrap">
+                <div className="flex items-center flex-auto justify-center overflow-hidden p-0 w-full h-3/4 flex-nowrap">
                     <Image
                         alt="Card dialog window"
                         src="/images/home/cardsGrid/grid-01.png"

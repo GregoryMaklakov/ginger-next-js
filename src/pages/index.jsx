@@ -2,7 +2,7 @@ import Head from "next/head";
 import {
   BooksyButton,
   // TransitionPageEffect,
-  BackgroundBlock,
+  // BackgroundBlock,
   ColumnsBlock,
   Hero,
   GetDiscountBlock,

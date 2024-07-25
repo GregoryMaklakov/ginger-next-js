@@ -19,7 +19,7 @@ module.exports = {
 
       colors: {
         dark: "#1b1b1b",
-        cardGrey: "#171717",
+        cardGrey: "#010101",
         light: "#f5f5f5",
         primary: "#CC184B",
         primaryDark: "rgb(175, 189, 165)",
