@@ -74,7 +74,7 @@ export function MouseImageTrail({
     return (
         <div
             ref={scope}
-            className="relative overflow-hidden w-full h-auto flex items-center justify-center"
+            className="relative overflow-hidden w-full min-h-screen flex items-center justify-center"
             onMouseMove={handleMouseMove}
         >
             {children}

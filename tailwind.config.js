@@ -19,6 +19,7 @@ module.exports = {
 
       colors: {
         dark: "#1b1b1b",
+        cardGrey: "#171717",
         light: "#f5f5f5",
         primary: "#CC184B",
         primaryDark: "rgb(175, 189, 165)",
@@ -26,6 +27,7 @@ module.exports = {
         darkGrey: "#474747",
         gradientFrom: "#7053ff",
         gradientTo: "#e0658c",
+        orange: "rgb(235 148 103)",
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",

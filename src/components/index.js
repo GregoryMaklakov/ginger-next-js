@@ -19,5 +19,7 @@ export * from "./ArticlesBlock";
 export * from "./Tag";
 export * from "./ButtonBack";
 export * from "./HistoryBlock";
-export * from "./GradientText";
 export * from "./GalleryBlock";
+export * from "./Home/Hero";
+export * from "./Home/GetDiscountBlock";
+export * from "./CardsGrid";
