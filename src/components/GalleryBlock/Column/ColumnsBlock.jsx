@@ -76,6 +76,7 @@ export function ColumnsBlock({ className }) {
                         y={y3}
                     />
                     <Column
+                        className="xs:hidden"
                         images={[imagesData[9], imagesData[10], imagesData[11]]}
                         y={y4}
                     />
@@ -86,10 +87,10 @@ export function ColumnsBlock({ className }) {
     );
 }
 
-function Column({ images, y }) {
+function Column({ images, y, className }) {
     return (
         <motion.div
-            className="column relative h-full w-1/4 min-w-[20%] 2xs:min-w-[34%] flex flex-col gap-12 xl:gap-8 lg:gap-4 xs:gap-2 sm:w-1/3"
+            className={`${className} column relative h-full w-1/4 min-w-[20%] 2xs:min-w-[34%] flex flex-col gap-12 xl:gap-8 lg:gap-4 xs:gap-2 sm:w-1/3`}
             style={{ y }}
         >
             {images.map(src => (
@@ -111,6 +112,7 @@ function Column({ images, y }) {
 }
 
 Column.propTypes = {
+    className: PropTypes.string,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
     y: PropTypes.shape({
         current: PropTypes.number.isRequired,

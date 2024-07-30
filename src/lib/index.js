@@ -6,6 +6,7 @@ export { Routes } from "./routes";
 export { employeeData } from "./employeeData";
 export { textScramble } from "./textScramble";
 export { trialImages } from "./trialImages";
+export { cardGridData } from "./cardGridData";
 
 export {
   stagesDataAboutSchedule,
