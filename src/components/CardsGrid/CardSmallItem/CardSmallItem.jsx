@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Icon } from "../../Icons";
 import { CursorContext } from "../../../lib";
+import { TertiaryStoryText } from '../../HistoryBlock/StoryTexts/TertiaryStoryText';
 
-export function CardSmallItem({ title, description, image, link }) {
+export function CardSmallItem({ description, image, link, icon, title, gradientWord }) {
     const { setHoveringLink } = useContext(CursorContext);
 
     const handleMouseEnterLink = () => {
@@ -16,6 +17,7 @@ export function CardSmallItem({ title, description, image, link }) {
         setHoveringLink(false);
     };
 
+
     const AnimatedLink = motion(Link);
 
     return (
@@ -23,7 +25,12 @@ export function CardSmallItem({ title, description, image, link }) {
             <div className="flex items-start justify-start flex-row flex-grow flex-nowrap w-full p-8 relative overflow-hidden">
                 <div className="flex flex-col items-start p-0 justify-end h-min gap-[6px] relative w-full">
                     <div className="flex flex-col justify-start">
-                        <h3 className="text-lg text-dark dark:text-light">{title}</h3>
+                        <h3 className="text-lg text-dark dark:text-light font-medium">
+                            <TertiaryStoryText
+                                textData={title}
+                                gradientWord={gradientWord}
+                            />
+                        </h3>
                     </div>
                     <div className="flex flex-col justify-start">
                         <p className="text-sm text-dark/75 dark:text-light/75">
@@ -44,7 +51,8 @@ export function CardSmallItem({ title, description, image, link }) {
                     />
                 </div>
                 {link && (
-                    <div className="grid place-content-center">
+                    <div
+                        className="grid place-content-center">
                         <AnimatedLink
                             className="inline-flex"
                             href={link}
@@ -54,8 +62,8 @@ export function CardSmallItem({ title, description, image, link }) {
                             onMouseLeave={handleMouseLeaveLink}
                         >
                             <Icon
-                                name="booksy"
-                                size={140}
+                                name={icon}
+                                size={40}
                                 className="fill-current text-dark dark:text-light"
                             />
                         </AnimatedLink>
@@ -71,4 +79,6 @@ CardSmallItem.propTypes = {
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     link: PropTypes.string,
+    icon: PropTypes.string,
+    gradientWord: PropTypes.string,
 };

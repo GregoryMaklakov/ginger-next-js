@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { PropTypes } from 'prop-types';
 
-export function CardBigItem({ title, description, image }) {
+export function CardBigItem({ title, description, image, className }) {
   return (
-    <div className="flex items-center xs:flex-col-reverse justify-center bg-cardGrey rounded-3xl flex-none flex-row flex-nowrap gap-0 h-[600px] max-w-7xl overflow-hidden p-0 relative w-3/4 xl:w-full">
+    <div className={`${className} flex items-center xs:flex-col-reverse justify-center bg-cardGrey rounded-3xl flex-none flex-row flex-nowrap gap-0 h-[600px] max-w-7xl overflow-hidden p-0 relative w-3/4 xl:w-full`}>
       <div className="flex items-center xs:items-start xs:pr-8 xs:w-full flex-row justify-center flex-grow flex-shrink-0 flex-nowrap gap-[10px] h-full overflow-hidden p-12 relative w-1 md:p-8 sm:pr-0">
         <div className=" flex items-start justify-end flex-col flex-nowrap gap-2 h-min p-0 overflow-hidden relative">
           <div className="flex flex-col justify-start flex-shrink-0">
@@ -31,6 +31,7 @@ export function CardBigItem({ title, description, image }) {
 }
 
 CardBigItem.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
