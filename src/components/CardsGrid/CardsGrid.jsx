@@ -1,15 +1,22 @@
 import React from 'react'
+import { useTransform, motion } from 'framer-motion';
+import { PropTypes } from 'prop-types';
 import { CardSmallItem } from './CardSmallItem'
 import { CardBigItem } from './CardBigItem'
 import { cardGridData } from '../../lib/cardGridData';
 import { GridIcon } from '../Icons';
 
-export function CardsGrid() {
+export function CardsGrid({ scrollYProgress }) {
     const bigItemData = cardGridData[0];
     const smallItemsData = cardGridData.slice(1);
 
+    const scale = useTransform(scrollYProgress, [0, 0.6,], [0.8, 1]);
+
+
+
+
     return (
-        <div className='flex flex-col items-center justify-center flex-none flex-nowrap gap-4 md:gap-2 h-min p-0 relative w-full xl:px-4 xs:px-2'>
+        <motion.div style={{ scale }} className='relative h-min-content flex flex-col items-center justify-center flex-none flex-nowrap gap-4 md:gap-2  p-0 w-full xl:px-4 xs:px-2'>
             <CardBigItem
                 title={bigItemData.title}
                 description={bigItemData.description}
@@ -27,6 +34,11 @@ export function CardsGrid() {
             <div className='absolute right-[-140px] top-0 z-0 translate-x-1 rotate-45'>
                 <GridIcon size={1200} className='hidden xl:block' />
             </div>
-        </div>
+        </motion.div>
     )
 }
+CardsGrid.propTypes = {
+    scrollYProgress: PropTypes.shape({
+        get: PropTypes.func.isRequired
+    }).isRequired
+};

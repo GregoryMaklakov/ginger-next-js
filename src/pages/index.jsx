@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { useRef } from "react";
+import { useScroll, } from "framer-motion";
 import {
   BooksyButton,
   // TransitionPageEffect,
@@ -15,6 +17,15 @@ export default function Home() {
   const flippedTextHeroFirst = ["Glow", "Pure", "Vibe", "Lush", "Pedi"];
   const flippedTextHeroSecond = ["Mani", "Shine", "Nails", "Soft"];
 
+  const container = useRef();
+
+  const { scrollYProgress } = useScroll({
+
+    target: container,
+
+    offset: ["start start", "end end"]
+
+  })
   return (
     <>
       <Head>
@@ -43,12 +54,19 @@ export default function Home() {
       {/* <TransitionPageEffect /> */}
       <main className="main flex w-full flex-col">
         <Hero />
-        <GetDiscountBlock
-          wordsVariants1={flippedTextHeroFirst}
-          wordsVariants2={flippedTextHeroSecond}
-          images={trialImages}
-        />
-        <CardsGrid />
+        <div
+          ref={container}
+          className="relative h-full">
+          <GetDiscountBlock
+            wordsVariants1={flippedTextHeroFirst}
+            wordsVariants2={flippedTextHeroSecond}
+            images={trialImages}
+            scrollYProgress={scrollYProgress}
+          />
+          <CardsGrid
+            scrollYProgress={scrollYProgress}
+          />
+        </div>
         {/* <BackgroundBlock /> */}
         <ColumnsBlock />
         <BooksyButton className="fixed right-4 bottom-2 lg:bottom-0" />

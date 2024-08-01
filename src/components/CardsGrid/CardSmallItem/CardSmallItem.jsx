@@ -21,7 +21,7 @@ export function CardSmallItem({ description, image, link, icon, title, gradientW
     const AnimatedLink = motion(Link);
 
     return (
-        <div className="flex flex-[50%] items-center justify-center flex-col rounded-3xl flex-nowrap relative overflow-hidden h-full flex-grow bg-cardGrey pb-3">
+        <div className="flex flex-[50%] items-center justify-center flex-col rounded-3xl flex-nowrap relative overflow-hidden h-full flex-grow bg-cardGrey pb-3 border border-1 border-solid border-borderWhite20">
             <div className="flex items-start justify-start flex-row flex-grow flex-nowrap w-full p-8 relative overflow-hidden">
                 <div className="flex flex-col items-start p-0 justify-end h-min gap-[6px] relative w-full">
                     <div className="flex flex-col justify-start">

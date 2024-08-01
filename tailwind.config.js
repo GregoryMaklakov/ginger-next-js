@@ -19,7 +19,7 @@ module.exports = {
 
       colors: {
         dark: "#1b1b1b",
-        cardGrey: "#010101",
+        cardGrey: "#111111",
         light: "#f5f5f5",
         primary: "#CC184B",
         primaryDark: "rgb(175, 189, 165)",
@@ -28,6 +28,7 @@ module.exports = {
         gradientFrom: "#7053ff",
         gradientTo: "#e0658c",
         orange: "rgb(235 148 103)",
+        borderWhite20: "rgba(255, 255, 255, 0.2)",
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
@@ -63,3 +64,16 @@ module.exports = {
   // eslint-disable-next-line import/no-extraneous-dependencies
   plugins: [],
 };
+
+// colors: {
+//   dark: "#1b1b1b",
+//   cardGrey: "#010101",
+//   light: "#f5f5f5",
+//   primary: "#CC184B",
+//   primaryDark: "rgb(175, 189, 165)",
+//   lightGrey: "#E0E0E0",
+//   darkGrey: "#474747",
+//   gradientFrom: "#7053ff",
+//   gradientTo: "#e0658c",
+//   orange: "rgb(235 148 103)",
+// },
