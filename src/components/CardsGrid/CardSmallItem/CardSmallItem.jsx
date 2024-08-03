@@ -25,15 +25,17 @@ export function CardSmallItem({ description, image, link, icon, title, gradientW
             <div className="flex items-start justify-start flex-row flex-grow flex-nowrap w-full p-8 relative overflow-hidden">
                 <div className="flex flex-col items-start p-0 justify-end h-min gap-[6px] relative w-full">
                     <div className="flex flex-col justify-start">
-                        <h3 className="text-lg text-dark dark:text-light font-medium">
+                        <div className="text-lg font-medium">
                             <TertiaryStoryText
+                                className=""
                                 textData={title}
                                 gradientWord={gradientWord}
+                                variant="light"
                             />
-                        </h3>
+                        </div>
                     </div>
                     <div className="flex flex-col justify-start">
-                        <p className="text-sm text-dark/75 dark:text-light/75">
+                        <p className="text-sm text-light/75">
                             {description}
                         </p>
                     </div>

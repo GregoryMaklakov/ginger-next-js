@@ -18,10 +18,13 @@ export function GetDiscountBlock({ wordsVariants1, wordsVariants2, images, scrol
   };
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.125]);
-  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  // const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+
   return (
     <MouseImageTrail renderImageBuffer={50} rotationRange={25} images={images} >
-      <motion.div style={{ scale, opacity }} className="h-min pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16 z-[999] flex flex-col items-center justify-center w-full max-w-[1920px] mx-auto p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6">
+      <motion.div
+        style={{ scale }}
+        className="relative h-min pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16 z-[999] flex flex-col items-center justify-center w-full max-w-[1920px] mx-auto p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6">
         <StoryLine />
         <div className="flex flex-row items-center pt-24 content-center flex-wrap relative justify-center gap-6 xl:gap-3 w-full font-bold capitalize text-left text-8xl 2xl:text-6xl xl:text-4xl text-dark bg-inherit dark:bg-inherit dark:text-light md:text-4xl">
           <h2 className="flex flex-shrink-0">Charm</h2>

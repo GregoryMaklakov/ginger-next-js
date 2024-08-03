@@ -7,10 +7,10 @@ export function CardBigItem({ title, description, image, className }) {
       <div className="flex items-center xs:items-start xs:pr-8 xs:w-full flex-row justify-center flex-grow flex-shrink-0 flex-nowrap gap-[10px] h-full overflow-hidden p-12 relative w-1 md:p-8 sm:pr-0">
         <div className=" flex items-start justify-end flex-col flex-nowrap gap-2 h-min p-0 overflow-hidden relative">
           <div className="flex flex-col justify-start flex-shrink-0">
-            <h3 className="text-lg text-dark dark:text-primary font-medium">{title}</h3>
+            <h3 className="text-lg text-primary font-medium">{title}</h3>
           </div>
           <div className="flex flex-col justify-start flex-shrink-0">
-            <p className="text-4xl sm:text-2xl text-dark/75 dark:text-light font-bold">{description}</p>
+            <p className="text-4xl sm:text-2xl text-light font-bold">{description}</p>
           </div>
         </div>
       </div>

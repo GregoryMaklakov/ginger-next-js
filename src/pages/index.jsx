@@ -20,12 +20,10 @@ export default function Home() {
   const container = useRef();
 
   const { scrollYProgress } = useScroll({
-
     target: container,
-
     offset: ["start start", "end end"]
-
   })
+
   return (
     <>
       <Head>

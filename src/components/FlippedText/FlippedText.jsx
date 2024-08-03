@@ -17,12 +17,13 @@ export function FlippedText({ textVariants }) {
     }, [textVariants]);
 
     return (
-        <div className="inline-flex items-center justify-center w-80 2xl:w-60 xl:w-40 text-dark/75 dark:text-light/75 border-solid border-2 rounded-[2rem] py-3 px-4 border-primary normal-case dark:bg-dark bg-light">
+        <div
+            className="inline-flex items-center justify-center w-80 2xl:w-60 xl:w-40 text-dark/75 dark:text-light/75 border-solid border-2 rounded-[2rem] py-3 px-4 border-primary normal-case dark:bg-dark bg-light">
             <FlipItem key={textVariants[currentTextIndex]} text={textVariants[currentTextIndex]} />
         </div>
     );
 }
-
+// bg-gradient-to-r from-gradientFrom to-gradientTo
 FlippedText.propTypes = {
     textVariants: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
@@ -38,6 +39,7 @@ function FlipItem({ text }) {
             style={{ lineHeight: 0.75 }}
             initial="initial"
             animate="animate"
+
         >
             <div>
                 {text.split("").map((l, i) => (

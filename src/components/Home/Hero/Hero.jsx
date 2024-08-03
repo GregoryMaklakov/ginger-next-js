@@ -35,7 +35,7 @@ export function Hero() {
             </motion.div>
             <div className="flex items-center justify-center h-screen w-full max-w-[1920px] mx-auto absolute left-0 right-0">
                 <AnimatedText
-                    text="GINGER"
+                    text="Ginger"
                     className={`${isHovered
                         ? "dark:text-light text-light"
                         : "dark:text-primary text-dark"
