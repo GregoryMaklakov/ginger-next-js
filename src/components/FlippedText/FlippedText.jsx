@@ -2,14 +2,13 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
-
-export function FlippedText({ textVariants }) {
+export function FlippedText({ textVariants, gradientVariants }) {
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentTextIndex((prevIndex) =>
-                prevIndex === textVariants.length - 1 ? 0 : prevIndex + 1
+            setCurrentTextIndex(prevIndex =>
+                prevIndex === textVariants.length - 1 ? 0 : prevIndex + 1,
             );
         }, 3500);
 
@@ -17,17 +16,28 @@ export function FlippedText({ textVariants }) {
     }, [textVariants]);
 
     return (
-        <div
-            className="inline-flex items-center justify-center w-80 2xl:w-60 xl:w-40 text-dark/75 dark:text-light/75 border-solid border-2 rounded-[2rem] py-3 px-4 border-primary normal-case dark:bg-dark bg-light">
-            <FlipItem key={textVariants[currentTextIndex]} text={textVariants[currentTextIndex]} />
-        </div>
+        <motion.div
+            variants={gradientVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ duration: 2 }}
+            className="inline-flex items-center justify-center w-80 2xl:w-60 xl:w-40 text-dark/75 dark:text-light/75 rounded-[2rem] py-3 px-4 normal-case">
+            <FlipItem
+                key={textVariants[currentTextIndex]}
+                text={textVariants[currentTextIndex]}
+            />
+        </motion.div>
     );
 }
-// bg-gradient-to-r from-gradientFrom to-gradientTo
+
 FlippedText.propTypes = {
     textVariants: PropTypes.arrayOf(PropTypes.string).isRequired,
+    gradientVariants: PropTypes.shape({
+        animate: PropTypes.shape({
+            background: PropTypes.arrayOf(PropTypes.string).isRequired,
+        }).isRequired,
+    }).isRequired,
 };
-
 
 const DURATION = 0.5;
 const STAGGER = 0.025;
@@ -39,7 +49,6 @@ function FlipItem({ text }) {
             style={{ lineHeight: 0.75 }}
             initial="initial"
             animate="animate"
-
         >
             <div>
                 {text.split("").map((l, i) => (
@@ -47,11 +56,11 @@ function FlipItem({ text }) {
                         variants={{
                             initial: {
                                 y: 0,
-                                opacity: 0
+                                opacity: 0,
                             },
                             animate: {
                                 y: "-100%",
-                                opacity: 1
+                                opacity: 1,
                             },
                         }}
                         transition={{
@@ -76,7 +85,7 @@ function FlipItem({ text }) {
                             },
                             animate: {
                                 y: 0,
-                                opacity: 1
+                                opacity: 1,
                             },
                         }}
                         transition={{
@@ -98,4 +107,3 @@ function FlipItem({ text }) {
 FlipItem.propTypes = {
     text: PropTypes.string.isRequired,
 };
-

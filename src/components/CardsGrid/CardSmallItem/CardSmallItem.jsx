@@ -17,7 +17,6 @@ export function CardSmallItem({ description, image, link, icon, title, gradientW
         setHoveringLink(false);
     };
 
-
     const AnimatedLink = motion(Link);
 
     return (
@@ -27,7 +26,6 @@ export function CardSmallItem({ description, image, link, icon, title, gradientW
                     <div className="flex flex-col justify-start">
                         <div className="text-lg font-medium">
                             <TertiaryStoryText
-                                className=""
                                 textData={title}
                                 gradientWord={gradientWord}
                                 variant="light"

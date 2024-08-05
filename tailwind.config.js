@@ -16,18 +16,17 @@ module.exports = {
         "home-parallax-dark": "url('/images/gallery/home-parallax-dark.webp')",
         "sec-section": "url('/images/home/sec-section-02.jpg')",
       },
-
       colors: {
         dark: "#1b1b1b",
         cardGrey: "#111111",
         light: "#f5f5f5",
         primary: "#CC184B",
-        primaryDark: "rgb(175, 189, 165)",
+        primaryDark: "#afbda5",
         lightGrey: "#E0E0E0",
         darkGrey: "#474747",
         gradientFrom: "#7053ff",
         gradientTo: "#e0658c",
-        orange: "rgb(235 148 103)",
+        orange: "#eb9467",
         borderWhite20: "rgba(255, 255, 255, 0.2)",
       },
       animation: {
@@ -64,16 +63,3 @@ module.exports = {
   // eslint-disable-next-line import/no-extraneous-dependencies
   plugins: [],
 };
-
-// colors: {
-//   dark: "#1b1b1b",
-//   cardGrey: "#010101",
-//   light: "#f5f5f5",
-//   primary: "#CC184B",
-//   primaryDark: "rgb(175, 189, 165)",
-//   lightGrey: "#E0E0E0",
-//   darkGrey: "#474747",
-//   gradientFrom: "#7053ff",
-//   gradientTo: "#e0658c",
-//   orange: "rgb(235 148 103)",
-// },

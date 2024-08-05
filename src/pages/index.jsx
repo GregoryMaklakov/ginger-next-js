@@ -14,7 +14,7 @@ import { trialImages } from "../lib";
 
 export default function Home() {
 
-  const flippedTextHeroFirst = ["Glow", "Pure", "Vibe", "Lush", "Pedi"];
+  const flippedTextHeroFirst = ["Glow", "Pure", "Vibe",];
   const flippedTextHeroSecond = ["Mani", "Shine", "Nails", "Soft"];
 
   const container = useRef();

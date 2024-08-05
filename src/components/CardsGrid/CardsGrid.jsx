@@ -12,9 +12,6 @@ export function CardsGrid({ scrollYProgress }) {
 
     const scale = useTransform(scrollYProgress, [0, 0.6,], [0.8, 1]);
 
-
-
-
     return (
         <motion.div style={{ scale }} className='relative h-min-content flex flex-col items-center justify-center flex-none flex-nowrap gap-4 md:gap-2  p-0 w-full xl:px-4 xs:px-2'>
             <CardBigItem
