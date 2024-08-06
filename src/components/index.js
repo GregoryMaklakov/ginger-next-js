@@ -22,4 +22,5 @@ export * from "./HistoryBlock";
 export * from "./GalleryBlock";
 export * from "./Home/Hero";
 export * from "./Home/GetDiscountBlock";
+export * from "./Home/EmployeesBlock";
 export * from "./CardsGrid";

@@ -9,13 +9,14 @@ import {
   Hero,
   GetDiscountBlock,
   CardsGrid,
+  EmployeesBlock
 } from "../components";
 import { trialImages } from "../lib";
 
 export default function Home() {
 
   const flippedTextHeroFirst = ["Glow", "Pure", "Vibe",];
-  const flippedTextHeroSecond = ["Mani", "Shine", "Nails", "Soft"];
+  const flippedTextHeroSecond = ["Mani", "Shine", "Soft"];
 
   const container = useRef();
 
@@ -65,6 +66,7 @@ export default function Home() {
             scrollYProgress={scrollYProgress}
           />
         </div>
+        <EmployeesBlock />
         {/* <BackgroundBlock /> */}
         <ColumnsBlock />
         <BooksyButton className="fixed right-4 bottom-2 lg:bottom-0" />

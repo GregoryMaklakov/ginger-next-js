@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
-export function FlippedText({ textVariants, gradientVariants }) {
+export function FlippedText({ textVariants, gradientVariants, className }) {
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ export function FlippedText({ textVariants, gradientVariants }) {
             initial="initial"
             animate="animate"
             transition={{ duration: 2 }}
-            className="inline-flex items-center justify-center w-80 2xl:w-60 xl:w-40 text-dark/75 dark:text-light/75 rounded-[2rem] py-3 px-4 normal-case">
+            className={`${className} inline-flex items-center justify-center w-80 2xl:w-60 xl:w-40 rounded-[2rem] py-3 px-4 normal-case border-2 border-solid`}>
             <FlipItem
                 key={textVariants[currentTextIndex]}
                 text={textVariants[currentTextIndex]}
@@ -31,6 +31,7 @@ export function FlippedText({ textVariants, gradientVariants }) {
 }
 
 FlippedText.propTypes = {
+    className: PropTypes.string,
     textVariants: PropTypes.arrayOf(PropTypes.string).isRequired,
     gradientVariants: PropTypes.shape({
         animate: PropTypes.shape({
