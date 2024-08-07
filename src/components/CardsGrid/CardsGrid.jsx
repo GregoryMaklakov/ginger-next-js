@@ -3,7 +3,7 @@ import { useTransform, motion } from 'framer-motion';
 import { PropTypes } from 'prop-types';
 import { CardSmallItem } from './CardSmallItem'
 import { CardBigItem } from './CardBigItem'
-import { cardGridData } from '../../lib/cardGridData';
+import { cardGridData } from '../../lib';
 import { GridIcon } from '../Icons';
 
 export function CardsGrid({ scrollYProgress }) {

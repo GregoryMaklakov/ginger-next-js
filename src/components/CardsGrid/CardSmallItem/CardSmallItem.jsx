@@ -64,7 +64,7 @@ export function CardSmallItem({ description, image, link, icon, title, gradientW
                             <Icon
                                 name={icon}
                                 size={40}
-                                className="fill-current text-dark dark:text-light"
+                                className="fill-current text-light"
                             />
                         </AnimatedLink>
                     </div>

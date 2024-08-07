@@ -47,3 +47,43 @@ export const cardGridData = [
     image: "/images/home/cardsGrid/grid-04.png",
   },
 ];
+
+//
+export const cardGridDataEmployees = [
+  // CardSmallItem 01
+  {
+    id: 1,
+    title: "Atrakcyjne Wynagrodzenie i Premie",
+    gradientWord: "Wynagrodzenie",
+    description:
+      "Oferujemy konkurencyjne wynagrodzenie, które odpowiada Twoim umiejętnościom i doświadczeniu. Nasze premie motywują do osiągania najlepszych wyników i nagradzają zaangażowanie.",
+    image: "/images/home/cardsGrid/grid-02.png",
+  },
+  // CardSmallItem 02
+  {
+    id: 2,
+    title: "Profesjonalny Rozwój i Szkolenia",
+    gradientWord: "Profesjonalny",
+    description:
+      "Inwestujemy w rozwój pracowników poprzez regularne szkolenia i materiały edukacyjne. Rozwijaj swoje umiejętności i ucz się nowych technik.",
+    image: "/images/home/cardsGrid/grid-03.png",
+  },
+  // CardSmallItem 03
+  {
+    id: 3,
+    title: "Przyjazna Atmosfera i Korzyści Pracownicze",
+    gradientWord: "Atmosfera",
+    description:
+      "W naszym salonie panuje przyjazna atmosfera z regularnymi imprezami integracyjnymi. Zapewniamy wygodne miejsce pracy.",
+    image: "/images/home/cardsGrid/grid-04.png",
+  },
+  // CardSmallItem 04
+  {
+    id: 4,
+    title: "Oficjalne Zatrudnienie i Stabilność",
+    gradientWord: "Stabilność",
+    description:
+      "Oferujemy oficjalne zatrudnienie z pełnymi świadczeniami, co zapewnia stabilność i bezpieczeństwo pracy. Szukamy osób gotowych na długoterminową współpracę.",
+    image: "/images/home/cardsGrid/grid-05.png",
+  },
+];

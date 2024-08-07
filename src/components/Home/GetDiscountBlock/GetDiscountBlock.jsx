@@ -1,13 +1,11 @@
-import { useContext } from "react";
 import { useTransform, motion } from "framer-motion";
 import { PropTypes } from "prop-types";
-import Link from "next/link";
-import { CursorContext } from "../../../lib";
 import { MouseImageTrail } from "../../GalleryBlock";
 import { Icon } from "../../Icons";
 import { FlippedText } from "../../FlippedText";
 import { StoryLine } from "../../HistoryBlock";
 import { RoundedFrame } from "../RoundedFrame";
+import { ButtonLink } from '../../Button/Button';
 
 export function GetDiscountBlock({
   wordsVariants1,
@@ -15,13 +13,6 @@ export function GetDiscountBlock({
   images,
   scrollYProgress,
 }) {
-  const { setHoveringLink } = useContext(CursorContext);
-  const handleMouseEnter = () => {
-    setHoveringLink(true);
-  };
-  const handleMouseLeave = () => {
-    setHoveringLink(false);
-  };
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.125]);
 
@@ -90,7 +81,8 @@ export function GetDiscountBlock({
             />
           </div>
           <div className="flex flex-row gap-6 xl:gap-3 flex-wrap justify-center items-center ">
-            <h2 className="flex flex-shrink-0">with Ginger</h2>
+            <h2 className="flex flex-shrink-0">with</h2>
+            <h2 className="flex flex-shrink-0">Ginger</h2>
             <h2 className="flex flex-shrink-0">Beauty</h2>
             <RoundedFrame
               src="/images/home/frame/studio-frame.mp4"
@@ -113,25 +105,21 @@ export function GetDiscountBlock({
           </div>
         </div>
         <div className="flex items-center pb-24 xs: justify-start sm:flex-col xs:w-full pt-3 lg:p-16 md:p-12 sm:p-6">
-          <Link
-            className="flex items-center justify-center bg-dark text-light p-2.5 px-6 xs:px-4 rounded-lg text-lg 2xs:text-sm font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4 xs:w-full"
-            href="/dummy.pdf"
+          <ButtonLink
+            variant="primary"
+            href="/ginger-sale.pdf"
             target="_blank"
             download
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            icon="linkArrow"
           >
             Odbierz zniżkę 20%
-            <Icon name="linkArrow" size={24} className="ml-2" />
-          </Link>
-          <Link
-            className="flex items-center sx:w-full xs:mt-4 ml-4 xs:ml-0 font-medium capitalize underline text-lg 2xs:text-sm dark:text-light text-dark "
+          </ButtonLink>
+          <ButtonLink
+            variant="secondary"
             href="tel:48510001772"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
           >
             Zadzwoń
-          </Link>
+          </ButtonLink>
         </div>
         <StoryLine />
       </motion.div>
