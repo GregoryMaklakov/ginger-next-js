@@ -40,16 +40,17 @@ export function CardSmallItem({ description, image, link, icon, title, gradientW
                 </div>
             </div>
             <div className="flex flex-[75%] flex-col flex-nowrap">
-                <div className="flex items-center flex-auto justify-center overflow-hidden p-0 w-full h-3/4 flex-nowrap">
-                    <Image
-                        alt="Card dialog window"
-                        src={image}
-                        width={400}
-                        height={400}
-                        className="w-full"
-                        loading="lazy"
-                    />
-                </div>
+                {image &&
+                    <div className="flex items-center flex-auto justify-center overflow-hidden p-0 w-full h-3/4 flex-nowrap">
+                        <Image
+                            alt="Card dialog window"
+                            src={image}
+                            width={400}
+                            height={400}
+                            className="w-full"
+                            loading="lazy"
+                        />
+                    </div>}
                 {link && (
                     <div
                         className="grid place-content-center">
@@ -77,7 +78,7 @@ export function CardSmallItem({ description, image, link, icon, title, gradientW
 CardSmallItem.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    image: PropTypes.string,
     link: PropTypes.string,
     icon: PropTypes.string,
     gradientWord: PropTypes.string,

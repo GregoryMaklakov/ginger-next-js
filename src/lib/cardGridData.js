@@ -57,7 +57,7 @@ export const cardGridDataEmployees = [
     gradientWord: "Wynagrodzenie",
     description:
       "Oferujemy konkurencyjne wynagrodzenie, które odpowiada Twoim umiejętnościom i doświadczeniu. Nasze premie motywują do osiągania najlepszych wyników i nagradzają zaangażowanie.",
-    image: "/images/home/cardsGrid/grid-02.png",
+    image: "/images/work/work-card-01.png",
   },
   // CardSmallItem 02
   {
@@ -66,7 +66,7 @@ export const cardGridDataEmployees = [
     gradientWord: "Profesjonalny",
     description:
       "Inwestujemy w rozwój pracowników poprzez regularne szkolenia i materiały edukacyjne. Rozwijaj swoje umiejętności i ucz się nowych technik.",
-    image: "/images/home/cardsGrid/grid-03.png",
+    image: "/images/work/work-card-02.png",
   },
   // CardSmallItem 03
   {
@@ -75,7 +75,7 @@ export const cardGridDataEmployees = [
     gradientWord: "Atmosfera",
     description:
       "W naszym salonie panuje przyjazna atmosfera z regularnymi imprezami integracyjnymi. Zapewniamy wygodne miejsce pracy.",
-    image: "/images/home/cardsGrid/grid-04.png",
+    image: "/images/work/work-card-03.png",
   },
   // CardSmallItem 04
   {
@@ -84,6 +84,6 @@ export const cardGridDataEmployees = [
     gradientWord: "Stabilność",
     description:
       "Oferujemy oficjalne zatrudnienie z pełnymi świadczeniami, co zapewnia stabilność i bezpieczeństwo pracy. Szukamy osób gotowych na długoterminową współpracę.",
-    image: "/images/home/cardsGrid/grid-05.png",
+    image: "/images/work/work-card-04.png",
   },
 ];
