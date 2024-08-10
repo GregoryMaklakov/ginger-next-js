@@ -4,18 +4,18 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 
-const imagesData = [
-    "01.jpg",
-    "02.jpg",
-    "03.jpg",
-    "04.jpg",
-    "05.jpg",
-    "06.jpg",
-    "07.jpg",
-    "08.jpg",
-    "09.jpg",
-    "10.jpg",
-    "11.jpg",
+const columnImagesData = [
+    "01.webp",
+    "02.webp",
+    "03.webp",
+    "04.webp",
+    "05.webp",
+    "06.webp",
+    "07.webp",
+    "08.webp",
+    "09.webp",
+    "10.webp",
+    "11.webp",
     "12.gif",
 ];
 
@@ -57,27 +57,27 @@ export function ColumnsBlock({ className }) {
 
     return (
         <section className={`${className} main w-full`}>
-            <div className="spacer h-[50vh]" />
+            <div className="spacer h-[25vh]" />
             <div
                 ref={gallery}
                 className="gallery h-[175vh] sm:h-screen dark:bg-dark bg-light overflow-hidden px-12 xl:px-4 xs:px-0"
             >
                 <div className="galleryWrapper relative -top-[12vh] h-[200vh] flex items-center justify-center gap-12 xl:gap-8 lg:gap-4 xs:gap-2">
                     <Column
-                        images={[imagesData[0], imagesData[1], imagesData[2]]}
+                        images={[columnImagesData[0], columnImagesData[1], columnImagesData[2]]}
                         y={y}
                     />
                     <Column
-                        images={[imagesData[3], imagesData[4], imagesData[5]]}
+                        images={[columnImagesData[3], columnImagesData[4], columnImagesData[5]]}
                         y={y2}
                     />
                     <Column
-                        images={[imagesData[6], imagesData[7], imagesData[8]]}
+                        images={[columnImagesData[6], columnImagesData[7], columnImagesData[8]]}
                         y={y3}
                     />
                     <Column
                         className="xs:hidden"
-                        images={[imagesData[9], imagesData[10], imagesData[11]]}
+                        images={[columnImagesData[9], columnImagesData[10], columnImagesData[11]]}
                         y={y4}
                     />
                 </div>

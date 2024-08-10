@@ -75,7 +75,8 @@ export const cardGridDataEmployees = [
     gradientWord: "Atmosfera",
     description:
       "W naszym salonie panuje przyjazna atmosfera z regularnymi imprezami integracyjnymi. Zapewniamy wygodne miejsce pracy.",
-    image: "/images/work/work-card-03.png",
+    // image: "/images/work/work-card-03.png",
+    image: "/images/gallery/home-parallax-dark.webp",
   },
   // CardSmallItem 04
   {

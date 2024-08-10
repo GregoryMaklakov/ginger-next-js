@@ -12,9 +12,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-dark": "url('/images/home/bg-hero-dark.webp')",
-        "hero-light": "url('/images/home/bg-hero-light-02.jpg')",
-        "home-parallax-dark": "url('/images/gallery/home-parallax-dark.webp')",
-        "sec-section": "url('/images/home/sec-section-02.jpg')",
+        "hero-light": "url('/images/home/bg-hero-light.jpg')",
       },
       colors: {
         dark: "#1b1b1b",

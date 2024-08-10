@@ -4,14 +4,14 @@ import { useScroll, } from "framer-motion";
 import {
   BooksyButton,
   // TransitionPageEffect,
-  // BackgroundBlock,
   ColumnsBlock,
   Hero,
   GetDiscountBlock,
   CardsGrid,
-  EmployeesBlock
+  EmployeesBlock,
+  ParallaxText,
 } from "../components";
-import { trialImages } from "../lib";
+import { trialImages, socialLink } from "../lib";
 
 export default function Home() {
 
@@ -67,8 +67,10 @@ export default function Home() {
           />
         </div>
         <EmployeesBlock />
-        {/* <BackgroundBlock /> */}
+        <ParallaxText link={socialLink.instagram} className="pt-24" baseVelocity={-10} count={20} icon="insta">Join us</ParallaxText>
+        <ParallaxText link={socialLink.booksy} className="pb-24" baseVelocity={10} count={15}>See more reviews </ParallaxText>
         <ColumnsBlock />
+
         <BooksyButton className="fixed right-4 bottom-2 lg:bottom-0" />
       </main>
     </>

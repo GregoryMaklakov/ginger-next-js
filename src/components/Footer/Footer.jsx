@@ -74,7 +74,7 @@ export function Footer() {
                                     </ul>
                                 </div>
                                 <div className="flex  items-center flex-col gap-6 self-start">
-                                    <div className="flex items-center self-start flex-wrap">
+                                    <div className="flex items-center self-start flex-wrap 2xl:gap-y-4">
                                         {socialLinks.map(link => (
                                             <motion.a
                                                 key={link.name}

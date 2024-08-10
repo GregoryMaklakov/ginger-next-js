@@ -1,9 +1,9 @@
 export const trialImages = [
   "/images/gallery/trail/trail-01.jpg",
   "/images/gallery/trail/trail-02.jpg",
-  "/images/gallery/trail/trail-03.jpg",
   "/images/gallery/trail/trail-04.jpg",
   "/images/gallery/trail/trail-05.jpg",
+  "/images/gallery/trail/trail-03.jpg",
   "/images/gallery/trail/trail-06.jpg",
   "/images/gallery/trail/trail-07.jpg",
   "/images/gallery/trail/trail-08.jpg",

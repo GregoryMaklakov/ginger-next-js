@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { cardGridDataEmployees } from "../../lib";
+import { cardGridDataEmployees, hiringEmployeesData } from "../../lib";
 import {
     AnimatedText,
     CardSmallItem,
@@ -44,11 +44,11 @@ export default function Work() {
                     <div className="flex flex-col items-center justify-center">
                         <TertiaryStoryText
                             className="font-medium py-12"
-                            textData="Make your career"
-                            gradientWord="career"
+                            textData="Rozwijaj swoją karierę"
+                            gradientWord="karierę"
                         />
                         <AnimatedText
-                            text="Dołącz do naszego zespołu!"
+                            text="Razem z nami!"
                             className="mb-24 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12 font-bold text-8xl"
                         />
                         <div className="grid grid-cols-2 gap-4 md:grid-cols-1 md:gap-2 max-w-7xl p-0 w-3/4 xl:w-full">
@@ -57,29 +57,26 @@ export default function Work() {
                             ))}
                         </div>
                         <TertiaryStoryText
-                            className="font-medium py-12"
-                            textData="Otwarte stanowiska"
-                            gradientWord="stanowiska"
+                            className="font-medium pb-12 pt-16"
+                            textData="Zostań częścią Ginger Beauty Zone"
+                            gradientWord="Ginger"
                         />
                         <AnimatedText
-                            text="Przeglądaj otwarte stanowiska i dowiedz się więcej o pracy w Ginger Beauty Zone."
+                            text="Sprawdź nasze oferty pracy!"
                             className="mb-24 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12 font-bold text-8xl"
                         />
-                        <div className="grid grid-cols-2 gap-4 md:grid-cols-1 md:gap-2 max-w-7xl p-0 w-3/4 xl:w-full">
-                            <EmployeeCardPosition
-                                href="/"
-                                title="Manikiurzystka - Stylistka paznokci"
-                                gradientWord="Stylistka"
-                                description="Pełny etat"
-                            />
-                            <EmployeeCardPosition
-                                href="/"
-                                title="Manikiurzystka - Stylistka paznokci"
-                                gradientWord="Stylistka"
-                                description="Pełny etat"
-                                disabled
-                            />
-                        </div>
+                        <ul className="grid grid-cols-2 gap-4 md:grid-cols-1 md:gap-2 max-w-7xl p-0 w-3/4 xl:w-full">
+                            {hiringEmployeesData.map((offer) => (
+                                <EmployeeCardPosition
+                                    key={offer.slug}
+                                    title={offer.title}
+                                    subtitle={offer.subtitle}
+                                    gradientWord={offer.gradientWord}
+                                    disabled={offer.disabled}
+                                    link={`/work/${offer.slug}`}
+                                />
+                            ))}
+                        </ul>
                     </div>
 
                 </Layout>

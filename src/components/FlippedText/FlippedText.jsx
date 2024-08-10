@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";

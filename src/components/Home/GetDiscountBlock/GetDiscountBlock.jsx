@@ -5,7 +5,6 @@ import { Icon } from "../../Icons";
 import { FlippedText } from "../../FlippedText";
 import { StoryLine } from "../../HistoryBlock";
 import { RoundedFrame } from "../RoundedFrame";
-import { ButtonLink } from '../../Button/Button';
 
 export function GetDiscountBlock({
   wordsVariants1,
@@ -96,7 +95,7 @@ export function GetDiscountBlock({
         <p className="my-4 text-base font-medium text-center text-dark dark:text-light xs:w-full">
           "Najlepszy sposób, aby zadbać o siebie."
         </p>
-        <div className="flex flex-row items-center justify-center gap-8 w-auto mb-4 xs:mb-28">
+        <div className="flex flex-row items-center justify-center gap-8 w-auto mb-24 xs:mb-28">
           <div className="flex items-center">
             <Icon name="stars-review" />
           </div>
@@ -104,23 +103,7 @@ export function GetDiscountBlock({
             600+ reviews on Booksy
           </div>
         </div>
-        <div className="flex items-center pb-24 xs: justify-start sm:flex-col xs:w-full pt-3 lg:p-16 md:p-12 sm:p-6">
-          <ButtonLink
-            variant="primary"
-            href="/ginger-sale.pdf"
-            target="_blank"
-            download
-            icon="linkArrow"
-          >
-            Odbierz zniżkę 20%
-          </ButtonLink>
-          <ButtonLink
-            variant="secondary"
-            href="tel:48510001772"
-          >
-            Zadzwoń
-          </ButtonLink>
-        </div>
+
         <StoryLine />
       </motion.div>
     </MouseImageTrail>

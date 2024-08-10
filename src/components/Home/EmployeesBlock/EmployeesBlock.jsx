@@ -1,7 +1,7 @@
 
 import { StoryLine, TertiaryStoryText } from "../../HistoryBlock";
 import { RoundedFrame } from "../RoundedFrame";
-import { ButtonLink } from '../../Button/Button';
+import { ButtonLink } from '../../ButtonLink/ButtonLink';
 
 export function EmployeesBlock() {
 
