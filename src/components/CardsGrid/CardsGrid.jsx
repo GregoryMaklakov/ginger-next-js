@@ -16,7 +16,6 @@ export function CardsGrid({ scrollYProgress }) {
 
     return (
         <motion.div style={{ scale }} className='relative h-min-content flex flex-col items-center justify-center flex-none flex-nowrap gap-4 md:gap-2  p-0 w-full xl:px-4 xs:px-2'>
-
             <CardBigItem
                 title={bigItemData.title}
                 description={bigItemData.description}
