@@ -15,7 +15,7 @@ export const cardGridData = [
     description:
       "Dbamy o naszych klientów! W ramach programu lojalnościowego, za każdą 8 usługę otrzymasz 30% zniżki. Pamiętaj, aby pokazać swoją kartę lojalnościową i cieszyć się oszczędnościami! Zarezerwuj swój pierwszy wizyt, aby otrzymać kartę lojalnościową.",
     link: "https://gingerbeautyzone.booksy.com",
-    image: "/images/home/cardsGrid/grid-01.gif",
+    image: "/images/home/cardsGrid/grid-01.png",
     icon: "booksy",
   },
   // CardSmallItem 02

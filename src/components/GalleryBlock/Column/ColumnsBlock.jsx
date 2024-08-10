@@ -16,7 +16,7 @@ const columnImagesData = [
     "09.webp",
     "10.webp",
     "11.webp",
-    "12.gif",
+    "12.jpg",
 ];
 
 export function ColumnsBlock({ className }) {
