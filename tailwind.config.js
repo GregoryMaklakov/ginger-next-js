@@ -10,15 +10,22 @@ module.exports = {
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
+      backgroundImage: {
+        "hero-dark": "url('/images/home/bg-hero-dark.webp')",
+        "hero-light": "url('/images/home/bg-hero-light.jpg')",
+      },
       colors: {
         dark: "#1b1b1b",
+        cardGrey: "#111111",
         light: "#f5f5f5",
-        primary: "#B63E96", // 240,86,199
-        primaryDark: "#58E6D9", // 80,230,217
+        primary: "#CC184B",
+        primaryDark: "#afbda5",
         lightGrey: "#E0E0E0",
         darkGrey: "#474747",
         gradientFrom: "#7053ff",
         gradientTo: "#e0658c",
+        orange: "#eb9467",
+        borderWhite20: "rgba(255, 255, 255, 0.2)",
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
@@ -29,6 +36,9 @@ module.exports = {
       },
       transitionTimingFunction: {
         "ease-OutCubic": "cubic-bezier(0.215,0.610,0.355,1.000)",
+      },
+      filter: {
+        logo: "contrast(100%) brightness(150%)",
       },
     },
     screens: {

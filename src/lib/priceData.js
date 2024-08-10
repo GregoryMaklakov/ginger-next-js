@@ -314,11 +314,21 @@ export const priceDataEyes = [
       },
       {
         id: 2,
+        name: "Przedłużanie rzęs 1:2 (2D)",
+        price: 180,
+      },
+      {
+        id: 3,
+        name: "Przedłużanie rzęs 1:3 (3D)",
+        price: 200,
+      },
+      {
+        id: 4,
         name: "Przedłużanie rzęs 1:1 + Strzałka",
         price: 140,
       },
       {
-        id: 3,
+        id: 5,
         name: "Efect mokrych rzęs",
         price: 160,
       },

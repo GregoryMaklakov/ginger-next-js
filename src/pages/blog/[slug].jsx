@@ -45,7 +45,7 @@ function ArticlePage() {
         <meta name="description" content="Obejrzyj naszą galerię zdjęć, aby zobaczyć, jakie efekty osiągamy w naszym salonie Ginger Beauty Zone." />
       </Head>
       <TransitionPageEffect />
-      <section className="flex w-full flex-col items-center justify-center dark:text-light text-dark">
+      <section className="flex w-full flex-col items-center justify-center dark:text-light text-dark mt-28">
         <Layout className="pt-8">
           <div className="flex items-start lg:flex-col">
             <ButtonBack className="mr-4 lg:mr-0 lg:mb-4" />

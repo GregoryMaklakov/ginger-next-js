@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Icon } from '../Icons/Icon';
-import { Routes, socialLink } from '../../lib/constant';
+import { socialLink } from '../../lib/constant';
+import { Routes } from '../../lib/routes';
 import { Logo } from '../Logo';
 import { MoonIcon } from '../Icons/MoonIcon';
 import { SunIcon } from '../Icons/SunIcon';
@@ -27,6 +28,11 @@ export const navLinks = [
   },
   {
     id: 4,
+    href: Routes.WORK,
+    label: 'Praca',
+  },
+  {
+    id: 5,
     href: Routes.PRICE,
     label: 'Cennik',
   },
@@ -64,11 +70,10 @@ export function Navigation() {
   };
 
   const handleMouseLeave = () => {
-    setHoveringLink(false);
   };
 
   return (
-    <header className="w-full max-w-[1920px] mx-auto px-32 lg:px-16 md:px-6 py-8 font-medium flex items-center justify-between z-50 relative dark:text-light">
+    <header className="w-full max-w-[1920px] mx-auto px-32 lg:px-16 md:px-6 py-8 font-medium flex items-center justify-between z-50 absolute left-0 top-0 right-0 dark:text-light ">
       <button
         aria-label="burger-menu"
         type="button"
@@ -107,7 +112,7 @@ export function Navigation() {
                   key={`link-${link.id}-${link.label}`}
                   href={link.href}
                   title={link.label}
-                  className={`${isHoveringLink ? "text-dark bg-light dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
+                  className={`${isHoveringLink ? "text-dark bg-inherit dark:bg-dark dark:text-light" : "text-dark dark:bg-dark dark:text-light"
                     } mr-4 `}
                 />
               )}

@@ -54,8 +54,7 @@ export function ReviewsStory({
         <>
             <div className={`${className} text-center relative `}>
                 <TertiaryStoryText
-
-                    className="leading-[4.25rem] lg:leading-10 z-20 relative"
+                    className="leading-[5.25rem] lg:leading-10 z-20 relative font-bold text-[5rem] xl:text-6xl lg:text-5xl xs:text-3xl"
                     textData={textData}
                     gradientWord={gradientWord}
                 />

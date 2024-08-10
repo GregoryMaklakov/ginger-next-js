@@ -5,3 +5,4 @@ export * from "./HistoryCard";
 export * from "./ReviewsStory";
 export * from "./StoryLine";
 export * from "./TwoCardInOne";
+export * from "./GradientText";

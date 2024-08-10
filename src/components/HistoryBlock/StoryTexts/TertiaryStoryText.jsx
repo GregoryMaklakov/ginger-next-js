@@ -1,7 +1,14 @@
 import { PropTypes } from "prop-types";
 
-export function TertiaryStoryText({ className, textData, gradientWord }) {
+
+
+export function TertiaryStoryText({ className, textData = "", gradientWord, variant = "default" }) {
     const words = textData.split(" ");
+
+    const colorVariants = {
+        default: "text-dark dark:bg-inherit dark:text-light",
+        light: "text-light",
+    };
 
     return (
         <p
@@ -13,8 +20,8 @@ export function TertiaryStoryText({ className, textData, gradientWord }) {
                     key={word}
                     className={`${word === gradientWord
                         ? "bg-gradient-to-r from-gradientFrom to-gradientTo bg-clip-text ease-ease-OutCubic"
-                        : "text-dark dark:bg-inherit dark:text-light"
-                        } inline w-full font-bold capitalize max-w-5xl text-[5rem] xl:text-6xl lg:text-5xl xs:text-3xl`}
+                        : colorVariants[variant] || colorVariants.default
+                        } inline w-full capitalize max-w-5xl`}
                 >
                     {word}{" "}
                 </span>
@@ -27,4 +34,5 @@ TertiaryStoryText.propTypes = {
     className: PropTypes.string,
     textData: PropTypes.string,
     gradientWord: PropTypes.string,
+    variant: PropTypes.oneOf(["default", "light"]),
 };

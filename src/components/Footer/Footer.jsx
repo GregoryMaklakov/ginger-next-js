@@ -31,7 +31,7 @@ export function Footer() {
         setHoveringLink(false);
     };
     return (
-        <footer className="w-full max-w-[1920px] z-[100] block mx-auto bg-light dark:bg-dark py-12 px-32 lg:px-16 md:px-6 relative">
+        <footer className="w-full max-w-[1920px] z-[100] block mx-auto bg-light dark:bg-dark py-12 px-32 lg:px-16 xl:px-4 xs:px-2 relative">
             <FrameWhiteBlack className='pb-0'>
                 <div className="min-w-full mx-auto inline-block dark:bg-dark bg-light px-8 py-8 xs:px-4 text-dark dark:text-light/75 rounded-2xl">
                     <div className="footer-top grid w-full grid-cols-2 xl:flex xl:flex-col-reverse">
@@ -74,7 +74,7 @@ export function Footer() {
                                     </ul>
                                 </div>
                                 <div className="flex  items-center flex-col gap-6 self-start">
-                                    <div className="flex items-center self-start flex-wrap">
+                                    <div className="flex items-center self-start flex-wrap 2xl:gap-y-4">
                                         {socialLinks.map(link => (
                                             <motion.a
                                                 key={link.name}

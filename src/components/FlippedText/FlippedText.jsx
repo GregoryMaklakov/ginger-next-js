@@ -1,36 +1,111 @@
-import PropTypes from 'prop-types';
-import { useEffect, useState, useRef } from "react";
-import { textScramble } from "../../lib";
+/* eslint-disable react/no-array-index-key */
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 
-export function FlippedText({ textVariants }) {
+export function FlippedText({ textVariants, gradientVariants, className }) {
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
-    const textElementRef = useRef(null);
 
     useEffect(() => {
-        const [firstText] = textVariants;
-        textElementRef.current.innerText = firstText;
         const interval = setInterval(() => {
-            setCurrentTextIndex((prevIndex) =>
-                prevIndex === textVariants.length - 1 ? 0 : prevIndex + 1
+            setCurrentTextIndex(prevIndex =>
+                prevIndex === textVariants.length - 1 ? 0 : prevIndex + 1,
             );
-            const nextText = textVariants[currentTextIndex];
-
-            if (textElementRef.current) {
-                textScramble.animateText(textElementRef.current, nextText).then(() => {
-                });
-            }
         }, 3500);
 
         return () => clearInterval(interval);
-    }, [currentTextIndex, textVariants]);
+    }, [textVariants]);
 
     return (
-        <div className="inline-block text-dark/75 dark:text-light/75 border-solid border-2 rounded-[2rem] py-2 px-4 border-primary capitalize">
-            <span ref={textElementRef} />
-        </div>
+        <motion.div
+            variants={gradientVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ duration: 2 }}
+            className={`${className} inline-flex items-center justify-center w-80 2xl:w-60 xl:w-40 rounded-[2rem] py-3 px-4 normal-case border-2 border-solid`}>
+            <FlipItem
+                key={textVariants[currentTextIndex]}
+                text={textVariants[currentTextIndex]}
+            />
+        </motion.div>
     );
 }
 
 FlippedText.propTypes = {
+    className: PropTypes.string,
     textVariants: PropTypes.arrayOf(PropTypes.string).isRequired,
+    gradientVariants: PropTypes.shape({
+        animate: PropTypes.shape({
+            background: PropTypes.arrayOf(PropTypes.string).isRequired,
+        }).isRequired,
+    }).isRequired,
+};
+
+const DURATION = 0.5;
+const STAGGER = 0.025;
+
+function FlipItem({ text }) {
+    return (
+        <motion.div
+            className="relative inline-block overflow-hidden whitespace-nowrap "
+            style={{ lineHeight: 0.75 }}
+            initial="initial"
+            animate="animate"
+        >
+            <div>
+                {text.split("").map((l, i) => (
+                    <motion.span
+                        variants={{
+                            initial: {
+                                y: 0,
+                                opacity: 0,
+                            },
+                            animate: {
+                                y: "-100%",
+                                opacity: 1,
+                            },
+                        }}
+                        transition={{
+                            duration: DURATION,
+                            ease: "easeInOut",
+                            delay: STAGGER * i,
+                        }}
+                        className="inline-block"
+                        key={i}
+                    >
+                        {l}
+                    </motion.span>
+                ))}
+            </div>
+            <div className="absolute inset-0">
+                {text.split("").map((l, i) => (
+                    <motion.span
+                        variants={{
+                            initial: {
+                                y: "100%",
+                                opacity: 0,
+                            },
+                            animate: {
+                                y: 0,
+                                opacity: 1,
+                            },
+                        }}
+                        transition={{
+                            duration: DURATION,
+                            ease: "easeInOut",
+                            delay: STAGGER * i,
+                        }}
+                        className="inline-block"
+                        key={i}
+                    >
+                        {l}
+                    </motion.span>
+                ))}
+            </div>
+        </motion.div>
+    );
 }
+
+FlipItem.propTypes = {
+    text: PropTypes.string.isRequired,
+};

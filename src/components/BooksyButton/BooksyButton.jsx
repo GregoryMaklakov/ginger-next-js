@@ -7,7 +7,7 @@ export function BooksyButton({ className }) {
 
 	return (
 		<div
-			className={`flex items-center justify-center overflow-hidden md:right-0 md:-top-[54px] md:left-auto md:bottom-auto xs:-top-[60px] md:z-50 ${className}`}
+			className={`flex items-center justify-center overflow-hidden md:right-0 md:-top-[54px] md:left-auto md:bottom-auto xs:-top-[60px] z-50 md:z-50 ${className}`}
 		>
 			<div className="w-48 h-auto flex items-center justify-center relative md:w-28">
 				<Icon

@@ -71,13 +71,13 @@ export default function About() {
             zIndex: 1001,
           }}
         />
-        <Layout className="pt-8">
+        <Layout className="pt-8 mt-28">
 
           {/* //? History of Ginger */}
           <History />
           <AnimatedText
             text="Dowiedz się więcej o Ginger"
-            className="my-24 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12"
+            className="my-24 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12 font-bold text-8xl"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 items-center">
             <div className="col-span-3 xl:col-span-4 flex flex-col items-start justify-start md:order-2 md:col-span-8">

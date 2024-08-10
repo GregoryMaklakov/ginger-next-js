@@ -1,10 +1,3 @@
-export const Routes = {
-  HOME: "/",
-  ABOUT: "/about",
-  BlOG: "/blog",
-  PRICE: "/price",
-};
-
 export const socialLink = {
   instagram: "https://www.instagram.com/ginger_beauty_zone/",
   facebook: "https://www.facebook.com/profile.php?id=100087405266889",
@@ -18,5 +11,5 @@ export const socialLink = {
   booksyMaria:
     "https://booksy.com/pl-pl/162702_ginger-beauty-zone_paznokcie_3_warszawa/staffer/339160#ba_s=dl_1",
   google: "https://maps.app.goo.gl/YPCGoKhWmdks7Tv2A",
-  googleReview: "https://maps.app.goo.gl/YPCGoKhWmdks7Tv2A", // !
+  googleReview: "https://maps.app.goo.gl/YPCGoKhWmdks7Tv2A", //
 };

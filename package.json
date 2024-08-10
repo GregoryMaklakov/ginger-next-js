@@ -11,9 +11,11 @@
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx src --fix"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/line-clamp": "^0.4.4",
     "eslint-config-next": "13.2.4",
     "framer-motion": "^10.6.0",
+    "gsap": "^3.12.5",
     "next": "13.2.4",
     "next-sitemap": "^4.0.9",
     "prop-types": "^15.8.1",

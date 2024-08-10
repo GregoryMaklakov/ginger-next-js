@@ -90,7 +90,7 @@ export const articles = [
         data: [
           {
             before: "ponad",
-            amount: "1080",
+            amount: "1480",
             subtitle: "zadowolonych klientów",
           },
           {

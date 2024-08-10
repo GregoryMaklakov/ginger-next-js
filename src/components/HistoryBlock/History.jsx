@@ -39,7 +39,7 @@ export function History() {
             <MainStoryText className="py-12" data={block2} year={2019} />
             <MainStoryText className="py-12" data={block3} year={2022} />
             <AnimatedText
-                className="pt-24 max-w-5xl text-[5rem] xl:text-6xl lg:text-5xl xs:text-3xl"
+                className="pt-24 max-w-5xl text-[5rem] xl:text-6xl lg:text-5xl xs:text-3xl font-bold text-8xl"
                 text={block4.title}
             />
             <GradientText
@@ -72,7 +72,7 @@ export function History() {
                     gradientWord="rodziny"
                 />
             )}
-            <ParallaxText link={socialLink.instagram} className="pt-24" baseVelocity={-10} count={20}>Join us</ParallaxText>
+            <ParallaxText link={socialLink.instagram} className="pt-24" baseVelocity={-10} count={20} icon="insta">Join us</ParallaxText>
             <ParallaxText link={socialLink.booksy} className="pb-24" baseVelocity={10} count={15}>See more reviews </ParallaxText>
 
             <TwoCardInOne card01={aboutHistory.card01} card02={aboutHistory.card02} alt="card-birthday-cake" year={2024} />
