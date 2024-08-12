@@ -33,7 +33,7 @@ export function EmployeeCardPosition({ link, title, gradientWord, subtitle, disa
                 whileTap={disabled ? {} : { scale: 0.98 }}
                 whileHover={disabled ? {} : { scale: 1.02 }}
                 href={disabled ? link : link}
-                className={`flex flex-[50%] items-center justify-center flex-col rounded-3xl flex-nowrap relative overflow-hidden h-full flex-grow transition-all pb-3 border border-1 border-solid ${disabled ? 'bg-darkGrey border-darkGrey cursor-not-allowed opacity-1' : 'bg-gradient-to-b from-[#353535] to-[#242323] hover:bg-gradient-to-r border-borderWhite20'
+                className={`flex flex-[50%] min-h-[172px] items-center justify-center flex-col rounded-3xl flex-nowrap relative overflow-hidden h-full flex-grow transition-all pb-3 border border-1 border-solid ${disabled ? 'bg-darkGrey border-darkGrey cursor-not-allowed opacity-1' : 'bg-gradient-to-b from-[#353535] to-[#242323] hover:bg-gradient-to-r border-borderWhite20 '
                     }`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}

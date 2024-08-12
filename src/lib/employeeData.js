@@ -65,7 +65,7 @@ export const hiringEmployeesData = [
 
     blockAccordion: [
       {
-        heading: "Stylistka paznokci",
+        heading: "Szczegóły",
         data: [
           {
             num: "/",
