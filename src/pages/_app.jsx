@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import "../styles/globals.css";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Head from "next/head";
-import Script from 'next/script';
-import { Montserrat } from 'next/font/google';
+import Script from "next/script";
+import { Montserrat } from "next/font/google";
 import { AnimatePresence } from "framer-motion";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
 import { CustomCursor, Footer, Navigation } from "../components";
-import { CursorContext, ThemeContext } from '../lib/context';
+import { CursorContext, ThemeContext } from "../lib/context";
 import { useThemeSwitcher } from "../hooks/useThemeSwicher";
 
 const montserrat = Montserrat({
@@ -17,7 +17,7 @@ const montserrat = Montserrat({
   variable: "--font-mont",
 });
 
-export default function App({ Component, pageProps, }) {
+export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [isHoveringLink, setIsHoveringLink] = useState(false);
   const [isHoveringText, setIsHoveringText] = useState(false);
@@ -42,7 +42,14 @@ export default function App({ Component, pageProps, }) {
         toggleTheme: () => setMode(mode === "dark" ? "light" : "dark"),
       },
     }),
-    [isHoveringLink, isHoveringText, isHoveringLogo, isHoveringImage, mode, setMode]
+    [
+      isHoveringLink,
+      isHoveringText,
+      isHoveringLogo,
+      isHoveringImage,
+      mode,
+      setMode,
+    ],
   );
   return (
     <>
@@ -51,35 +58,31 @@ export default function App({ Component, pageProps, }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script
-        srtategy="lazyOnload"
+        strategy="lazyOnload"
         src="https://www.googletagmanager.com/gtag/js?id=G-FEZ3384TFD"
       />
-      <Script
-        id="googleAn"
-        srtategy="lazyOnload">
+      <Script id="googleAn" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
-            gtag('config', 'G-FEZ3384TFD');`
-        }
+            gtag('config', 'G-FEZ3384TFD');`}
       </Script>
-      <Script
-        id="facebook-pixel"
-        strategy="afterInteractive"
-      >
+      <Script id="facebook-pixel" strategy="afterInteractive">
         {`
-         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '598370205256649');
-          fbq('track', 'PageView');
-        `}
+      !function(f,b,e,v,n,t,s) {
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+      }(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '598370205256649');
+      fbq('track', 'PageView');
+  `}
       </Script>
       <noscript>
         <img
