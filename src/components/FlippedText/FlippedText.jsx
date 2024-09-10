@@ -38,7 +38,7 @@ FlippedText.propTypes = {
         animate: PropTypes.shape({
             background: PropTypes.arrayOf(PropTypes.string).isRequired,
         }).isRequired,
-    }).isRequired,
+    }),
 };
 
 const DURATION = 0.5;

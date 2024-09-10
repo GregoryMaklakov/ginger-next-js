@@ -15,8 +15,8 @@ import { trialImages, socialLink } from "../lib";
 
 export default function Home() {
 
-  const flippedTextHeroFirst = ["Glow", "Pure", "Vibe",];
-  const flippedTextHeroSecond = ["Mani", "Shine", "Soft"];
+  const flippedTextHeroFirst = ["Glow", "Pure", "Vibe", "Mani", "Soft"];
+  // const flippedTextHeroSecond = ["Mani", "Shine", "Soft"];
 
   const container = useRef();
 
@@ -58,7 +58,7 @@ export default function Home() {
           className="relative h-full">
           <GetDiscountBlock
             wordsVariants1={flippedTextHeroFirst}
-            wordsVariants2={flippedTextHeroSecond}
+            // wordsVariants2={flippedTextHeroSecond}
             images={trialImages}
             scrollYProgress={scrollYProgress}
           />

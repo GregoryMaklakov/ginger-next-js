@@ -3,55 +3,49 @@ import { PropTypes } from "prop-types";
 import { MouseImageTrail } from "../../GalleryBlock";
 import { Icon } from "../../Icons";
 import { FlippedText } from "../../FlippedText";
-import { StoryLine } from "../../HistoryBlock";
+import { StoryLine, TertiaryStoryText } from "../../HistoryBlock";
 import { RoundedFrame } from "../RoundedFrame";
 
 export function GetDiscountBlock({
   wordsVariants1,
-  wordsVariants2,
   images,
   scrollYProgress,
 }) {
-
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.125]);
 
   const gradientVariants01 = {
+    backgroundSize: "100% 500%",
     animate: {
-      // background: [
-      //   "linear-gradient(to right, #eb9467, #fa75f8)",
-      //   "linear-gradient(to right, #fa75f8, #6600ff",
-      //   "linear-gradient(to right, #facc69, #CC184B)",
-      //   "linear-gradient(to right, #e665e3, #f8844a)",
-      // ],
-      background: [
-        "linear-gradient(to right, #CC184B, #e63466)",
-        "linear-gradient(to right, #e21d1d, #f9396f",
-        "linear-gradient(to right, #e63466, #f9396f)",
-        "linear-gradient(to right, #CC184B, #f9064b)",
+      backgroundImage: [
+        "linear-gradient(49deg,#2d4de0 0, #9f71f0 20%)",
+        "linear-gradient(52deg,#fc6277 58%, #f8ef6f 80%)",
       ],
       transition: {
-        duration: 10,
+        duration: 3,
         repeat: Infinity,
         repeatType: "reverse",
-        ease: "linear",
+        ease: "easeInOut",
+      },
+    },
+  };
+  const gradientVariants02 = {
+    backgroundSize: "100% 500%",
+    animate: {
+      backgroundImage: [
+        "linear-gradient(49deg,#981496 0, #5166d7 20%)",
+        "linear-gradient(52deg,#f8ef6f 8%, #2d4de0 90%)",
+      ],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
       },
     },
   };
 
-  const gradientVariants02 = {
-    animate: {
-      background: [
-        "linear-gradient(to right, #1b1b1b, #1b1b1b))",
-        "linear-gradient(to right, #1b1b1b, #1b1b1b",
-      ],
-      transition: {
-        duration: 10,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "linear",
-      },
-    },
-  };
+
+
   return (
     <MouseImageTrail renderImageBuffer={50} rotationRange={25} images={images}>
       <motion.div
@@ -62,11 +56,6 @@ export function GetDiscountBlock({
         <div className="flex flex-col items-center pt-24 content-center flex-wrap relative justify-center gap-6 xl:gap-3 w-full font-bold capitalize text-left text-8xl 2xl:text-6xl xl:text-4xl text-dark bg-inherit dark:bg-inherit dark:text-light md:text-4xl">
           <div className="flex flex-row gap-6 xl:gap-3 flex-wrap justify-center items-center h-full">
             <h2 className="flex flex-shrink-0">Nails</h2>
-            <FlippedText
-              className="text-dark/75 dark:text-light/75 border-dark dark:border-light/75"
-              textVariants={wordsVariants1}
-              gradientVariants={gradientVariants01}
-            />
             <RoundedFrame
               src="/images/home/frame/frame-01.jpg"
               size="large"
@@ -74,15 +63,17 @@ export function GetDiscountBlock({
               alt="Our team"
             />
             <FlippedText
-              className="text-light/75 border-primary"
-              textVariants={wordsVariants2}
-              gradientVariants={gradientVariants02}
+              className="text-dark/75 dark:bg-dark bg-light dark:text-light/75 border-dark dark:border-light/75"
+              textVariants={wordsVariants1}
             />
+            <h2 className="flex flex-shrink-0">Shine</h2>
           </div>
           <div className="flex flex-row gap-6 xl:gap-3 flex-wrap justify-center items-center ">
             <h2 className="flex flex-shrink-0">with</h2>
-            <h2 className="flex flex-shrink-0">Ginger</h2>
-            <h2 className="flex flex-shrink-0">Beauty</h2>
+            <TertiaryStoryText textData="Ginger" gradientWord="Ginger" variant="animate" gradientAnimation={gradientVariants01}
+            />
+            <TertiaryStoryText textData="Beauty" gradientWord="Beauty" variant="animate" gradientAnimation={gradientVariants02}
+            />
             <RoundedFrame
               src="/images/home/frame/studio-frame.mp4"
               size="large"
@@ -112,7 +103,6 @@ export function GetDiscountBlock({
 
 GetDiscountBlock.propTypes = {
   wordsVariants1: PropTypes.arrayOf(PropTypes.string).isRequired,
-  wordsVariants2: PropTypes.arrayOf(PropTypes.string).isRequired,
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
   scrollYProgress: PropTypes.shape({
     get: PropTypes.func.isRequired,

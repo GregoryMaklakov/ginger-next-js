@@ -21,7 +21,7 @@ export function Hero() {
     return (
         <>
             <motion.div
-                className="relative min-h-screen w-[100vw] dark:bg-dark overflow-hidden bg-no-repeat bg-cover bg-top dark:bg-hero-dark bg-hero-light"
+                className="relative min-h-screen w-[100vw]  overflow-hidden bg-no-repeat bg-cover bg-top dark:bg-hero-dark bg-hero-light z-[0]"
                 initial={{
                     filter: "blur(12px)",
                     scale: 1.125,
@@ -40,7 +40,7 @@ export function Hero() {
                         ? "dark:text-light text-light"
                         : "dark:text-primary text-dark"
                         }
-                        w-min transition-all duration-500 
+                        w-min transition-all duration-500 flex
                         tracking-[2.3rem] 2xl:tracking-[1rem] lg:tracking-[0.5rem] xs:tracking-[0.25rem] "`}
                 />
 
@@ -50,7 +50,7 @@ export function Hero() {
                         ? "dark:text-primary text-primary"
                         : "dark:text-light text-primary"
                         }
-              w-min transition-all duration-500
+              w-min transition-all duration-500 flex
                         tracking-[2.3rem] 2xl:tracking-[1rem] lg:tracking-[0.5rem] xs:tracking-[0.25rem] z-20"`}
                 />
             </div>
