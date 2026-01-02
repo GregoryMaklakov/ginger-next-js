@@ -46,6 +46,7 @@ export default function Price() {
           <PriceList categories={priceDataNails} />
         </div>
       ),
+      // disabled: false,
     },
     {
       title: 'Brwi/Rzęsy/Makeup',
@@ -54,6 +55,7 @@ export default function Price() {
           <PriceList categories={priceDataEyes} />
         </div>
       ),
+      // disabled: true,
     },
   ];
 

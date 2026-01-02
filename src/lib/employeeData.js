@@ -103,6 +103,11 @@ export const hiringEmployeesData = [
       ],
     },
   },
+
+
+
+
+
   // Brwi + Rzęsy
   {
     slug: "eyebrow-lash-offer",
@@ -117,17 +122,17 @@ export const hiringEmployeesData = [
         data: [
           {
             before: " Już ponad",
-            amount: "2",
+            amount: "3",
             subtitle: "lata na rynku beauty",
           },
           {
             before: "ponad",
-            amount: "1480",
+            amount: "1680",
             subtitle: "zadowolonych klientów",
           },
           {
             before: "ponad",
-            amount: "41000",
+            amount: "4000",
             subtitle: "wykonanych usług",
           },
         ],
