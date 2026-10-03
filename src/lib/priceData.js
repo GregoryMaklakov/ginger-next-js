@@ -253,45 +253,45 @@ export const priceDataEyes = [
       {
         id: 3,
         name: "Regulacja Brwi + Farbka",
-        price: 70,
+        price: 75,
       },
+      // {
+      //   id: 4,
+      //   name: "Regulacja Brwi + Henna",
+      //   price: 80,
+      // },
+      // {
+      //   id: 4,
+      //   name: "Regulacja brwi + Farbka + Wąsik",
+      //   price: 90,
+      // },
       {
         id: 4,
-        name: "Regulacja Brwi + Henna",
-        price: 80,
-      },
-      {
-        id: 5,
-        name: "Regulacja brwi + Farbka + Wąsik",
-        price: 90,
-      },
-      {
-        id: 6,
         name: "Laminacja brwi + Farbka",
         price: 120,
       },
+      // {
+      //   id: 6,
+      //   name: "Laminacja brwi + Farbka + Botox",
+      //   price: 150,
+      // },
       {
-        id: 7,
-        name: "Laminacja brwi + Farbka + Botox",
-        price: 150,
-      },
-      {
-        id: 8,
+        id: 5,
         name: "Laminacja Brwi bez pomalowania",
         price: 100,
       },
       {
-        id: 9,
+        id: 6,
         name: "Farbka Brwi",
         price: 40,
       },
       {
-        id: 10,
+        id: 7,
         name: "Pomalowanie rzęs",
         price: 40,
       },
       {
-        id: 11,
+        id: 8,
         name: "Wąsik",
         description: "Depilacja wąsika woskiem",
         price: 30,
@@ -312,11 +312,11 @@ export const priceDataEyes = [
         name: "Laminacja rzęs + Farbka",
         price: 140,
       },
-      {
-        id: 3,
-        name: "Pomalowanie rzęs",
-        price: 30,
-      },
+      // {
+      //   id: 3,
+      //   name: "Pomalowanie rzęs",
+      //   price: 30,
+      // },
     ],
   },
   //  Przedłużanie rzęs

@@ -2,6 +2,7 @@ export const socialLink = {
   instagram: "https://www.instagram.com/ginger_beauty_zone/",
   facebook: "https://www.facebook.com/profile.php?id=100087405266889",
   booksy: "https://gingerbeautyzone.booksy.com",
+  fresha: "https://www.fresha.com/book-now/ginger-beauty-zone-kateryna-maklakova-utjo34lt/all-offer?share=true&pId=3087211",
   booksyKate:
     "https://booksy.com/pl-pl/162702_ginger-beauty-zone_paznokcie_3_warszawa/staffer/327518#ba_s=dl_1",
   booksyLiza:
